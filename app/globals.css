@@ -2,32 +2,57 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
+@layer base {
+	body {
+		@apply font-primary leading-[1.75rem];
+	}
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
+	p, span:not(h1 > span) {
+		@apply tracking-wide;
+	}
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+	.h1 {
+		@apply text-[48px] xl:text-[72px] leading-[1.1] font-black mb-7;
+	}
+
+	.h2 {
+		@apply text-[36px] xl:text-[48px] leading-[1.1] font-bold mb-7;
+	}
+
+	.h3 {
+		@apply text-[20px] xl:text-[24px] leading-[1.1] font-semibold mb-3;
+	}
+
+	.gallery-item {
+		@apply w-[330px] h-[200px] opacity-0 absolute ease-in-out duration-300 z-0 rounded-lg bg-contain;
+	}
+
+	.gallery-item-1, .gallery-item-5 {
+		@apply -translate-x-2/4 opacity-40 z-[-3];
+	}
+
+	.gallery-item-2, .gallery-item-4 {
+		@apply w-[380px] h-[250px] -translate-x-2/4 opacity-80 z-[-2];
+	}
+
+	.gallery-item-1 {
+		@apply left-[15%];
+	}
+
+	.gallery-item-2 {
+		@apply left-[30%]
+	}
+
+	.gallery-item-3 {
+		@apply w-[430px] h-[300px] left-[50%] -translate-x-2/4 opacity-100 z-[-1];
+	}
+
+	.gallery-item-4 {
+		@apply left-[70%];
+	}
+
+	.gallery-item-5 {
+		@apply left-[85%];
+	}
 }
