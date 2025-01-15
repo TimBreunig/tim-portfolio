@@ -1,25 +1,22 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
-import { Button } from "@/components/ui/button";
+import React from "react";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircle, faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
+
 const CardGrid = () => {
-	let [current, setCurrent] = useState(0);
-
-	let previousSlide = () => {
-		if(current === 0) setCurrent(slides.length - 1);
-		else setCurrent(current - 1);
-	};
-
-	let nextSlide = () => {
-		if(current === slides.length - 1) setCurrent(0);
-		else setCurrent(current + 1);
-	};
 
 	let cards = [
+		{
+			title: "The Wandering Knight",
+			genre: "Game",
+			role: "Storytelling & Engineering",
+			place: "Independent",
+			date: "2024",
+			path: "/images/IntroCutscene2_LowRes.gif",
+		},
 		{
 			title: "Project Mothership",
 			genre: "Game",
@@ -29,30 +26,28 @@ const CardGrid = () => {
 			path: "https://www.hdm-stuttgart.de/stage/mediafiles/4413/galerie/Img0.png",
 		},
 		{
+			title: "Expiravoid",
+			genre: "App Concept",
+			role: "UI Design & Prototyping",
+			place: "Stuttgart Media University",
+			date: "2024",
+			path: "https://preview.redd.it/trees-mountains-japanese-painting-1920x1080-v0-y9nyfcv39awa1.jpg?auto=webp&s=72153eaa723c15680052d18f6fa1545cac8699af",
+		},
+		{
+			title: "Movie Night",
+			genre: "App",
+			role: "UI Design & Frontend Engineering",
+			place: "Stuttgart Media University",
+			date: "2024",
+			path: "https://preview.redd.it/trees-mountains-japanese-painting-1920x1080-v0-y9nyfcv39awa1.jpg?auto=webp&s=72153eaa723c15680052d18f6fa1545cac8699af",
+		},
+		{
 			title: "Chromania",
 			genre: "Game",
 			role: "Design & Engineering",
 			place: "Stuttgart Media University",
 			date: "2023",
 			path: "https://preview.redd.it/trees-mountains-japanese-painting-1920x1080-v0-y9nyfcv39awa1.jpg?auto=webp&s=72153eaa723c15680052d18f6fa1545cac8699af",
-		},
-		{
-			title: "Project A",
-			genre: "Website",
-			desc: "Project Mothership ist als kooperatives Rogue-like mit Souls-inspiriertem Kampfsystem in einer top-down 2.5D perspective gedacht. Das Spiel wird von Studenten der Hochschule der Medien Stuttgart im Modul Game Praktikum entwickelt. Ein Team von 24 Studenten ist beauftragt ein Spiel zu entwickeln, dabei den Entwicklungsprozess eigenständig zu organisieren, und dieses dann an dem MediaNight Event der Hochschule zu demonstrieren.",
-			path: "https://i.redd.it/1yxsh7cbkux41.jpg",
-		},
-		{
-			title: "Project B",
-			genre: "App",
-			desc: "Project Mothership ist als kooperatives Rogue-like mit Souls-inspiriertem Kampfsystem in einer top-down 2.5D perspective gedacht. Das Spiel wird von Studenten der Hochschule der Medien Stuttgart im Modul Game Praktikum entwickelt. Ein Team von 24 Studenten ist beauftragt ein Spiel zu entwickeln, dabei den Entwicklungsprozess eigenständig zu organisieren, und dieses dann an dem MediaNight Event der Hochschule zu demonstrieren.",
-			path: "https://preview.redd.it/digital-art-1920x1080-v0-3v02j6si59va1.jpg?auto=webp&s=a18397832a446ca2f35ef6b05b225f0513b0936a",
-		},
-		{
-			title: "Project C",
-			genre: "Video",
-			desc: "Project Mothership ist als kooperatives Rogue-like mit Souls-inspiriertem Kampfsystem in einer top-down 2.5D perspective gedacht. Das Spiel wird von Studenten der Hochschule der Medien Stuttgart im Modul Game Praktikum entwickelt. Ein Team von 24 Studenten ist beauftragt ein Spiel zu entwickeln, dabei den Entwicklungsprozess eigenständig zu organisieren, und dieses dann an dem MediaNight Event der Hochschule zu demonstrieren.",
-			path: "https://i.redd.it/alv7zok8df851.jpg",
 		},
 	];
 
