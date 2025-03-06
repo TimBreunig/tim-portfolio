@@ -36,11 +36,11 @@ const Footer = () => {
 				</div>
 
 				<div className="w-[50%] xl:h-48 flex flex-col xl:flex-row justify-between items-stretch gap-16">
-					<a href="mailto:breunig.tim@web.de" className="w-full flex flex-col items-center justify-center shadow-solid rounded-lg bg-primary-200 hover:bg-accent-300 transition-colors duration-200">
+					<a href="mailto:breunig.tim@web.de" className="w-full flex flex-col items-center justify-center shadow-solid rounded-lg bg-primary-300 hover:bg-accent-300 transition-colors duration-200">
 						<FontAwesomeIcon icon={faEnvelope} className="w-8 text-primary-900" />
 						<span className="mt-3 text-primary-900 font-medium">breunig.tim@web.de</span>
 					</a>
-					<a href="tel:+491625636484" className="w-full flex flex-col items-center justify-center shadow-solid rounded-lg bg-primary-200 hover:bg-accent-300 transition-colors duration-200">
+					<a href="tel:+491625636484" className="w-full flex flex-col items-center justify-center shadow-solid rounded-lg bg-primary-300 hover:bg-accent-300 transition-colors duration-200">
 						<FontAwesomeIcon icon={faPhone} className="w-7 text-primary-900" />
 						<span className="mt-4 text-primary-900 font-medium">+49 162 5636484</span>
 					</a>

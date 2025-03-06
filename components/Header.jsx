@@ -37,7 +37,7 @@ const Header = () => {
 	})
 
 	return (
-		<header className={`fixed w-full py-8 xl:py-12 z-50 transition-all duration-500 ${visible ? 'top-0' : '-top-40'} ${transparent ? 'bg-transparent border-b-0 border-primary-500/0' : 'bg-primary-0/50 py-6 xl:py-9 border-b border-primary-500/40 backdrop-blur-md'} `}>
+		<header className={`fixed w-full py-8 xl:py-12 z-50 transition-all duration-500 ${visible ? 'top-0' : '-top-40'} ${transparent ? 'bg-transparent border-b-0 border-primary-500/0' : 'bg-primary-100/50 py-6 xl:py-9 border-b border-primary-500/40 backdrop-blur-md'} `}>
 			<div className={`container flex justify-between items-center text-primary-600 `}>
 				<Link href="/">
 					<h1 className="text-4xl font-semibold text-primary-900">

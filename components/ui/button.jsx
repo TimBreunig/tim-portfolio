@@ -10,9 +10,9 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default: "bg-gradient-to-br from-accent-600 to-accent-400 text-primary-200 hover:text-primary-900",
-        light: "bg-gradient-to-br from-accent-600 to-accent-400 text-primary-900 hover:text-primary-200",
-        primary: "bg-primary-100 text-accent-900",
-        outline: "border border-primary-700/40 bg-primary-700/10 text-primary-900 hover:bg-primary-900 hover:border-primary-900 hover:text-primary-200",
+        light: "bg-gradient-to-br from-accent-600 to-accent-400 text-primary-900 hover:text-primary-300",
+        primary: "bg-primary-200 text-accent-900",
+        outline: "border border-primary-700/40 bg-primary-700/10 text-primary-900 hover:bg-primary-900 hover:border-primary-900 hover:text-primary-300",
       },
       size: {
         default: "px-8 py-4",

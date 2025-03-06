@@ -75,7 +75,7 @@ const Carousel = () => {
 					);
 				})}
 			</div>
-			<div className="absolute w-full h-full top-0 bg-gradient-to-b from-primary-200/20 via-primary-200 via-40% to-primary-0 -z-10" />
+			<div className="absolute w-full h-full top-0 bg-gradient-to-b from-primary-300/20 via-primary-300 via-40% to-primary-100 -z-10" />
 
 			<div className="absolute w-full h-full top-0 px-8 flex justify-between items-center z-10">
 				<button onClick={previousSlide}>

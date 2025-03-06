@@ -1,7 +1,9 @@
+"use client";
 import Link from "next/Link";
 import { Button } from "@/components/ui/button";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faDownload } from '@fortawesome/free-solid-svg-icons'
+import Typewriter from 'typewriter-effect';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDownload } from '@fortawesome/free-solid-svg-icons';
 
 import Carousel from "@/components/Carousel";
 import CardGrid from "@/components/CardGrid";
@@ -12,7 +14,22 @@ const Home = () => {
 		<div className="mx-auto h-screen xl:pb-24 bg-radial-gradient">
 			<div className="container h-screen flex flex-col xl:flex-row items-center justify-between">
 				<div className="mt-12 text-center xl:text-left text-primary-800">
-					<span className="font-secondary tracking-wider inline-block text-xl mb-3 text-primary-700">UI DESIGN & FRONTEND DEVELOPMENT</span>
+					<span className="font-secondary tracking-wider inline-block text-xl mb-3 text-primary-700 uppercase">
+						<Typewriter
+							options={{
+								strings: [
+									"User Interface Design",
+									"Frontend Web Development",
+									"Game Design & Development",
+								],
+								autoStart: true,
+								loop: true,
+								delay: 50,
+								deleteSpeed: 40,
+								pauseFor: 2400,
+							}}
+						/>
+					</span>
 					<h1 className="h1 font-light text-primary-900">
 						Hi there! I'm <br /><span className="text-[56px] xl:text-[92px] font-black bg-gradient-to-br from-accent-700 to-accent-300 inline-block text-transparent bg-clip-text">Tim Breunig</span>
 					</h1>
@@ -34,7 +51,7 @@ const Home = () => {
 			</div>
 		</div>
 
-		<div className="mx-auto h-screen xl:pb-24 bg-primary-0 text-primary-800">
+		<div className="mx-auto h-screen xl:pb-24 bg-primary-100 text-primary-800">
 			<div className="container h-screen flex flex-col xl:flex-row items-center justify-between">
 				<div className="mt-12 text-center xl:text-left">
 					<h2 className="h2 bg-gradient-to-br from-accent-700 to-accent-300 inline-block text-transparent bg-clip-text">
@@ -55,7 +72,7 @@ const Home = () => {
 			</div>
 		</div>
 
-		<div className="mx-auto h-auto xl:py-24 bg-primary-0 text-primary-800">
+		<div className="mx-auto h-auto xl:py-24 bg-primary-100 text-primary-800">
 			<div className="container flex flex-col items-center justify-center">
 				<h2 className="h2 mb-14 bg-gradient-to-br from-accent-700 to-accent-300 inline-block text-transparent bg-clip-text">Recent Work</h2>
     			<CardGrid />
