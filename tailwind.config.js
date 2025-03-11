@@ -55,7 +55,9 @@ module.exports = {
         '2': '0 0 32%'
       },
       backgroundImage: {
-        "radial-gradient": "radial-gradient(ellipse at 95% 0, #2F2F3B, #141417 70%)",
+        "radial-gradient": "radial-gradient(ellipse at 95% 0, #2F2F3B 0%, #141417 70%)",
+        "pink-gradient": "linear-gradient(90deg, #F4C4F3 0%, #FC67FA 100%)",
+        "blue-gradient": "linear-gradient(90deg, #BAE2FF 0%, #57B8FF 100%)",
       },
       boxShadow: {
         "solid": "16px 16px rgba(28, 28, 34, 1.0)",

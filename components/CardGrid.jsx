@@ -2,6 +2,7 @@
 
 import React from "react";
 
+import Link from "next/Link";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircle, faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
@@ -16,6 +17,7 @@ const CardGrid = () => {
 			place: "Independent",
 			date: "2024",
 			path: "/images/IntroCutscene2_LowRes.gif",
+			link: "/wandering-knight",
 		},
 		{
 			title: "Project Mothership",
@@ -24,6 +26,7 @@ const CardGrid = () => {
 			place: "Stuttgart Media University",
 			date: "2024",
 			path: "/images/ProjectMothershipTeaser.png",
+			link: "/project-mothership",
 		},
 		{
 			title: "Expiravoid",
@@ -32,6 +35,7 @@ const CardGrid = () => {
 			place: "Stuttgart Media University",
 			date: "2024",
 			path: "/images/ExpiravoidTeaser.png",
+			link: "/project-mothership",
 		},
 		{
 			title: "Movie Night",
@@ -40,6 +44,7 @@ const CardGrid = () => {
 			place: "Stuttgart Media University",
 			date: "2024",
 			path: "/images/MovieNightTeaser.png",
+			link: "/project-mothership",
 		},
 		{
 			title: "Chromania",
@@ -48,16 +53,18 @@ const CardGrid = () => {
 			place: "Stuttgart Media University",
 			date: "2023",
 			path: "/images/ChromaniaTeaser.png",
+			link: "/chromania",
 		},
 	];
 
 	return (
 		
 		
-		<div class="flex flex-wrap flex-col xl:flex-row items-center gap-[2%]">
+		<div className="flex flex-wrap flex-col xl:flex-row items-center gap-[2%]">
 			{cards.map((card, index) => {
 					return (
-						<div key={index}
+						<Link key={index}
+							href={card.link}
 							className="group flex-2 box-border w-[32%] p-4 mb-7 rounded-xl border border-transparent bg-primary-200 hover:bg-primary-100 hover:border hover:border-primary-500/40 hover:cursor-pointer transition-colors duration-300">
         					<div className="rounded-lg h-64 overflow-hidden">
           						<img alt="content" className="object-cover object-center h-full w-full" src={card.path} />
@@ -74,7 +81,7 @@ const CardGrid = () => {
 								   {card.date}
        							</p>
 							</div>
-      					</div>
+      					</Link>
 					);
 				})}
     	</div>

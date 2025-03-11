@@ -2,12 +2,12 @@ import { Button } from "./ui/button";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedinIn, faInstagram, faPinterestP, faGithub } from '@fortawesome/free-brands-svg-icons'
-import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons'
+import { faPaperPlane } from '@fortawesome/free-solid-svg-icons'
 
 const Footer = () => {
 	return (
 		<div className="bg-primary-0 w-full py-8 xl:py-12 text-primary-700">
-			<div className="container mx-auto my-12 flex flex-col xl:flex-row justify-between items-center gap-16">
+			<div className="container mx-auto my-12 flex flex-col xl:flex-row justify-between items-start gap-16">
 				<div className="xl:w-[50%]">
 					<h2 className="h2 text-primary-900">Get in touch!</h2>
 					<p>Interested in my work? Learn more about my profession and reach out to me via my socials or send me an email.</p>
@@ -34,18 +34,22 @@ const Footer = () => {
 						</a>
 					</span>
 				</div>
-
-				<div className="w-[50%] xl:h-48 flex flex-col xl:flex-row justify-between items-stretch gap-16">
-					<a href="mailto:breunig.tim@web.de" className="w-full flex flex-col items-center justify-center shadow-solid rounded-lg bg-primary-300 hover:bg-accent-300 transition-colors duration-200">
-						<FontAwesomeIcon icon={faEnvelope} className="w-8 text-primary-900" />
-						<span className="mt-3 text-primary-900 font-medium">breunig.tim@web.de</span>
-					</a>
-					<a href="tel:+491625636484" className="w-full flex flex-col items-center justify-center shadow-solid rounded-lg bg-primary-300 hover:bg-accent-300 transition-colors duration-200">
-						<FontAwesomeIcon icon={faPhone} className="w-7 text-primary-900" />
-						<span className="mt-4 text-primary-900 font-medium">+49 162 5636484</span>
-					</a>
+				<div className="xl:w-[50%]">
+					<h2 className="h2 text-primary-900">&nbsp;</h2>
+					<form action="#" method="POST" className="relative">
+						<textarea
+                			id="message"
+                			name="message"
+							placeholder="Enter your message..."
+                			rows={4}
+                			className="h-36 block w-full rounded-md bg-primary-200 px-6 py-4 -mt-4 text-base font-light text-primary-700 box-border border border-primary-200 placeholder:text-primary-500 focus:outline-0 focus:border focus:border-primary-500 resize-none"
+                			defaultValue={''}
+              			/>
+						<button type="submit" className="absolute block right-6 bottom-4 w-10 h-10 p-2 rounded-lg group">
+							<FontAwesomeIcon icon={faPaperPlane} className="w-6 h-6 text-primary-500 group-hover:text-accent-500 transition-colors duration-300" />
+						</button>
+					</form>
 				</div>
-				
 			</div>
 		</div>
 	);
