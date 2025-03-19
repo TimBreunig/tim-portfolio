@@ -42,7 +42,7 @@ const Footer = () => {
                 			name="message"
 							placeholder="Enter your message..."
                 			rows={4}
-                			className="h-36 block w-full rounded-md bg-primary-200 px-6 py-4 -mt-4 text-base font-light text-primary-700 box-border border border-primary-200 placeholder:text-primary-500 focus:outline-0 focus:border focus:border-primary-500 resize-none"
+                			className="h-36 block w-full rounded-md bg-primary-200 px-6 py-4 -mt-4 text-base font-base text-primary-700 box-border border border-primary-200 placeholder:text-primary-500 focus:outline-0 focus:border focus:border-primary-600 resize-none"
                 			defaultValue={''}
               			/>
 						<button type="submit" className="absolute block right-6 bottom-4 w-10 h-10 p-2 rounded-lg group">

@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 const ProjectMothership = () => {
     return (
         <section className="h-full">
-            <div className="mx-auto h-screen xl:pb-24 bg-radial-gradient text-primary-900">
+            <div className="mx-auto xl:pb-24 bg-radial-gradient text-primary-900">
                 <div className="container h-screen flex flex-col xl:flex-row items-center justify-between gap-12">
 				    <div className="relative w-[39%] mt-12 text-center xl:text-left text-primary-800 z-20">
                         <div className="absolute top-0 -left-[20%] w-[120%] h-[120%] bg-black-gradient blur-[150px] -z-10"></div>
@@ -61,9 +61,9 @@ const ProjectMothership = () => {
 					    </p>
                         */}
                         <p className="mb-7">
-                            Finding a fitting camera concept for <span className="italic">Project Mothership</span> was quite a challenging task. Together with the Game Design
-                            Department, we came up with a top-down system that dynamically changes the camera's height between a minimum and maximum value, depending on the
-                            distance between the players. This way, we ensure a smooth appearence throughout various different scenarios.
+                            Finding a fitting camera concept for <span className="italic">Project Mothership</span> was quite a challenging task. In the end, we came up with a
+                            top-down system that dynamically changes the camera's height between a minimum and maximum value, depending on the distance between the players.
+                            This way, we ensure a smooth appearence throughout various different scenarios.
 					    </p>
                         <p className="mb-7">
                             Additionally, instead of using the players as reference objects, we committed to the oxygen tank as focus for the camera. When it is not picked up
@@ -77,7 +77,7 @@ const ProjectMothership = () => {
                 <div className="container flex flex-col xl:flex-row items-top justify-between gap-12">
                     <div className="relative w-[59%] mt-12 text-center xl:text-left text-primary-800 z-10">
                         <p className="font-secondary tracking-wider inline-block text-lg mb-3 text-primary-700 uppercase">
-                            Removing visibility blockers
+                            Maintaining visibility
 					    </p>
                         <h2 className="h2 text-primary-900">
 						    Raycasting
@@ -91,7 +91,7 @@ const ProjectMothership = () => {
                         */}
                         <p className="mb-7">
                             To ensure no large objects are blocking the view, rays are casted from the camera's position to both players' and the oxygen tank's positions.
-                            In case one of them hits a target that features a mesh, it is added to an array that contains all objects which are currently in the camera's fov.
+                            In case a target with a mesh is hit, it is added to an array that contains all objects which are currently in the camera's fov.
                             Each of those objects' opacity is then lerped smoothly over a fraction of a second so it appears visible but transparent.
 					    </p>
                         <p className="mb-7">
@@ -142,14 +142,14 @@ const ProjectMothership = () => {
 					    </p>
                         */}
                         <p className="mb-7">
-                            Finding a fitting camera concept for <span className="italic">Project Mothership</span> was quite a challenging task. Together with the Game Design
-                            Department, we came up with a top-down system that dynamically changes the camera's height between a minimum and maximum value, depending on the
-                            distance between the players. This way, we ensure a smooth appearence throughout various different scenarios.
+                            Since <span className="italic">Project Mothership</span> features strongly stylized high-quality graphics, it was essential to implement fitting
+                            visual effects. Many of them were created with shaders in Godot's own language, which is similar to GLSL. This includes various effects in combat
+                            during charging and attacking but also damage indication for players and enemies.
 					    </p>
                         <p className="mb-7">
-                            Additionally, instead of using the players as reference objects, we committed to the oxygen tank as focus for the camera. When it is not picked up
-                            and thus stationary, the camera stays in place, keeping both players equally in view. However, once the tank is picked up, the focus shifts to the
-                            player that carries it, stressing its importance and providing additional visual feedback for the players.
+                            Apart from that, we also made use of Godot's built-in 3D particle system for more complex physical effects. For example, we simulated clods of soil
+                            flying into the air that are synchronized with the digging animation of the armadillos as well as dust being swirled up when the giant drill is activated,
+                            reinforcing a sense of immersion for players.
                         </p>
                     </div>
 				</div>

@@ -4,17 +4,17 @@ import { Button } from "@/components/ui/button";
 const WanderingKnight = () => {
     return (
         <section className="h-full">
-            <div className="mx-auto h-screen xl:pb-24 bg-radial-gradient text-primary-900">
+            <div className="mx-auto xl:pb-24 bg-radial-gradient text-primary-900">
                 <div className="container h-screen flex flex-col xl:flex-row items-center justify-between gap-[2%]">
 				    <div className="w-[39%] mt-12 text-center xl:text-left text-primary-800">
 					    <h1 className="h1 text-primary-900">
-						    The Wandering Knight
+						    The Wander&shy;ing Knight
 					    </h1>
                         <p className="text-base xl:max-w-[600px] mb-4 text-primary-700">
                             Game | Independent | 2024
 					    </p>
                         <p className="text-lg xl:max-w-[600px] mb-7">
-                            The Wandering Knight is a game.
+                            <span className="italic">The Wandering Knight</span> is a game.
 					    </p>
                         <Link href="" target="_blank">
 							<Button>
@@ -22,12 +22,13 @@ const WanderingKnight = () => {
 							</Button>
 						</Link>
                     </div>
-                    <div className="w-[59%] mt-12 text-center xl:text-left text-primary-800">
+                    <div className="relative w-[59%] mt-12 text-center xl:text-left text-primary-800 z-10">
                         <img
                             alt="The Wandering Knight Teaser Image"
                             src="/images/IntroCutscene2_LowRes.gif"
-                            className="rounded-xl aspect-video object-cover"
+                            className="aspect-[15.2/9] rounded-xl object-cover pointer-events-none"
                         />
+                        <div className="absolute -top-[7%] right-[25%] w-[85%] h-[105%] bg-blue-gradient blur-[150px] opacity-60 -z-10"></div>
                     </div>
 				</div>
             </div>

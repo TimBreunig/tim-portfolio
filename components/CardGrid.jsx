@@ -17,7 +17,7 @@ const CardGrid = () => {
 			place: "Independent",
 			date: "2024",
 			path: "/images/IntroCutscene2_LowRes.gif",
-			link: "/wandering-knight",
+			link: "/work/wandering-knight",
 		},
 		{
 			title: "Project Mothership",
@@ -26,7 +26,7 @@ const CardGrid = () => {
 			place: "Stuttgart Media University",
 			date: "2024",
 			path: "/images/ProjectMothershipTeaser.png",
-			link: "/project-mothership",
+			link: "/work/project-mothership",
 		},
 		{
 			title: "Expiravoid",
@@ -35,7 +35,7 @@ const CardGrid = () => {
 			place: "Stuttgart Media University",
 			date: "2024",
 			path: "/images/ExpiravoidTeaser.png",
-			link: "/project-mothership",
+			link: "/work/project-mothership",
 		},
 		{
 			title: "Movie Night",
@@ -44,7 +44,7 @@ const CardGrid = () => {
 			place: "Stuttgart Media University",
 			date: "2024",
 			path: "/images/MovieNightTeaser.png",
-			link: "/project-mothership",
+			link: "/work/project-mothership",
 		},
 		{
 			title: "Chromania",
@@ -53,7 +53,7 @@ const CardGrid = () => {
 			place: "Stuttgart Media University",
 			date: "2023",
 			path: "/images/ChromaniaTeaser.png",
-			link: "/chromania",
+			link: "/work/chromania",
 		},
 	];
 
@@ -67,12 +67,12 @@ const CardGrid = () => {
 							href={card.link}
 							className="group flex-2 box-border w-[32%] p-4 mb-7 rounded-xl border border-transparent bg-primary-200 hover:bg-primary-100 hover:border hover:border-primary-500/40 hover:cursor-pointer transition-colors duration-300">
         					<div className="rounded-lg h-64 overflow-hidden">
-          						<img alt="content" className="object-cover object-center h-full w-full" src={card.path} />
+          						<img alt="content" className="object-cover object-center h-full w-full group-hover:scale-105 transition-transform duration-300" src={card.path} />
        						</div>
        						<div className="relative px-6 py-6 mt-3 rounded-lg bg-primary-300 group-hover:bg-primary-200 overflow-hidden transition-colors duration-300">
 								<h2 className="h3 font-bold text-accent-900">{card.title}</h2>
 								<FontAwesomeIcon icon={faArrowRight} className="absolute w-5 h-5 p-1 top-6 right-5 text-accent-900 group-hover:-rotate-45 transition-transform duration-300"/>
-       							<p className="text-sm leading-relaxed mt-2">
+       							<p className="text-sm text-primary-800 leading-relaxed mt-2">
 								   {card.genre} &#8211; {card.role}
 								</p>
        							<p className="text-xs text-primary-700 inline-flex items-center mt-8">

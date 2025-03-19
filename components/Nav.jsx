@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 const links = [
 	{
 		name: "home",
-		path: "/",
+		path: "/home",
 	},
 	{
 		name: "services",
@@ -33,7 +33,7 @@ const Nav = () => {
 						href={link.path}
 						key={index}
 						className={`${
-							link.path === pathname && "text-primary-800"
+							pathname.includes(link.path) && "text-primary-800"
 						} font-medium text-primary-700 hover:text-accent-500 uppercase tracking-widest transition-all duration-300`}
 					>
 						{link.name}
