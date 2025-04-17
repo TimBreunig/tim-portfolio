@@ -57,9 +57,7 @@ const CardGrid = () => {
 		},
 	];
 
-	return (
-		
-		
+	return (		
 		<div className="flex flex-wrap flex-col xl:flex-row items-center gap-[2%]">
 			{cards.map((card, index) => {
 					return (
@@ -70,7 +68,7 @@ const CardGrid = () => {
           						<img alt="content" className="object-cover object-center h-full w-full group-hover:scale-105 transition-transform duration-300" src={card.path} />
        						</div>
        						<div className="relative px-6 py-6 mt-3 rounded-lg bg-primary-300 group-hover:bg-primary-200 overflow-hidden transition-colors duration-300">
-								<h2 className="h3 font-bold text-accent-900">{card.title}</h2>
+								<h3 className="h3 font-bold text-accent-900">{card.title}</h3>
 								<FontAwesomeIcon icon={faArrowRight} className="absolute w-5 h-5 p-1 top-6 right-5 text-accent-900 group-hover:-rotate-45 transition-transform duration-300"/>
        							<p className="text-sm text-primary-800 leading-relaxed mt-2">
 								   {card.genre} &#8211; {card.role}

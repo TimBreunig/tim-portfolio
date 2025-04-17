@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import Typewriter from 'typewriter-effect';
 
 import Carousel from "@/components/Carousel";
+import TabGrid from "@/components/TabGrid";
 import CardGrid from "@/components/CardGrid";
 
 const Home = () => {
@@ -80,8 +81,14 @@ const Home = () => {
 			</div>
         </div>
 		<div className="mx-auto h-auto xl:py-24 bg-primary-100">
-			<div className="container flex flex-col items-center justify-center">
-				<h2 className="h2 text-primary-900 mb-14">Recent Work</h2>
+			<div className="container">
+				<h2 className="h2 mb-14 text-primary-900 text-center">Services</h2>
+    			<TabGrid />
+			</div>
+		</div>
+		<div className="mx-auto h-auto xl:py-24 bg-primary-100">
+			<div className="container">
+				<h2 className="h2 mb-14 text-primary-900 text-center">Recent Work</h2>
     			<CardGrid />
 			</div>
 		</div>
