@@ -7,6 +7,14 @@ import Carousel from "@/components/Carousel";
 import TabGrid from "@/components/TabGrid";
 import CardGrid from "@/components/CardGrid";
 
+
+const smoothScroll = (e) => {
+	e.preventDefault();
+	const section = document.querySelector('#about');
+	section?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+
 const Home = () => {
   return (
 	<section className="h-full">
@@ -37,9 +45,9 @@ const Home = () => {
 						from designing and building websites to developing video games.
 					</p>
 					<div>
-						<Link href="/resume">
+						<Link href="#about" onClick={smoothScroll}>
 							<Button>
-								<span>Open Resume</span>
+								<span>About me</span>
 							</Button>
 						</Link>
 					</div>
@@ -49,7 +57,9 @@ const Home = () => {
 				</div>
 			</div>
 		</div>
-		<div className="mx-auto xl:pb-24 bg-primary-100 text-primary-800">
+		<div
+			id="about"
+			className="mx-auto xl:pb-24 bg-primary-100 text-primary-800">
             <div className="container h-screen flex flex-col xl:flex-row items-center justify-between gap-12">
 				<div className="relative w-[39%] mt-12 text-center xl:text-left text-primary-800 z-20">
                     <div className="absolute top-[28%] left-[15%] w-[55%] h-[35%] bg-blue-gradient blur-[150px] opacity-60 -z-10"></div>
@@ -73,20 +83,24 @@ const Home = () => {
 					<div>
 						<Link href="/resume">
 							<Button>
-								<span>Open Resume</span>
+								<span>Download CV</span>
 							</Button>
 						</Link>
 					</div>
                 </div>
 			</div>
         </div>
-		<div className="mx-auto h-auto xl:py-24 bg-primary-100">
+		<div 
+			id ="services"
+			className="mx-auto h-auto xl:py-24 bg-primary-100">
 			<div className="container">
 				<h2 className="h2 mb-14 text-primary-900 text-center">Services</h2>
     			<TabGrid />
 			</div>
 		</div>
-		<div className="mx-auto h-auto xl:py-24 bg-primary-100">
+		<div
+			id ="work"
+			className="mx-auto h-auto xl:py-24 bg-primary-100">
 			<div className="container">
 				<h2 className="h2 mb-14 text-primary-900 text-center">Recent Work</h2>
     			<CardGrid />
