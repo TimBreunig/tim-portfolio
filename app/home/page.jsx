@@ -52,8 +52,11 @@ const Home = () => {
 						</Link>
 					</div>
 				</div>
-				<div className="xl:max-w-[50%] xl:self-end"><img className="h-[360px] pt-8 xl:h-[850px] xl:bottom-0 object-cover mix-blend-darken"
-							src="https://www.firstmedica.de/fileadmin/_processed_/e/6/csm_vampir-lifting-ergebnis_e538809ee0.jpg" />
+				<div className="xl:max-w-[50%] xl:self-end">
+					<img
+						className="h-[360px] pt-8 xl:h-[850px] xl:bottom-0 object-cover mix-blend-darken"
+						src="https://www.firstmedica.de/fileadmin/_processed_/e/6/csm_vampir-lifting-ergebnis_e538809ee0.jpg"
+					/>
 				</div>
 			</div>
 		</div>
@@ -61,16 +64,20 @@ const Home = () => {
 			id="about"
 			className="mx-auto xl:pb-24 bg-primary-100 text-primary-800">
             <div className="container h-screen flex flex-col xl:flex-row items-center justify-between gap-12">
-				<div className="relative w-[39%] mt-12 text-center xl:text-left text-primary-800 z-20">
-                    <div className="absolute top-[28%] left-[15%] w-[55%] h-[35%] bg-blue-gradient blur-[150px] opacity-60 -z-10"></div>
+				<div className="relative w-[40%] h-full mt-12 text-center xl:text-left text-primary-800 z-20">
+					<img
+						className="absolute w-full h-[80%] top-[7%] object-cover"
+						src="/images/portrait.png"
+					/>
+                    <div className="absolute top-[28%] left-[33%] w-[27%] h-[36%] bg-blue-gradient blur-[150px] opacity-60 -z-10"></div>
                 </div>
-                <div className="relative w-[59%] mt-12 text-center xl:text-left text-primary-800 z-10">
+                <div className="relative w-[58%] mt-12 text-center xl:text-left text-primary-800 z-10">
                     <h2 className="h2 text-primary-900">
 						About Me
 					</h2>
                     <p className="mb-7">
-						I'm Tim Breunig, a multidisciplinary designer and developer from Pforzheim, Germany.
-						I love to develop concepts and create implementations for a variety of digital experiences, laying the focus on websites and video games.
+						I'm Tim Breunig, a multidisciplinary designer and developer from Germany.
+						I love to develop concepts and create implementations for a variety of digital experiences, focusing on websites and video games.
 					</p>
 					<p className="mb-7">
 						Starting in 2021, I studied Computer Science and Media at Stuttgart Media University until I graduated in 2025 with the Bachelor of Science.

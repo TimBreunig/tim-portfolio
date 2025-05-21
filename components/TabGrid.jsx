@@ -43,7 +43,7 @@ const TabGrid = () => {
 					return (
 						<div key={index}
 							className="flex-2 items-center box-border w-[32%]">
-							<div className="hex-icon-wrapper mx-auto flex items-center justify-center w-24 h-24 bg-gradient-to-br from-accent-600 to-accent-400">
+							<div className="hex-icon-wrapper mx-auto flex items-center justify-center w-24 h-24 bg-gradient-to-br from-accent-600 to-accent-400 shadow-2xl/60">
                                 <FontAwesomeIcon icon={tab.icon} className="w-10 h-10 text-primary-900" />
                             </div>
        						<div className="h-72 -mt-12 mb-7 rounded-xl bg-primary-200 shadow-2xl/75">

@@ -47,7 +47,7 @@ const ProjectMothership = () => {
                         <div className="absolute top-[28%] left-[15%] w-[55%] h-[35%] bg-blue-gradient blur-[150px] opacity-60 -z-10"></div>
                     </div>
                     <div className="relative w-[59%] mt-12 text-center xl:text-left text-primary-800 z-10">
-                        <p className="font-secondary tracking-wider inline-block text-lg mb-3 text-primary-700 uppercase">
+                        <p className="font-secondary tracking-widest inline-block text-lg mb-3 text-primary-700 uppercase">
                             Providing a clear vision
 					    </p>
                         <h2 className="h2 text-primary-900">
@@ -76,7 +76,7 @@ const ProjectMothership = () => {
             <div className="mx-auto xl:pb-24 bg-primary-100 text-primary-800">
                 <div className="container flex flex-col xl:flex-row items-top justify-between gap-12">
                     <div className="relative w-[59%] mt-12 text-center xl:text-left text-primary-800 z-10">
-                        <p className="font-secondary tracking-wider inline-block text-lg mb-3 text-primary-700 uppercase">
+                        <p className="font-secondary tracking-widest inline-block text-lg mb-3 text-primary-700 uppercase">
                             Maintaining visibility
 					    </p>
                         <h2 className="h2 text-primary-900">
@@ -128,7 +128,7 @@ const ProjectMothership = () => {
                         <div className="absolute top-[28%] left-[15%] w-[55%] h-[35%] bg-blue-gradient blur-[150px] opacity-60 -z-10"></div>
                     </div>
                     <div className="relative w-[59%] mt-12 text-center xl:text-left text-primary-800 z-10">
-                        <p className="font-secondary tracking-wider inline-block text-lg mb-3 text-primary-700 uppercase">
+                        <p className="font-secondary tracking-widest inline-block text-lg mb-3 text-primary-700 uppercase">
                             It's all in the details
 					    </p>
                         <h2 className="h2 text-primary-900">

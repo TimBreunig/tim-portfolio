@@ -10,15 +10,15 @@ const links = [
 	},
 	{
 		name: "about",
-		path: "#about",
+		path: "/home#about",
 	},
 	{
 		name: "services",
-		path: "#services",
+		path: "/home#services",
 	},
 	{
 		name: "work",
-		path: "#work",
+		path: "/home#work",
 	},
 ];
 
