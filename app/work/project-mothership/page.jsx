@@ -109,7 +109,7 @@ const ProjectMothership = () => {
                         />
                         */}
                         <img
-                            alt="Project Mothership Trailer"
+                            alt="Project Mothership Raycasting"
                             src="/images/ProjectMothershipRaycasting2.png"
                             className="absolute top-12 left-0 rounded-lg aspect-video object-cover"
                         />

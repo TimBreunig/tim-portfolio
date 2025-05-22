@@ -18,8 +18,8 @@ const smoothScroll = (e) => {
 const Home = () => {
   return (
 	<section className="h-full">
-		<div className="mx-auto xl:pb-24 bg-radial-gradient">
-			<div className="container h-screen flex flex-col xl:flex-row items-center justify-between">
+		<div className="mx-auto bg-radial-gradient">
+			<div className="container pt-20 xl:pt-0 xl:h-screen flex flex-col xl:flex-row items-center justify-between">
 				<div className="mt-12 text-center xl:text-left text-primary-800">
 					<span className="font-secondary tracking-wider inline-block text-xl mb-3 text-primary-700 uppercase">
 						<Typewriter
@@ -54,24 +54,26 @@ const Home = () => {
 				</div>
 				<div className="xl:max-w-[50%] xl:self-end">
 					<img
-						className="h-[360px] pt-8 xl:h-[850px] xl:bottom-0 object-cover mix-blend-darken"
-						src="https://www.firstmedica.de/fileadmin/_processed_/e/6/csm_vampir-lifting-ergebnis_e538809ee0.jpg"
+						className="sm:max-w-md xl:max-w-full xl:h-[90vh] xl:bottom-0 object-contain xl:object-cover scale-x-[-1] mx-auto"
+						src="/images/portrait.png"
+						alt="Portrait of Tim Breunig"
 					/>
 				</div>
 			</div>
 		</div>
 		<div
 			id="about"
-			className="mx-auto xl:pb-24 bg-primary-100 text-primary-800">
-            <div className="container h-screen flex flex-col xl:flex-row items-center justify-between gap-12">
-				<div className="relative w-[40%] h-full mt-12 text-center xl:text-left text-primary-800 z-20">
+			className="mx-auto pt-8 xl:pt-0 bg-primary-200 text-primary-800">
+            <div className="container xl:h-[85vh] flex flex-col-reverse xl:flex-row items-center justify-between gap-12">
+				<div className="relative xl:w-[40%] h-full text-center xl:text-left text-primary-800 z-20">
 					<img
-						className="absolute w-full h-[80%] top-[7%] object-cover"
+						className="xl:absolute w-full h-full bottom-0 object-cover"
 						src="/images/portrait.png"
+						alt="Portrait of Tim Breunig"
 					/>
                     <div className="absolute top-[28%] left-[33%] w-[27%] h-[36%] bg-blue-gradient blur-[150px] opacity-60 -z-10"></div>
                 </div>
-                <div className="relative w-[58%] mt-12 text-center xl:text-left text-primary-800 z-10">
+                <div className="relative xl:w-[58%] mt-12 text-center xl:text-left text-primary-800 z-10">
                     <h2 className="h2 text-primary-900">
 						About Me
 					</h2>
@@ -99,7 +101,7 @@ const Home = () => {
         </div>
 		<div 
 			id ="services"
-			className="mx-auto h-auto xl:py-24 bg-primary-100">
+			className="mx-auto h-auto py-24 bg-primary-100">
 			<div className="container">
 				<h2 className="h2 mb-14 text-primary-900 text-center">Services</h2>
     			<TabGrid />
@@ -107,7 +109,7 @@ const Home = () => {
 		</div>
 		<div
 			id ="work"
-			className="mx-auto h-auto xl:py-24 bg-primary-100">
+			className="mx-auto h-auto py-24 bg-primary-100">
 			<div className="container">
 				<h2 className="h2 mb-14 text-primary-900 text-center">Recent Work</h2>
     			<CardGrid />

@@ -58,12 +58,12 @@ const CardGrid = () => {
 	];
 
 	return (		
-		<div className="flex flex-wrap flex-col xl:flex-row items-center gap-[2%]">
+		<div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-[2%]">
 			{cards.map((card, index) => {
 					return (
 						<Link key={index}
 							href={card.link}
-							className="group flex-2 box-border w-[32%] p-4 mb-7 rounded-xl border border-transparent bg-primary-200 hover:bg-primary-100 hover:border hover:border-primary-500/40 hover:cursor-pointer transition-colors duration-300">
+							className="group flex-2 box-border w-full p-4 mb-0 xl:mb-7 rounded-xl border border-transparent bg-primary-200 hover:bg-primary-100 hover:border hover:border-primary-500/40 hover:cursor-pointer transition-colors duration-300">
         					<div className="rounded-lg h-64 overflow-hidden">
           						<img alt="content" className="object-cover object-center h-full w-full group-hover:scale-105 transition-transform duration-300" src={card.path} />
        						</div>
