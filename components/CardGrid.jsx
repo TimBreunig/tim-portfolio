@@ -44,7 +44,7 @@ const CardGrid = () => {
 			place: "Stuttgart Media University",
 			date: "2024",
 			path: "/images/MovieNightTeaser.png",
-			link: "/work/project-mothership",
+			link: "/work/movie-night",
 		},
 		{
 			title: "Chromania",
