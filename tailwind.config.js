@@ -55,7 +55,7 @@ module.exports = {
         '2': '0 0 32%'
       },
       backgroundImage: {
-        "radial-gradient": "radial-gradient(ellipse at 95% 0, #2F2F3B 0%, #1C1C22 50%, #141417 70%)",
+        "radial-gradient": "radial-gradient(ellipse at 0 0, #1C1C22 0%, #141417 85%)",
         "black-gradient": "radial-gradient(#0F0F12 70%, #141417 100%)",
         "blue-gradient": "radial-gradient(ellipse at 25% 95%, #24A7FF 0%, #D936CB 100%)",
       },

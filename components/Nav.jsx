@@ -33,8 +33,8 @@ const Nav = () => {
 						href={link.path}
 						key={index}
 						className={`${
-							pathname.includes(link.path) && "text-primary-800"
-						} font-medium text-primary-700 hover:text-accent-500 uppercase tracking-widest transition-all duration-300`}
+							pathname.includes(link.path) && "text-primary-900"
+						} font-semibold text-primary-900 hover:text-accent-500 capitalize tracking-wider transition-all duration-300`}
 					>
 						{link.name}
 					</Link>

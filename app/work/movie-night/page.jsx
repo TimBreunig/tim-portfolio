@@ -6,7 +6,7 @@ const ProjectMothership = () => {
         <section className="h-full">
             <div className="mx-auto xl:pb-24 bg-radial-gradient text-primary-900">
                 <div className="container h-screen flex flex-col xl:flex-row items-center justify-between gap-12">
-				    <div className="relative w-[39%] mt-12 text-center xl:text-left text-primary-800 z-20">
+				    <div className="relative w-[39%] mt-8 text-center xl:text-left text-primary-800 z-20">
                         <div className="absolute top-0 -left-[20%] w-[120%] h-[120%] bg-black-gradient blur-[150px] -z-10"></div>
 					    <h1 className="h1 text-primary-900">
 						    Movie Night
@@ -20,14 +20,12 @@ const ProjectMothership = () => {
                             The movie that has the most votes at the set deadline is declared the winner.
 					    </p>
                     </div>
-                    <div className="relative w-[59%] mt-12 text-center xl:text-left text-primary-800 z-10">
-                        <video className="aspect-[15.2/9] rounded-xl object-cover pointer-events-none" autoPlay muted loop>
-                            <source
-                                src="/videos/ProjectMothershipTrailer.mp4"
-                                type="video/mp4"
-                            ></source>
-                            Your browser does not support the video tag.
-                        </video>
+                     <div className="relative w-[59%] mt-6 text-center xl:text-left text-primary-800 z-10">
+                        <img
+                            alt="Movie Night Teaser image"
+                            src="/images/movie_night_teaser.png"
+                            className="aspect-[15.2/9] rounded-xl object-cover pointer-events-none"
+                        />
                         <div className="absolute -top-[7%] right-[25%] w-[85%] h-[105%] bg-blue-gradient blur-[150px] opacity-60 -z-10"></div>
                     </div>
 				</div>

@@ -8,27 +8,16 @@ import { Button } from "./ui/button";
 import Nav from "./Nav";
 
 const Header = () => {
-	const [prevScrollPos, setPrevScrollPos] = useState(0);
-	const [visible, setVisible] = useState(true);
 	const [transparent, setTransparent] = useState(true);
 
   	const handleScroll = () => {
     	const currentScrollPos = window.scrollY
 
-    	if(currentScrollPos > prevScrollPos) {
-        	setVisible(false)
+		if(currentScrollPos > 0) {
+			setTransparent(false)
+		} else {
 			setTransparent(true)
-    	} else {
-        	setVisible(true)
-
-			if(currentScrollPos > 0) {
-				setTransparent(false)
-			} else {
-				setTransparent(true)
-			}
-    	}
-
-    	setPrevScrollPos(currentScrollPos)
+		}
 	};
 
 	useEffect( () => {
@@ -37,7 +26,7 @@ const Header = () => {
 	})
 
 	return (
-		<header className={`fixed w-full py-8 xl:py-12 z-50 transition-all duration-500 ${visible ? 'top-0' : '-top-40'} ${transparent ? 'bg-transparent border-b-0 border-primary-500/0' : 'bg-primary-100/50 py-6 xl:py-9 border-b border-primary-500/40 backdrop-blur-md'} `}>
+		<header className={`fixed w-full py-8 xl:py-12 z-50 transition-all duration-500 ${transparent ? 'bg-transparent border-b-0 border-primary-500/0' : 'bg-primary-100/50 py-6 xl:py-6 border-b border-primary-500/40 backdrop-blur-lg'} `}>
 			<div className={`container flex justify-between items-center text-primary-600 `}>
 				<Link href="/">
 					<h1 className="text-4xl font-semibold text-primary-900">
@@ -46,10 +35,10 @@ const Header = () => {
 				</Link>
 
 				{/* desktop nav & contact button */}
-				<div className="hidden xl:flex items-center gap-11 2xl:gap-15">
+				<div className="hidden xl:flex items-center gap-10 2xl:gap-14">
 					<Nav />
 					<Link href="/contact">
-						<Button variant="outline">
+						<Button>
 							Contact
 						</Button>
 					</Link>

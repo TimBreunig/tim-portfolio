@@ -20,7 +20,7 @@ const Home = () => {
 	<section className="h-full">
 		<div className="mx-auto bg-radial-gradient">
 			<div className="container pt-20 xl:pt-0 xl:h-screen flex flex-col xl:flex-row items-center justify-between">
-				<div className="mt-12 text-center xl:text-left text-primary-800">
+				<div className="mt-8 text-center xl:text-left text-primary-800">
 					<span className="font-secondary tracking-wider inline-block text-xl mb-3 text-primary-700 uppercase">
 						<Typewriter
 							options={{
@@ -44,9 +44,14 @@ const Home = () => {
 						I'm passionate about creating appealing and user-friendly digital experiences in various media formats &ndash;
 						from designing and building websites to developing video games.
 					</p>
-					<div>
+					<div className="flex gap-4">
 						<Link href="#about" onClick={smoothScroll}>
 							<Button>
+								<span>About me</span>
+							</Button>
+						</Link>
+						<Link href="#about" onClick={smoothScroll}>
+							<Button variant="outline">
 								<span>About me</span>
 							</Button>
 						</Link>

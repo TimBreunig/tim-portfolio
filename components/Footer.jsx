@@ -9,7 +9,7 @@ const Footer = () => {
 	return (
 		<div className="bg-primary-0 w-full py-8 xl:py-12 text-primary-700">
 			<div className="container mx-auto">
-				<div className="flex flex-col xl:flex-row justify-between items-start gap-12 xl:gap-16 my-12">
+				<div className="flex flex-col xl:flex-row justify-between items-start gap-12 xl:gap-16 mt-12 mb-16">
 					<div className="xl:w-[50%]">
 						<h2 className="h2 text-primary-900">Get in touch!</h2>
 						<p>Interested in my work? Learn more about my profession and reach out to me via my socials or send me an email.</p>
@@ -53,19 +53,19 @@ const Footer = () => {
 						</form>
 					</div>
 				</div>
-				<div className="flex flex-col xl:flex-row text-center justify-between text-sm gap-1 md:gap-0">
+				<div className="flex flex-col xl:flex-row text-center justify-between text-base gap-1 md:gap-0">
 					<span className="text-primary-600">
 						© 2025 Tim Breunig. All rights reserved.
 					</span>
 					<span>
 						<Link
-							className="mr-3 xl:mr-4 text-primary-700 underline underline-offset-8 decoration-[0.5px] hover:text-accent-500 transition-colors duration-300"
+							className="mr-3 xl:mr-6 text-primary-900 hover:text-primary-700 transition-colors duration-300"
 							href="/imprint"
 						>
 							Imprint
 						</Link>
 						<Link
-							className="text-primary-700 underline underline-offset-8 decoration-[0.5px] hover:text-accent-500 transition-colors duration-300"
+							className="text-primary-900 hover:text-primary-700 transition-colors duration-300"
 							href="/privacy-policy"
 						>
 							Privacy Policy
