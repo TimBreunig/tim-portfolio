@@ -3,9 +3,11 @@ import Link from "next/Link";
 import { Button } from "@/components/ui/button";
 import Typewriter from 'typewriter-effect';
 
-import Carousel from "@/components/Carousel";
 import TabGrid from "@/components/TabGrid";
 import CardGrid from "@/components/CardGrid";
+import TechStack from "@/components/TechStack";
+import HeadingFullPage from "@/components/HeadingFullPage";
+import Carousel from "@/components/Carousel";
 
 
 const smoothScroll = (e) => {
@@ -18,10 +20,43 @@ const smoothScroll = (e) => {
 const Home = () => {
   return (
 	<section className="h-full">
+		<div className="mx-auto bg-primary-900">
+			<div className="relative container-wide pt-20 xl:pt-0 xl:h-screen flex flex-col items-center justify-center">
+				<Carousel />
+				<span className="font-secondary tracking-wider inline-block text-xl mb-1 text-primary-700 uppercase">
+					<Typewriter
+						options={{
+							strings: [
+								"User Interface Design",
+								"Frontend Web Development",
+								"Game Design & Development",
+							],
+							autoStart: true,
+							loop: true,
+							delay: 50,
+							deleteSpeed: 40,
+							pauseFor: 2400,
+						}}
+					/>
+				</span>
+				<p className="h6 text-primary-100">
+					Tim Breunig<span className="text-accent-500">.</span>
+				</p>
+				<h1 className="h1 text-primary-100">
+					Web Developer
+				</h1>
+				<Button
+					className="absolute bottom-6"
+					onClick={smoothScroll}>
+					<span>Scroll down</span>
+				</Button>
+			</div>
+		</div>
+		{/*
 		<div className="mx-auto bg-radial-gradient">
 			<div className="container pt-20 xl:pt-0 xl:h-screen flex flex-col xl:flex-row items-center justify-between">
 				<div className="mt-8 text-center xl:text-left text-primary-800">
-					<span className="font-secondary tracking-wider inline-block text-xl mb-3 text-primary-700 uppercase">
+					<span className="font-secondary tracking-wider inline-block text-xl mb-1 text-primary-700 uppercase">
 						<Typewriter
 							options={{
 								strings: [
@@ -40,7 +75,7 @@ const Home = () => {
 					<h1 className="h1 font-light text-primary-900">
 						Hi there! I'm <br /><span className="text-[56px] xl:text-[92px] font-black bg-gradient-to-br from-accent-700 to-accent-300 inline-block text-transparent bg-clip-text">Tim Breunig</span>
 					</h1>
-					<p className="text-lg xl:max-w-[600px] mb-7">
+					<p className="text-lg xl:max-w-[600px] mb-10">
 						I'm passionate about creating appealing and user-friendly digital experiences in various media formats &ndash;
 						from designing and building websites to developing video games.
 					</p>
@@ -66,6 +101,7 @@ const Home = () => {
 				</div>
 			</div>
 		</div>
+		*/}
 		<div
 			id="about"
 			className="mx-auto pt-8 xl:pt-0 bg-primary-200 text-primary-800">
@@ -104,20 +140,30 @@ const Home = () => {
                 </div>
 			</div>
         </div>
-		<div 
-			id ="services"
-			className="mx-auto h-auto py-24 bg-primary-100">
-			<div className="container">
-				<h2 className="h2 mb-14 text-primary-900 text-center">Services</h2>
-    			<TabGrid />
-			</div>
-		</div>
 		<div
 			id ="work"
-			className="mx-auto h-auto py-24 bg-primary-100">
-			<div className="container">
-				<h2 className="h2 mb-14 text-primary-900 text-center">Recent Work</h2>
+			className="mx-auto h-auto pb-12 pt-36 bg-primary-900">
+			<div className="container-wide">
+				<h2 className="h2 text-left mb-8 text-primary-200">Featured Work</h2>
     			<CardGrid />
+			</div>
+		</div>
+		<div className="h-screen mx-auto box-content pb-60 bg-primary-900">
+			<HeadingFullPage />
+		</div>
+		<div
+			className="relative xl:h-screen mx-auto box-content py-24 xl:py-4 flex items-center bg-primary-100 z-10">
+			<div className="container-wide">
+				<TechStack />
+			</div>
+		</div>
+		<div 
+			id ="services"
+			className="mx-auto xl:h-screen py-24 xl:py-36 bg-primary-900">
+			<div className="container-wide text-right">
+				<span className="mb-4 font-secondary font-medium inline-block text-2xl text-primary-600 uppercase">&#91;What I offer&#93;</span>
+				<h2 className="h2 mb-14 text-primary-200">Services</h2>
+    			<TabGrid />
 			</div>
 		</div>
 	</section>

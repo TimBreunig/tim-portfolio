@@ -26,20 +26,20 @@ const Header = () => {
 	})
 
 	return (
-		<header className={`fixed w-full py-8 xl:py-12 z-50 transition-all duration-500 ${transparent ? 'bg-transparent border-b-0 border-primary-500/0' : 'bg-primary-100/50 py-6 xl:py-6 border-b border-primary-500/40 backdrop-blur-lg'} `}>
-			<div className={`container flex justify-between items-center text-primary-600 `}>
+		<header className={`fixed w-full py-6 z-50 transition-all duration-500 ${transparent ? '' : 'py-4 xl:py-4'} `}>
+			<div className={`container-wide flex justify-between items-center`}>
 				<Link href="/">
-					<h1 className="text-4xl font-semibold text-primary-900">
+					<h1 className="text-4xl font-bold text-primary-100 tracking-[-0.1em]">
 						TB <span className="text-accent-500">.</span>
 					</h1>
 				</Link>
 
 				{/* desktop nav & contact button */}
-				<div className="hidden xl:flex items-center gap-10 2xl:gap-14">
+				<div className="hidden xl:flex items-center gap-10 2xl:gap-10">
 					<Nav />
 					<Link href="/contact">
 						<Button>
-							Contact
+							Get in touch
 						</Button>
 					</Link>
 				</div>

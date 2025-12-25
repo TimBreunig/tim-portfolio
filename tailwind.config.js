@@ -21,7 +21,7 @@ module.exports = {
         "2xl": "1440px",
     },
     fontFamily: {
-        primary: "var(--font-montserrat)",
+        primary: "var(--font-outfit)",
         secondary: "var(--font-inconsolata)",
     },
     extend: {

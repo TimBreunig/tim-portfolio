@@ -3,6 +3,7 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 
+
 const IndexPage = () => {
   const router = useRouter();
 

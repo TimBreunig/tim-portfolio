@@ -3,6 +3,7 @@
 import Link from "next/Link";
 import { usePathname } from "next/navigation";
 
+
 const links = [
 	{
 		name: "home",
@@ -22,19 +23,20 @@ const links = [
 	},
 ];
 
+
 const Nav = () => {
 	const pathname = usePathname();
 
 	return (
-		<nav className="flex gap-12 2xl:gap-16">
+		<nav className="flex gap-12 2xl:gap-14">
 			{links.map((link, index) => {
 				return (
 					<Link
 						href={link.path}
 						key={index}
-						className={`${
-							pathname.includes(link.path) && "text-primary-900"
-						} font-semibold text-primary-900 hover:text-accent-500 capitalize tracking-wider transition-all duration-300`}
+						className={`font-semibold text-xl text-primary-100 hover:text-accent-500 capitalize tracking-wide transition-all duration-300 ${
+							pathname.includes(link.path) ? "active" : ""
+						}`}
 					>
 						{link.name}
 					</Link>
