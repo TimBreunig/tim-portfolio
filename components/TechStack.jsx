@@ -41,11 +41,11 @@ const TechStack = () => {
 			Icon: JsLogo
 		},
 		{
-			name: "Git",
+			name: "Java",
 			Icon: GitLogo
 		},
 		{
-			name: "Figma",
+			name: "CSharp",
 			Icon: FigmaLogo
 		},
 	];

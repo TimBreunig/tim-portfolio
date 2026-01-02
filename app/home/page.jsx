@@ -2,6 +2,8 @@
 import Link from "next/Link";
 import { Button } from "@/components/ui/button";
 import Typewriter from 'typewriter-effect';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLinkedinIn, faInstagram, faPinterestP, faGithub } from '@fortawesome/free-brands-svg-icons'
 
 import TabGrid from "@/components/TabGrid";
 import CardGrid from "@/components/CardGrid";
@@ -21,87 +23,54 @@ const Home = () => {
   return (
 	<section className="h-full">
 		<div className="mx-auto bg-primary-900">
-			<div className="relative container-wide pt-20 xl:pt-0 xl:h-screen flex flex-col items-center justify-center">
+			<div className="relative container-wide pt-20 xl:pt-4 xl:h-screen flex flex-col items-center justify-center gap-16">
 				<Carousel />
-				<span className="font-secondary tracking-wider inline-block text-xl mb-1 text-primary-700 uppercase">
-					<Typewriter
-						options={{
-							strings: [
-								"User Interface Design",
-								"Frontend Web Development",
-								"Game Design & Development",
-							],
-							autoStart: true,
-							loop: true,
-							delay: 50,
-							deleteSpeed: 40,
-							pauseFor: 2400,
-						}}
-					/>
-				</span>
-				<p className="h6 text-primary-100">
-					Tim Breunig<span className="text-accent-500">.</span>
-				</p>
-				<h1 className="h1 text-primary-100">
-					Web Developer
-				</h1>
-				<Button
-					className="absolute bottom-6"
-					onClick={smoothScroll}>
-					<span>Scroll down</span>
-				</Button>
-			</div>
-		</div>
-		{/*
-		<div className="mx-auto bg-radial-gradient">
-			<div className="container pt-20 xl:pt-0 xl:h-screen flex flex-col xl:flex-row items-center justify-between">
-				<div className="mt-8 text-center xl:text-left text-primary-800">
-					<span className="font-secondary tracking-wider inline-block text-xl mb-1 text-primary-700 uppercase">
-						<Typewriter
-							options={{
-								strings: [
-									"User Interface Design",
-									"Frontend Web Development",
-									"Game Design & Development",
-								],
-								autoStart: true,
-								loop: true,
-								delay: 50,
-								deleteSpeed: 40,
-								pauseFor: 2400,
-							}}
-						/>
+				<div className="text-center">
+					<span className="inline-block h6 text-primary-100">
+						Tim Breunig<span className="text-accent-500">.</span>
+						&nbsp;
 					</span>
-					<h1 className="h1 font-light text-primary-900">
-						Hi there! I'm <br /><span className="text-[56px] xl:text-[92px] font-black bg-gradient-to-br from-accent-700 to-accent-300 inline-block text-transparent bg-clip-text">Tim Breunig</span>
+					<h1 className="h1 text-primary-100">
+						Web Developer
 					</h1>
-					<p className="text-lg xl:max-w-[600px] mb-10">
-						I'm passionate about creating appealing and user-friendly digital experiences in various media formats &ndash;
-						from designing and building websites to developing video games.
-					</p>
+				</div>
+				<div className="group absolute container-wide w-full bottom-6 flex justify-between items-end">
 					<div className="flex gap-4">
-						<Link href="#about" onClick={smoothScroll}>
-							<Button>
-								<span>About me</span>
-							</Button>
-						</Link>
-						<Link href="#about" onClick={smoothScroll}>
-							<Button variant="outline">
-								<span>About me</span>
-							</Button>
-						</Link>
+						<a href="https://de.linkedin.com/in/tim-breunig-a82250252" target="_blank">
+							<FontAwesomeIcon icon={faLinkedinIn} className="block box-border w-6 h-6 p-4 rounded-full border border-primary-800 text-primary-600 hover:border-primary-300 hover:text-primary-200 transition-colors duration-300" />
+						</a>
+						<a href="https://github.com/TimBreunig" target="_blank">
+							<FontAwesomeIcon icon={faGithub} className="block box-border w-6 h-6 p-4 rounded-full border border-primary-800 text-primary-600 hover:border-primary-300 hover:text-primary-200 transition-colors duration-300" />
+						</a>
+						<a href="https://www.instagram.com/_timbrng_/" target="_blank">
+							<FontAwesomeIcon icon={faInstagram} className="block box-border w-6 h-6 p-4 rounded-full border border-primary-800 text-primary-600 hover:border-primary-300 hover:text-primary-200 transition-colors duration-300" />
+						</a>
+						<a href="https://www.pinterest.de/tiracin16/" target="_blank">
+							<FontAwesomeIcon icon={faPinterestP} className="block box-border w-6 h-6 p-4 rounded-full border border-primary-800 text-primary-600 hover:border-primary-300 hover:text-primary-200 transition-colors duration-300" />
+						</a>
+					</div>
+					<div className="font-secondary font-medium text-2xl uppercase text-primary-600">
+						&#91;
+						<span className="inline-block">
+							<Typewriter
+								options={{
+									strings: [
+										"Design",
+										"Build",
+										"Create",
+									],
+									autoStart: true,
+									loop: true,
+									delay: 75,
+									deleteSpeed: 60,
+									pauseFor: 2400,
+								}}
+							/>
+						</span>with passion&#93;
 					</div>
 				</div>
-				<div className="xl:max-w-[50%] xl:self-end">
-					<img
-						className="sm:max-w-md xl:max-w-full xl:h-[90vh] xl:bottom-0 object-contain xl:object-cover scale-x-[-1] mx-auto"
-						src="/images/portrait.png"
-						alt="Portrait of Tim Breunig"
-					/>
-				</div>
 			</div>
 		</div>
-		*/}
 		<div
 			id="about"
 			className="mx-auto pt-8 xl:pt-0 bg-primary-200 text-primary-800">

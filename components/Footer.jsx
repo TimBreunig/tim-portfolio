@@ -85,16 +85,16 @@ const Footer = () => {
 					</span>
 					<span>
 						<Link
-							className="mr-3 xl:mr-6 text-primary-900 hover:text-primary-700 transition-colors duration-300"
+							className="mr-3 xl:mr-5 font-secondary uppercase text-primary-800 hover:text-primary-700 transition-colors duration-300"
 							href="/imprint"
 						>
-							Imprint
+							&#91;Imprint&#93;
 						</Link>
 						<Link
-							className="text-primary-900 hover:text-primary-700 transition-colors duration-300"
+							className="font-secondary uppercase text-primary-800 hover:text-primary-700 transition-colors duration-300"
 							href="/privacy-policy"
 						>
-							Privacy Policy
+							&#91;Privacy Policy&#93;
 						</Link>
 					</span>
 				</div>

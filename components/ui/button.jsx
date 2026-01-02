@@ -10,7 +10,7 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default: "bg-gradient-to-br from-accent-600 to-accent-400 text-primary-900 hover:text-primary-200",
-        light: "bg-gradient-to-br from-accent-600 to-accent-400 text-primary-900 hover:text-primary-300",
+        light: "text-primary-200 hover:text-primary-300",
         primary: "bg-primary-200 text-accent-900",
         outline: "box-border border border-primary-700 text-primary-900 hover:bg-primary-900 hover:border-primary-900 hover:text-primary-300",
       },
