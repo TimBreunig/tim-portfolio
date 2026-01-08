@@ -43,7 +43,7 @@ const TabGrid = () => {
 					return (
 						<div key={index}
 							className="flex-0 xl:flex-2 items-center box-border lg:w-[49%] w-full">
-							<div className="hex-icon-wrapper mx-auto flex items-center justify-center w-24 h-24 bg-gradient-to-br from-accent-600 to-accent-400 shadow-2xl/60">
+							<div className="hex-icon-wrapper mx-auto flex items-center justify-center w-24 h-24 bg-linear-to-br from-accent-600 to-accent-400 shadow-2xl/60">
                                 <FontAwesomeIcon icon={tab.icon} className="w-10 h-10 text-primary-900" />
                             </div>
        						<div className="h-72 md:h-60 lg:h-72 xl:h-80 2xl:h-72 -mt-12 mb-7 rounded-xl bg-primary-200 hover:bg-primary-300 shadow-2xl/75 transition-all duration-300">
@@ -84,7 +84,7 @@ const TabGrid = () => {
 					return (
 						<div key={index}
 							className="w-full">
-							<div className="hex-icon-wrapper mx-auto flex items-center justify-center w-24 h-24 bg-gradient-to-br from-purple-400 to-purple-600 shadow-2xl/60">
+							<div className="hex-icon-wrapper mx-auto flex items-center justify-center w-24 h-24 bg-linear-to-br from-purple-400 to-purple-600 shadow-2xl/60">
                                 <FontAwesomeIcon icon={tab.icon} className="w-10 h-10 text-primary-900" />
                             </div>
        						<div className="-mt-12 group flex items-center justify-center w-full aspect-video p-12 bg-primary-200 rounded-2xl shadow-md hover:cursor-pointer">
