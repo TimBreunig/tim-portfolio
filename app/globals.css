@@ -1,11 +1,108 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+@import 'tailwindcss';
 
+@plugin 'tailwindcss-animate';
+
+@custom-variant dark (&:is(.dark *));
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 2rem;
+}
+
+@theme {
+  --breakpoint-*: initial;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1440px;
+
+  --font-*: initial;
+  --font-primary: "Outfit", sans-serif;
+  --font-secondary: "Inconsolata", monospace;
+
+  --color-primary-0: #0f0f12;
+  --color-primary-100: #141417;
+  --color-primary-200: #212127;
+  --color-primary-300: #30303b;
+  --color-primary-400: #4a4a5c;
+  --color-primary-500: #68687a;
+  --color-primary-600: #89899c;
+  --color-primary-700: #a8a8ba;
+  --color-primary-800: #d0d0db;
+  --color-primary-900: #fdfeff;
+
+  --color-accent-0: #072133;
+  --color-accent-100: #08436e;
+  --color-accent-200: #0060a1;
+  --color-accent-300: #0085de;
+  --color-accent-400: #0099ff;
+  --color-accent-500: #24a7ff;
+  --color-accent-600: #57b8ff;
+  --color-accent-700: #85ceff;
+  --color-accent-800: #bae2ff;
+  --color-accent-900: #f5f5fc;
+
+  --flex-2: 0 0 32%;
+
+  --background-image-radial-gradient: radial-gradient(
+    ellipse at 0 0,
+    #1c1c22 0%,
+    #141417 85%
+  );
+  --background-image-black-gradient: radial-gradient(#0f0f12 70%, #141417 100%);
+  --background-image-blue-gradient: radial-gradient(
+    ellipse at 25% 95%,
+    #24a7ff 0%,
+    #d936cb 100%
+  );
+
+  --shadow-solid: 16px 16px rgba(28, 28, 34, 1);
+
+  --animate-accordion-down: accordion-down 0.25s ease-out;
+  --animate-accordion-up: accordion-up 0.25s ease-out;
+
+  @keyframes accordion-down {
+    from {
+      height: 0;
+    }
+    to {
+      height: var(--radix-accordion-content-height);
+    }
+  }
+  @keyframes accordion-up {
+    from {
+      height: var(--radix-accordion-content-height);
+    }
+    to {
+      height: 0;
+    }
+  }
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
 
 @layer base {
 	body {
-		@apply bg-primary-900 font-primary text-[1rem] xl:text-[1.125rem] leading-[1.75rem];
+		@apply bg-primary-900 font-primary text-[1rem] xl:text-[1.125rem] leading-7;
 	}
 
 	.container-wide {
@@ -46,7 +143,7 @@
 	}
 
 	nav a.active::after {
-		@apply absolute content-[''] w-1/2 h-[2px] -bottom-3 left-1/2 transform -translate-x-1/2 bg-primary-300 transition-colors duration-300 rounded;
+		@apply absolute content-[''] w-1/2 h-[2px] -bottom-3 left-1/2 transform -translate-x-1/2 bg-primary-300 transition-colors duration-300 rounded-sm;
 	}
 
 	nav a.active:hover::after {
@@ -82,7 +179,7 @@
 	}
 
 	.h3 {
-		@apply text-[2.825rem] xl:text-[8rem] leading-[1.0] font-bold uppercase tracking-wide mb-4;
+		@apply text-[2.825rem] xl:text-[8rem] leading-none font-bold uppercase tracking-wide mb-4;
 	}
 
 	.h4 {

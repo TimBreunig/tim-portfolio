@@ -89,7 +89,7 @@ const CardGrid = () => {
 							<Link key={index}
 								href={card.link}
 								className="block p-5">
-								<div className="aspect-[16/10] rounded-xl overflow-hidden">
+								<div className="aspect-16/10 rounded-xl overflow-hidden">
 									<img alt="content" className="object-cover object-center h-full w-full group-hover:scale-105 transition-transform duration-300" src={card.path} />
 								</div>
 								<div className="relative px-4 pt-7 pb-2 rounded-b-xl overflow-hidden duration-300">
@@ -107,7 +107,7 @@ const CardGrid = () => {
 										</div>
 										<FontAwesomeIcon
 											icon={faArrowRight}
-											className="w-7 h-7 p-1 text-primary-900 group-hover:text-purple-400 group-hover:-rotate-45 transition-all duration-300"
+											className="w-7 h-7 p-1 text-2xl text-primary-900 group-hover:text-purple-400 group-hover:-rotate-45 transition-all duration-300"
 										/>
 									</div>
 									<p className="-mt-1 font-secondary font-semibold text-xl uppercase text-primary-600 group-hover:text-primary-500 tracking-wider leading-relaxed transition-colors truncate">

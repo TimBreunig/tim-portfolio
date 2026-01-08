@@ -32,7 +32,7 @@ const Header = () => {
 		<header className={"fixed w-full h-full py-10 z-50 pointer-events-none transition-all duration-500 ${transparent ? '' : ''} "}>
 			<div className={"container-wide flex justify-between items-start pointer-events-auto"}>
 				<Link href="/">
-					<div className="text-4xl font-bold text-primary-100 tracking-[-0.1em]">
+					<div className="text-4xl font-bold text-primary-100 -tracking-widest">
 						TB <span className="text-purple-500">.</span>
 					</div>
 				</Link>
@@ -47,7 +47,7 @@ const Header = () => {
 					mobile nav
 				</div>
 			</div>
-			<div className="absolute inset-x-0 bottom-10 pointer-events-auto">
+			<div className="absolute inset-x-0 bottom-10">
 				<div className="container-wide flex justify-between items-end">
 					<Socials />
 					<div className="font-secondary font-medium text-2xl uppercase text-primary-600">
