@@ -26,7 +26,7 @@ const HeadingFullPage = () => {
   const fillColor = useTransform(
     scrollYProgress,
     [0, 0.35, 0.36, 0.39, 0.4],
-    ['transparent', 'transparent', '#24a7ff', '#24a7ff', '#f5f5fc']
+    ['transparent', 'transparent', '#a855f7', '#a855f7', '#f5f5fc']
   )
 
   return (
@@ -58,8 +58,6 @@ const HeadingFullPage = () => {
             Versatile<br />Tech Stack
           </motion.h2>
         </div>
-        
-        <span className="absolute left-0 bottom-6 font-secondary font-medium text-primary-600 text-2xl uppercase">&#91;Professional at&#93;</span>
       </div>
     </section>
   )

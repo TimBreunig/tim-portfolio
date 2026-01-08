@@ -1,4 +1,4 @@
-import { Montserrat,  Outfit, Inconsolata } from "next/font/google";
+import { Montserrat, Outfit, Inconsolata } from "next/font/google";
 import "./globals.css";
 
 import Header from "@/components/Header";
@@ -39,7 +39,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="bg-primary-0">
-      <body className={`${outfit.variable} ${inconsolata.variable}`}>
+      <body className={`${outfit.variable} ${inconsolata.variable} relative`}>
         <Header />
         <PageTransition>
             {children}

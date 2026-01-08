@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useAnimation, useInView, useScroll } from 'framer-motion'
+import { motion, useAnimation, useInView } from 'framer-motion'
 import { useEffect, useRef } from 'react'
 
 import Link from "next/Link"
@@ -12,45 +12,40 @@ const CardGrid = () => {
 	const cards = [
 		{
 			title: "The Wandering Knight",
-			genre: "Game",
-			role: "Storytelling & Engineering",
-			place: "Independent",
+			description: "Game",
+			roles: ["Storytelling", "Engineering"],
 			date: "2024",
 			path: "/images/IntroCutscene2_LowRes.gif",
 			link: "/work/wandering-knight",
 		},
 		{
 			title: "Project Mothership",
-			genre: "Game",
-			role: "Software Engineering",
-			place: "Stuttgart Media University",
+			description: "Local-coop rogue-like videogame",
+			roles: ["Engineering"],
 			date: "2024",
 			path: "/images/ProjectMothershipTeaser.png",
 			link: "/work/project-mothership",
 		},
 		{
 			title: "Fembition",
-			genre: "Web Design",
-			role: "Web Design",
-			place: "Independent",
+			description: "Website for an imaginary esports-organization empowering female players",
+			roles: ["Web Design"],
 			date: "2025",
 			path: "/images/fembition_teaser.png",
 			link: "/work/fembition",
 		},
 		{
 			title: "Movie Night",
-			genre: "App",
-			role: "UI Design & Frontend Engineering",
-			place: "Stuttgart Media University",
+			description: "Mobile-first Web Application for organizing movie nights with friends",
+			roles: ["UI Design", "Frontend Development"],
 			date: "2024",
 			path: "/images/movie_night_teaser.png",
 			link: "/work/movie-night",
 		},
 		{
 			title: "Chromania",
-			genre: "Game",
-			role: "Design & Engineering",
-			place: "Stuttgart Media University",
+			description: "A personal indie top-down adventure game about magic, color and mental health",
+			roles: ["Game Design", "Game Art", "Engineering"],
 			date: "2023",
 			path: "/images/ChromaniaTeaser.png",
 			link: "/work/chromania",
@@ -98,10 +93,25 @@ const CardGrid = () => {
 									<img alt="content" className="object-cover object-center h-full w-full group-hover:scale-105 transition-transform duration-300" src={card.path} />
 								</div>
 								<div className="relative px-4 pt-7 pb-2 rounded-b-xl overflow-hidden duration-300">
-									<span className="block mb-3 text-3xl font-bold text-primary-900 group-hover:text-accent-500 transition-colors">{card.title}</span>
-									<FontAwesomeIcon icon={faArrowRight} className="absolute w-7 h-7 p-1 top-7 right-3 text-primary-900 group-hover:text-accent-500 group-hover:-rotate-45 transition-all duration-300"/>
-									<p className="-mt-1 font-secondary font-semibold text-xl uppercase text-primary-600 group-hover:text-primary-500 leading-relaxed transition-colors">
-									{card.genre} &#8211; {card.role}
+									<span className="block mb-3 text-3xl font-bold text-primary-900 group-hover:text-purple-400 transition-colors">{card.title}</span>
+									<div className="absolute top-7 right-3 flex justify-end items-center gap-4">
+										<div className="flex gap-3 flex-wrap">
+											{card.roles.map((role, index) => (
+												<div
+													key={index}
+													className="px-4 py-2 font-semibold text-sm uppercase tracking-wider bg-primary-300 text-primary-600 rounded-md"
+												>
+													{role}
+												</div>
+											))}
+										</div>
+										<FontAwesomeIcon
+											icon={faArrowRight}
+											className="w-7 h-7 p-1 text-primary-900 group-hover:text-purple-400 group-hover:-rotate-45 transition-all duration-300"
+										/>
+									</div>
+									<p className="-mt-1 font-secondary font-semibold text-xl uppercase text-primary-600 group-hover:text-primary-500 tracking-wider leading-relaxed transition-colors truncate">
+										{card.description}
 									</p>
 								</div>
 							</Link>

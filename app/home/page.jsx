@@ -2,14 +2,13 @@
 import Link from "next/Link";
 import { Button } from "@/components/ui/button";
 import Typewriter from 'typewriter-effect';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLinkedinIn, faInstagram, faPinterestP, faGithub } from '@fortawesome/free-brands-svg-icons'
 
-import TabGrid from "@/components/TabGrid";
 import CardGrid from "@/components/CardGrid";
-import TechStack from "@/components/TechStack";
-import HeadingFullPage from "@/components/HeadingFullPage";
 import Carousel from "@/components/Carousel";
+import HeadingFullPage from "@/components/HeadingFullPage";
+import Socials from "@/components/Socials";
+import TabGrid from "@/components/TabGrid";
+import TechStack from "@/components/TechStack";
 
 
 const smoothScroll = (e) => {
@@ -22,52 +21,29 @@ const smoothScroll = (e) => {
 const Home = () => {
   return (
 	<section className="h-full">
-		<div className="mx-auto bg-primary-900">
-			<div className="relative container-wide pt-20 xl:pt-4 xl:h-screen flex flex-col items-center justify-center gap-16">
-				<Carousel />
-				<div className="text-center">
-					<span className="inline-block h6 text-primary-100">
-						Tim Breunig<span className="text-accent-500">.</span>
-						&nbsp;
+		<div className="mx-auto">
+			<div className="container-wide pt-20 xl:pt-4 xl:h-screen flex flex-col items-center justify-center gap-16">
+				<div className="flex flex-col justify-center items-center gap-7">
+					<span className="font-heading uppercase inline-block h6 text-primary-100">
+						Tim Breunig
 					</span>
-					<h1 className="h1 text-primary-100">
-						Web Developer
+					<h1 className="inline-flex flex-col gap-2 text-primary-100 h1">
+						<span className="text-center">
+							Building
+						</span>
+						<span className="ml-[0.07em] text-left text-purple-500">
+							things
+						</span>
+						<span className="mr-[0.02em] text-right">
+							for
+						</span>
+						<span className="relative ml-[0.07em]">
+							the&nbsp;&nbsp;&nbsp;web
+							<span className="absolute -right-6 xl:-right-16 bottom-0 text-purple-500">
+								.
+							</span>
+						</span>
 					</h1>
-				</div>
-				<div className="group absolute container-wide w-full bottom-6 flex justify-between items-end">
-					<div className="flex gap-4">
-						<a href="https://de.linkedin.com/in/tim-breunig-a82250252" target="_blank">
-							<FontAwesomeIcon icon={faLinkedinIn} className="block box-border w-6 h-6 p-4 rounded-full border border-primary-800 text-primary-600 hover:border-primary-300 hover:text-primary-200 transition-colors duration-300" />
-						</a>
-						<a href="https://github.com/TimBreunig" target="_blank">
-							<FontAwesomeIcon icon={faGithub} className="block box-border w-6 h-6 p-4 rounded-full border border-primary-800 text-primary-600 hover:border-primary-300 hover:text-primary-200 transition-colors duration-300" />
-						</a>
-						<a href="https://www.instagram.com/_timbrng_/" target="_blank">
-							<FontAwesomeIcon icon={faInstagram} className="block box-border w-6 h-6 p-4 rounded-full border border-primary-800 text-primary-600 hover:border-primary-300 hover:text-primary-200 transition-colors duration-300" />
-						</a>
-						<a href="https://www.pinterest.de/tiracin16/" target="_blank">
-							<FontAwesomeIcon icon={faPinterestP} className="block box-border w-6 h-6 p-4 rounded-full border border-primary-800 text-primary-600 hover:border-primary-300 hover:text-primary-200 transition-colors duration-300" />
-						</a>
-					</div>
-					<div className="font-secondary font-medium text-2xl uppercase text-primary-600">
-						&#91;
-						<span className="inline-block">
-							<Typewriter
-								options={{
-									strings: [
-										"Design",
-										"Build",
-										"Create",
-									],
-									autoStart: true,
-									loop: true,
-									delay: 75,
-									deleteSpeed: 60,
-									pauseFor: 2400,
-								}}
-							/>
-						</span>with passion&#93;
-					</div>
 				</div>
 			</div>
 		</div>
@@ -111,13 +87,13 @@ const Home = () => {
         </div>
 		<div
 			id ="work"
-			className="mx-auto h-auto pb-12 pt-36 bg-primary-900">
-			<div className="container-wide">
-				<h2 className="h2 text-left mb-8 text-primary-200">Featured Work</h2>
+			className="mx-auto h-auto pb-12 pt-36">
+			<div className="container-wide z-10">
+				<h2 className="h2 text-left mb-8 text-primary-100">Featured Work<span className="text-purple-500">.</span></h2>
     			<CardGrid />
 			</div>
 		</div>
-		<div className="h-screen mx-auto box-content pb-60 bg-primary-900">
+		<div className="h-screen mx-auto box-content pb-60">
 			<HeadingFullPage />
 		</div>
 		<div
@@ -128,10 +104,10 @@ const Home = () => {
 		</div>
 		<div 
 			id ="services"
-			className="mx-auto xl:h-screen py-24 xl:py-36 bg-primary-900">
+			className="mx-auto xl:h-screen py-24 xl:py-36">
 			<div className="container-wide text-right">
 				<span className="mb-4 font-secondary font-medium inline-block text-2xl text-primary-600 uppercase">&#91;What I offer&#93;</span>
-				<h2 className="h2 mb-14 text-primary-200">Services</h2>
+				<h2 className="h2 mb-14 text-primary-200">Services<span className="text-purple-500">.</span></h2>
     			<TabGrid />
 			</div>
 		</div>

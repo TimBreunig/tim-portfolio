@@ -1,158 +1,92 @@
-import Link from "next/Link";
-import { Button } from "@/components/ui/button";
+"use client";
+
+import { motion, useAnimation, useScroll, useInView, useTransform } from 'framer-motion'
+import { useEffect, useRef } from 'react'
+
 
 const Fembition = () => {
+    const containerRef = useRef(null)
+
+	const isInView = useInView(containerRef, { once: true })
+	const mainControls = useAnimation()
+
+	useEffect(() => {
+		if(isInView) {
+			mainControls.start("show")
+		}
+	}, [isInView])
+
+
+    const { scrollYProgress } = useScroll({
+        target: containerRef,
+        offset: ['start end', 'end start'],
+    })
+
+    const y = useTransform(
+        scrollYProgress,
+        [0, 1],
+        ["25vh", "-25vh"]
+    )
+
+
     return (
-        <section className="h-full">
-            <div className="mx-auto xl:pb-24 bg-radial-gradient text-primary-900">
-                <div className="container h-screen flex flex-col xl:flex-row items-center justify-between gap-12">
-				    <div className="relative w-[39%] mt-8 text-center xl:text-left text-primary-800 z-20">
-                        <div className="absolute top-0 -left-[20%] w-[120%] h-[120%] bg-black-gradient blur-[150px] -z-10"></div>
-					    <h1 className="h1 text-primary-900">
-						    Project Mothership
-					    </h1>
-                        <p className="text-base xl:max-w-[600px] mb-4 text-primary-700">
-                            Game | Stuttgart Media University | 2024
-					    </p>
-                        <p className="text-lg mb-7">
-                            In the rogue-like cooperative action-adventure game <span className="italic">Project Mothership</span>, players slip into the role of two astronauts to
-                            prove their skills in teamwork, exploration and puzzle-solving while navigating their way back to the mothership before they run out of oxygen.
-					    </p>
-                        <Link href="https://projectmothershipgame.com/" target="_blank">
-							<Button>
-								<span>Visit Website</span>
-							</Button>
-						</Link>
-                    </div>
-                    <div className="relative w-[59%] mt-6 text-center xl:text-left text-primary-800 z-10">
-                        <video className="aspect-[15.2/9] rounded-xl object-cover pointer-events-none" autoPlay muted loop>
-                            <source
-                                src="/videos/ProjectMothershipTrailer.mp4"
-                                type="video/mp4"
-                            ></source>
-                            Your browser does not support the video tag.
-                        </video>
-                        <div className="absolute -top-[7%] right-[25%] w-[85%] h-[105%] bg-blue-gradient blur-[150px] opacity-60 -z-10"></div>
-                    </div>
-				</div>
-            </div>
-            <div className="mx-auto xl:pb-24 bg-primary-100 text-primary-800">
-                <div className="container flex flex-col xl:flex-row items-top justify-between gap-12">
-				    <div className="relative w-[39%] mt-12 text-center xl:text-left text-primary-800 z-20">
-                        <img
-                            alt="Project Mothership Trailer"
-                            src="/images/ProjectMothershipTrailer.png"
-                            className="absolute top-12 left-0 rounded-lg aspect-video object-cover"
-                        />
-                        <div className="absolute top-[28%] left-[15%] w-[55%] h-[35%] bg-blue-gradient blur-[150px] opacity-60 -z-10"></div>
-                    </div>
-                    <div className="relative w-[59%] mt-12 text-center xl:text-left text-primary-800 z-10">
-                        <p className="font-secondary tracking-widest inline-block text-lg mb-3 text-primary-700 uppercase">
-                            Providing a clear vision
-					    </p>
-                        <h2 className="h2 text-primary-900">
-						    Dynamic Camera
-					    </h2>
-                        {/*
-                        <p className="mb-7">
-                            The camera is an essential part of Game Design and Development. Not only does it determine key aspects like the perspective or the field of view that
-                            influence the players' perception of the game but also critically shapes their experience and interaction with the virtual world. Due to its deciding
-                            role, it is essential to attach great importance to it in the development process.
-					    </p>
-                        */}
-                        <p className="mb-7">
-                            Finding a fitting camera concept for <span className="italic">Project Mothership</span> was quite a challenging task. In the end, we came up with a
-                            top-down system that dynamically changes the camera's height between a minimum and maximum value, depending on the distance between the players.
-                            This way, we ensure a smooth appearence throughout various different scenarios.
-					    </p>
-                        <p className="mb-7">
-                            Additionally, instead of using the players as reference objects, we committed to the oxygen tank as focus for the camera. When it is not picked up
-                            and thus stationary, the camera stays in place, keeping both players equally in view. However, once the tank is picked up, the focus shifts to the
-                            player that carries it, stressing its importance and providing additional visual feedback for the players.
-                        </p>
-                    </div>
-				</div>
-            </div>
-            <div className="mx-auto xl:pb-24 bg-primary-100 text-primary-800">
-                <div className="container flex flex-col xl:flex-row items-top justify-between gap-12">
-                    <div className="relative w-[59%] mt-12 text-center xl:text-left text-primary-800 z-10">
-                        <p className="font-secondary tracking-widest inline-block text-lg mb-3 text-primary-700 uppercase">
-                            Maintaining visibility
-					    </p>
-                        <h2 className="h2 text-primary-900">
-						    Raycasting
-					    </h2>
-                        {/*
-                        <p className="mb-7">
-                            One thing that makes <span className="italic">Project Mothership</span> unique is its vast map with different bioms.
-                            Desert-like landscapes with lots of sand and rocks are featured as well as areas with shiny minerals that resemble a crystal mine.
-                            At the same time, this also means that some big assets are placed in the game that could interfere with the player's sight from time to time.
-					    </p>
-                        */}
-                        <p className="mb-7">
-                            To ensure no large objects are blocking the view, rays are casted from the camera's position to both players' and the oxygen tank's positions.
-                            In case a target with a mesh is hit, it is added to an array that contains all objects which are currently in the camera's fov.
-                            Each of those objects' opacity is then lerped smoothly over a fraction of a second so it appears visible but transparent.
-					    </p>
-                        <p className="mb-7">
-                            Once an object is not detected by a raycast anymore and thus not potentially blocking the view, it is removed from the array and its mesh
-                            regains full opacity. With this implementation, the opacity effect does not last any longer than required, providing the player with immediate
-                            visual feedback and maintaining the game's flow.
-					    </p>
-                    </div>
-                    <div className="relative w-[39%] mt-12 text-center xl:text-left text-primary-800 z-20">
-                        {/*
-                        <img
-                            alt="Project Mothership Trailer"
-                            src="/images/ProjectMothershipRaycasting1.png"
-                            className="absolute w-[80%] top-12 left-0 rounded-lg aspect-video object-cover -rotate-2"
-                        />
-                        */}
-                        <img
-                            alt="Project Mothership Raycasting"
-                            src="/images/ProjectMothershipRaycasting2.png"
-                            className="absolute top-12 left-0 rounded-lg aspect-video object-cover"
-                        />
-                        <div className="absolute top-[28%] right-[20%] w-[60%] h-[45%] bg-blue-gradient blur-[150px] opacity-60 -z-10"></div>
-                    </div>
-				</div>
-            </div>
-            <div className="mx-auto xl:pb-24 bg-primary-100 text-primary-800">
-                <div className="container flex flex-col xl:flex-row items-top justify-between gap-12">
-				    <div className="relative w-[39%] mt-12 text-center xl:text-left text-primary-800 z-20">
-                        <img
-                            alt="Project Mothership VFX"
-                            src="/images/ProjectMothershipVFX.png"
-                            className="absolute top-12 left-0 rounded-lg aspect-video object-cover"
-                        />
-                        <div className="absolute top-[28%] left-[15%] w-[55%] h-[35%] bg-blue-gradient blur-[150px] opacity-60 -z-10"></div>
-                    </div>
-                    <div className="relative w-[59%] mt-12 text-center xl:text-left text-primary-800 z-10">
-                        <p className="font-secondary tracking-widest inline-block text-lg mb-3 text-primary-700 uppercase">
-                            It's all in the details
-					    </p>
-                        <h2 className="h2 text-primary-900">
-						    Appealing VFX
-					    </h2>
-                        {/*
-                        <p className="mb-7">
-                            The camera is an essential part of Game Design and Development. Not only does it determine key aspects like the perspective or the field of view that
-                            influence the players' perception of the game but also critically shapes their experience and interaction with the virtual world. Due to its deciding
-                            role, it is essential to attach great importance to it in the development process.
-					    </p>
-                        */}
-                        <p className="mb-7">
-                            Since <span className="italic">Project Mothership</span> features strongly stylized high-quality graphics, it was essential to implement fitting
-                            visual effects. Many of them were created with shaders in Godot's own language, which is similar to GLSL. This includes various effects in combat
-                            during charging and attacking but also damage indication for players and enemies.
-					    </p>
-                        <p className="mb-7">
-                            Apart from that, we also made use of Godot's built-in 3D particle system for more complex physical effects. For example, we simulated clods of soil
-                            flying into the air that are synchronized with the digging animation of the armadillos as well as dust being swirled up when the giant drill is activated,
-                            reinforcing a sense of immersion for players.
-                        </p>
-                    </div>
-				</div>
+        <section className="relative h-full">
+            <motion.div
+                style={{ y }}
+                className="fixed flex items-center w-full xl:h-screen overflow-hidden z-0"
+            >
+                <img
+                    src="/images/fembition_teaser.png"
+                    alt="Fembition Teaser 1"
+                    className="object-cover w-full h-full"
+                />
+            </motion.div>
+
+            {/* Whitespace */}
+            <div ref={containerRef} className="h-screen" />
+
+            <div className="relative mx-auto h-auto pb-12 pt-36 bg-primary-900 z-10">
+                <div className="container-wide">
+                    <h2 className="h2 text-left mb-8 text-primary-100">Fembition<span className="text-purple-500">.</span></h2>
+                    <motion.div
+						variants={{ hidden: { opacity: 0, y: 20 }, show: { opacity: 1, y: 0 } }}
+						className="w-full flex flex-col gap-6 box-border p-8 bg-primary-100 rounded-2xl shadow-md text-primary-900 hover:cursor-pointer transition-colors duration-300"
+					>
+                        <div className="grid grid-cols-7 gap-12 w-full p-8 pb-12 bg-primary-200 rounded-xl">
+                            <div>
+                                <span className="block mb-2 font-semibold text-primary-600 uppercase tracking-wider">Year</span>
+                                <span className="h5">2025</span>
+                            </div>
+                            <div className="col-span-2">
+                                <span className="block mb-2 font-semibold text-primary-600 uppercase tracking-wider">Roles</span>
+                                <div className="flex flex-wrap gap-3">
+									{/*{card.roles.map((role, index) => (*/}
+										<div className="px-4 py-2 font-semibold text-sm uppercase tracking-wider bg-primary-300 text-primary-600 rounded-md">
+                                            Webdesign
+										</div>
+									{/*))*/}
+								</div>
+                            </div>
+                            <div className="col-span-4">
+                                <span className="block mb-2 font-semibold text-primary-600 uppercase tracking-wider">Description</span>
+                                <p className="p-2xl">
+                                    Fembition resulted from a challenge to design a landing page for a fictional organization within one business day &ndash; completely from scratch.
+                                    It is a statement-driven concept that draws attention to the severe underrepresentation of female players in esports despite the industry’s rapid global growth.
+                                    The issue is addressed through bold visuals, clear messaging and purposeful design.
+                                </p>
+                            </div>
+                        </div>
+                        <div className="aspect-video rounded-xl overflow-hidden">
+                            <img alt="content" className="w-full h-full object-cover object-center" src="/images/fembition_teaser2.png" />
+                        </div>
+                        <div className="aspect-video rounded-xl overflow-hidden">
+                            <img alt="content" className="w-full h-full object-cover object-center" src="/images/fembition_teaser3.png" />
+                        </div>
+                        <div className="aspect-video rounded-xl overflow-hidden">
+                            <img alt="content" className="w-full h-full object-cover object-center" src="/images/movie_night_teaser4.png" />
+                        </div>
+					</motion.div>
+                </div>
             </div>
         </section>
     );

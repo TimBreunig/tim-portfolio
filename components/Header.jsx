@@ -4,6 +4,9 @@ import React, { useEffect, useState } from "react";
 import Link from "next/Link";
 import { Button } from "./ui/button";
 
+import Socials from "@/components/Socials";
+import Typewriter from 'typewriter-effect';
+
 // components
 import Nav from "./Nav";
 
@@ -26,27 +29,43 @@ const Header = () => {
 	})
 
 	return (
-		<header className={`fixed w-full py-6 z-50 transition-all duration-500 ${transparent ? '' : 'py-4 xl:py-4'} `}>
-			<div className={`container-wide flex justify-between items-center`}>
+		<header className={"fixed w-full h-full py-10 z-50 pointer-events-none transition-all duration-500 ${transparent ? '' : ''} "}>
+			<div className={"container-wide flex justify-between items-start pointer-events-auto"}>
 				<Link href="/">
 					<div className="text-4xl font-bold text-primary-100 tracking-[-0.1em]">
-						TB <span className="text-accent-500">.</span>
+						TB <span className="text-purple-500">.</span>
 					</div>
 				</Link>
 
 				{/* desktop nav & contact button */}
 				<div className="hidden xl:flex items-center gap-10 2xl:gap-10">
 					<Nav />
-					<Link href="/contact">
-						<Button>
-							Get in touch
-						</Button>
-					</Link>
 				</div>
 
 				{/* mobile nav */}
 				<div className="xl:hidden">
 					mobile nav
+				</div>
+			</div>
+			<div className="absolute inset-x-0 bottom-10 pointer-events-auto">
+				<div className="container-wide flex justify-between items-end">
+					<Socials />
+					<div className="font-secondary font-medium text-2xl uppercase text-primary-600">
+						&#91;
+						<span className="inline-block">
+							<Typewriter
+							options={{
+								strings: ["Design", "Build", "Create"],
+								autoStart: true,
+								loop: true,
+								delay: 75,
+								deleteSpeed: 60,
+								pauseFor: 2400,
+							}}
+							/>
+						</span>
+						with passion&#93;
+					</div>
 				</div>
 			</div>
 		</header>

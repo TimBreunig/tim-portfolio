@@ -7,7 +7,7 @@ import { faPaperPlane } from '@fortawesome/free-solid-svg-icons'
 
 const Footer = () => {
 	return (
-		<div className="bg-primary-0 w-full pt-8 xl:pt-12 pb-6 xl:pb-8 text-primary-700">
+		<div className="relative w-full pt-8 xl:pt-12 pb-6 xl:pb-8 bg-primary-0 text-primary-700 z-50">
 			<div className="container-wide mx-auto">
 				<div className="flex flex-col xl:flex-row justify-between items-start gap-12 xl:gap-16 mt-12 mb-16">
 					<div className="xl:w-[50%]">

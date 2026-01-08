@@ -9,8 +9,8 @@ import HtmlLogo from "@/app/images/logos/logo-html5.svg";
 import TailwindLogo from "@/app/images/logos/logo-tailwind-css.svg";
 import JsLogo from "@/app/images/logos/logo-js.svg";
 import CssLogo from "@/app/images/logos/logo-css3.svg";
-import GitLogo from "@/app/images/logos/logo-git.svg";
-import FigmaLogo from "@/app/images/logos/logo-figma.svg";
+import JavaLogo from "@/app/images/logos/logo-java.svg";
+import CsharpLogo from "@/app/images/logos/logo-csharp.svg";
 
 
 const TechStack = () => {
@@ -42,11 +42,11 @@ const TechStack = () => {
 		},
 		{
 			name: "Java",
-			Icon: GitLogo
+			Icon: JavaLogo
 		},
 		{
-			name: "CSharp",
-			Icon: FigmaLogo
+			name: "Csharp",
+			Icon: CsharpLogo
 		},
 	];
 
@@ -85,7 +85,7 @@ const TechStack = () => {
 						variants={{ hidden: { opacity: 0, y: 20 }, show: { opacity: 1, y: 0 } }}
 						key={name}
 						className="group flex items-center justify-center w-full aspect-video p-12 bg-primary-200 hover:bg-primary-900 rounded-2xl shadow-md hover:cursor-pointer transition-colors duration-300">
-						<Icon className="max-w-32 max-h-32 fill-primary-900 group-hover:fill-primary-200 transition-colors duration-300" />
+						<Icon className="w-32 h-32 fill-primary-900 group-hover:fill-primary-200 transition-colors duration-300" />
 					</motion.div>
 					))
 				}
@@ -97,7 +97,7 @@ const TechStack = () => {
 						variants={{ hidden: { opacity: 0, y: 20 }, show: { opacity: 1, y: 0 } }}
 						key={name}
 						className="group flex items-center justify-center w-full aspect-video p-12 bg-primary-200 hover:bg-primary-900 rounded-2xl shadow-md hover:cursor-pointer transition-colors duration-300">
-						<Icon className="max-w-28 max-h-28 fill-primary-900 group-hover:fill-primary-200 transition-colors duration-300" />
+						<Icon className="w-24 h-24 fill-primary-900 group-hover:fill-primary-200 transition-colors duration-300" />
 					</motion.div>
 					))
 				}
