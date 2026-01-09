@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState, useRef, useLayoutEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
@@ -30,7 +31,7 @@ const Carousel = () => {
 
   return (
     <div className="relative w-full overflow-hidden">
-      <div className="relative h-[350px] flex items-center justify-center">
+      <div className="relative h-87.5 flex items-center justify-center">
         {slides.map((slide, index) => {
           let offset = index - current;
 
@@ -58,11 +59,12 @@ const Carousel = () => {
                 opacity: isCenter ? 1 : 0.4,
               }}
             >
-              <img
+              <Image
+                fill
                 ref={isCenter ? slideRef : null}
                 src={slide.path}
                 alt={slide.title}
-                className="w-[600px] aspect-video rounded-2xl shadow-xl"
+                className="w-150 aspect-video rounded-2xl shadow-xl"
               />
             </div>
           );

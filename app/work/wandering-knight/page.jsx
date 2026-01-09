@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 
 const WanderingKnight = () => {
@@ -10,10 +11,10 @@ const WanderingKnight = () => {
 					    <h1 className="h1 text-primary-900">
 						    The Wander&shy;ing Knight
 					    </h1>
-                        <p className="text-base xl:max-w-[600px] mb-4 text-primary-700">
+                        <p className="text-base xl:max-w-150 mb-4 text-primary-700">
                             Game | Independent | 2024
 					    </p>
-                        <p className="text-lg xl:max-w-[600px] mb-7">
+                        <p className="text-lg xl:max-w-150 mb-7">
                             <span className="italic">The Wandering Knight</span> is a game.
 					    </p>
                         <Link href="" target="_blank">
@@ -23,7 +24,8 @@ const WanderingKnight = () => {
 						</Link>
                     </div>
                     <div className="relative w-[59%] mt-6 text-center xl:text-left text-primary-800 z-10">
-                        <img
+                        <Image
+                            fill
                             alt="The Wandering Knight Teaser Image"
                             src="/images/IntroCutscene2_LowRes.gif"
                             className="aspect-[15.2/9] rounded-xl object-cover pointer-events-none"
@@ -35,7 +37,8 @@ const WanderingKnight = () => {
             <div className="mx-auto xl:pb-24 bg-primary-100 text-primary-800">
                 <div className="container flex flex-col xl:flex-row items-top justify-between gap-12">
 				    <div className="relative w-[39%] mt-12 text-center xl:text-left text-primary-800 z-20">
-                        <img
+                        <Image
+                            fill
                             alt="Project Mothership Trailer"
                             src="/images/ProjectMothershipTrailer.png"
                             className="absolute top-12 left-0 rounded-lg aspect-video object-cover"
@@ -83,7 +86,8 @@ const WanderingKnight = () => {
 					    </p>
                     </div>
                     <div className="relative w-[39%] mt-12 text-center xl:text-left text-primary-800 z-20">
-                        <img
+                        <Image
+                            fill
                             alt="Project Mothership Trailer"
                             src="/images/ProjectMothershipRaycasting2.png"
                             className="absolute top-12 left-0 rounded-lg aspect-video object-cover"
@@ -95,7 +99,8 @@ const WanderingKnight = () => {
             <div className="mx-auto xl:pb-24 bg-primary-100 text-primary-800">
                 <div className="container flex flex-col xl:flex-row items-top justify-between gap-12">
 				    <div className="relative w-[39%] mt-12 text-center xl:text-left text-primary-800 z-20">
-                        <img
+                        <Image
+                            fill
                             alt="Project Mothership VFX"
                             src="/images/ProjectMothershipVFX.png"
                             className="absolute top-12 left-0 rounded-lg aspect-video object-cover"

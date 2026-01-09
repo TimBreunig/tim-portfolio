@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Typewriter from 'typewriter-effect';
 
@@ -52,8 +53,9 @@ const Home = () => {
 			className="mx-auto pt-8 xl:pt-0 bg-primary-200 text-primary-800">
             <div className="container xl:h-[85vh] flex flex-col-reverse xl:flex-row items-center justify-between gap-12">
 				<div className="relative xl:w-[40%] h-full text-center xl:text-left text-primary-800 z-20">
-					<img
-						className="xl:absolute w-full h-full bottom-0 object-cover"
+					<Image
+						fill
+						className="xl:absolute bottom-0 object-cover"
 						src="/images/portrait.png"
 						alt="Portrait of Tim Breunig"
 					/>

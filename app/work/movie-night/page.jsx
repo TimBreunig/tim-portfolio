@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion, useAnimation, useScroll, useInView, useTransform } from 'framer-motion'
 import { useEffect, useRef } from 'react'
 
@@ -35,7 +36,9 @@ const MovieNight = () => {
                 style={{ y }}
                 className="fixed flex items-center w-full xl:h-screen overflow-hidden z-0"
             >
-                <img
+                <Image
+                    fill
+                    priority
                     src="/images/movie_night_teaser.png"
                     alt="Movie Night Teaser 1"
                     className="object-cover w-full h-full"
@@ -91,14 +94,14 @@ const MovieNight = () => {
                                 </p>
                             </div>
                         </div>
-                        <div className="aspect-video rounded-xl overflow-hidden">
-                            <img alt="content" className="object-cover object-center h-full w-full hover:scale-105 transition-transform duration-300" src="/images/movie_night_teaser2.png" />
+                        <div className="relative aspect-video rounded-xl overflow-hidden">
+                            <Image fill alt="content" className="object-cover object-center h-full w-full hover:scale-105 transition-transform duration-300" src="/images/movie_night_teaser2.png" />
                         </div>
-                        <div className="aspect-video rounded-xl overflow-hidden">
-                            <img alt="content" className="object-cover object-center h-full w-full hover:scale-105 transition-transform duration-300" src="/images/movie_night_teaser3.png" />
+                        <div className="relative aspect-video rounded-xl overflow-hidden">
+                            <Image fill alt="content" className="object-cover object-center h-full w-full hover:scale-105 transition-transform duration-300" src="/images/movie_night_teaser3.png" />
                         </div>
-                        <div className="aspect-video rounded-xl overflow-hidden">
-                            <img alt="content" className="object-cover object-center h-full w-full hover:scale-105 transition-transform duration-300" src="/images/movie_night_teaser4.png" />
+                        <div className="relative aspect-video rounded-xl overflow-hidden">
+                            <Image fill alt="content" className="object-cover object-center h-full w-full hover:scale-105 transition-transform duration-300" src="/images/movie_night_teaser4.png" />
                         </div>
 					</motion.div>
                 </div>

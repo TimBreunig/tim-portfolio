@@ -1,3 +1,4 @@
+import Image from "next/image";
 import CardGrid from "@/components/CardGrid";
 
 const Work = () => {
@@ -16,12 +17,14 @@ const Work = () => {
 					  </p>
           </div>
           <div className="relative w-[59%] h-screen text-center xl:text-left text-primary-800 z-10">
-            <img
+            <Image
+              fill
               alt="Project Mothership VFX"
               src="/images/IntroCutscene2_LowRes.gif"
               className="absolute top-[25%] right-0 w-[80%] aspect-video rounded-lg object-cover"
             />
-             <img
+             <Image
+              fill
               alt="Project Mothership VFX"
               src="/images/ProjectMothershipVFX.png"
               className="absolute bottom-[20%] w-[70%] aspect-video rounded-lg object-cover"

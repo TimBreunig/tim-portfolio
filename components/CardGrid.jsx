@@ -4,6 +4,7 @@ import { motion, useAnimation, useInView } from 'framer-motion'
 import { useEffect, useRef } from 'react'
 
 import Link from "next/link"
+import Image from "next/image";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircle, faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
@@ -89,8 +90,13 @@ const CardGrid = () => {
 							<Link key={index}
 								href={card.link}
 								className="block p-5">
-								<div className="aspect-16/10 rounded-xl overflow-hidden">
-									<img alt="content" className="object-cover object-center h-full w-full group-hover:scale-105 transition-transform duration-300" src={card.path} />
+								<div className="relative aspect-16/10 rounded-xl overflow-hidden">
+									<Image
+										fill
+										alt="content"
+										className="object-cover object-center h-full w-full group-hover:scale-105 transition-transform duration-300"
+										src={card.path}
+									/>
 								</div>
 								<div className="relative px-4 pt-7 pb-2 rounded-b-xl overflow-hidden duration-300">
 									<span className="block mb-3 text-3xl font-bold text-primary-900 group-hover:text-purple-400 transition-colors">{card.title}</span>

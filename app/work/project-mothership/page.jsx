@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 
 const ProjectMothership = () => {
@@ -11,7 +12,7 @@ const ProjectMothership = () => {
 					    <h1 className="h1 text-primary-900">
 						    Project Mothership
 					    </h1>
-                        <p className="text-base xl:max-w-[600px] mb-4 text-primary-700">
+                        <p className="text-base xl:max-w-150 mb-4 text-primary-700">
                             Game | Stuttgart Media University | 2024
 					    </p>
                         <p className="text-lg mb-7">
@@ -39,7 +40,8 @@ const ProjectMothership = () => {
             <div className="mx-auto xl:pb-24 bg-primary-100 text-primary-800">
                 <div className="container flex flex-col xl:flex-row items-top justify-between gap-12">
 				    <div className="relative w-[39%] mt-12 text-center xl:text-left text-primary-800 z-20">
-                        <img
+                        <Image
+                            fill
                             alt="Project Mothership Trailer"
                             src="/images/ProjectMothershipTrailer.png"
                             className="absolute top-12 left-0 rounded-lg aspect-video object-cover"
@@ -108,7 +110,8 @@ const ProjectMothership = () => {
                             className="absolute w-[80%] top-12 left-0 rounded-lg aspect-video object-cover -rotate-2"
                         />
                         */}
-                        <img
+                        <Image
+                            fill
                             alt="Project Mothership Raycasting"
                             src="/images/ProjectMothershipRaycasting2.png"
                             className="absolute top-12 left-0 rounded-lg aspect-video object-cover"
@@ -120,7 +123,8 @@ const ProjectMothership = () => {
             <div className="mx-auto xl:pb-24 bg-primary-100 text-primary-800">
                 <div className="container flex flex-col xl:flex-row items-top justify-between gap-12">
 				    <div className="relative w-[39%] mt-12 text-center xl:text-left text-primary-800 z-20">
-                        <img
+                        <Image
+                            fill
                             alt="Project Mothership VFX"
                             src="/images/ProjectMothershipVFX.png"
                             className="absolute top-12 left-0 rounded-lg aspect-video object-cover"
