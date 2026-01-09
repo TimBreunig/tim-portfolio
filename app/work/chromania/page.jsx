@@ -37,7 +37,7 @@ const Chromania = () => {
                 className="fixed flex items-center w-full xl:h-screen overflow-hidden z-0"
             >
                 <Image
-                    src="/images/movie_night_teaser1.png"
+                    src="/images/movie_night_teaser.png"
                     alt="content"
                     className="object-cover object-center"
                     fill

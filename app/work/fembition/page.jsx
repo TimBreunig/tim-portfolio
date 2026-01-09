@@ -39,7 +39,7 @@ const Fembition = () => {
                 <Image
                     src="/images/fembition_teaser.png"
                     alt="Fembition Teaser 1"
-                    className="object-cover"
+                    className="object-cover object-center"
                     fill
                     sizes="100vw"
                     priority
