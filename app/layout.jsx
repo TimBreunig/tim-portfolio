@@ -1,5 +1,6 @@
 import "./globals.css";
 
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PageTransition from "@/components/PageTransition";
@@ -20,6 +21,7 @@ export default function RootLayout({ children }) {
             {children}
         </PageTransition>
         <Footer />
+        <SpeedInsights />
       </body>
     </html>
   );
