@@ -3,7 +3,7 @@
 import { motion, useAnimation, useInView } from 'framer-motion'
 import { useEffect, useRef } from 'react'
 
-import Link from "next/Link"
+import Link from "next/link"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircle, faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
