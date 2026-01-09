@@ -93,10 +93,12 @@ const CardGrid = () => {
 								className="block p-5">
 								<div className="relative aspect-16/10 rounded-xl overflow-hidden">
 									<Image
-										fill
-										alt="content"
-										className="object-cover object-center h-full w-full group-hover:scale-105 transition-transform duration-300"
 										src={card.path}
+										alt="content"
+										className="object-cover object-center group-hover:scale-105 transition-transform duration-300"
+										fill
+										sizes="90vw,
+											(min-width: 1024px) 50vw,"
 									/>
 								</div>
 								<div className="relative px-4 pt-7 pb-2 rounded-b-xl overflow-hidden duration-300">

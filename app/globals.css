@@ -19,9 +19,8 @@
   --breakpoint-xl: 1280px;
   --breakpoint-2xl: 1440px;
 
-  --font-*: initial;
-  --font-primary: "Outfit", sans-serif;
-  --font-secondary: "Inconsolata", monospace;
+  --font-primary: 'Outfit', ui-sans-serif, system-ui, sans-serif;
+  --font-secondary: 'Inconsolata', ui-serif, Georgia, monospace;
 
   --color-primary-0: #0f0f12;
   --color-primary-100: #141417;

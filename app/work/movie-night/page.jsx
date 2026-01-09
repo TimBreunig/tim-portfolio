@@ -31,36 +31,25 @@ const MovieNight = () => {
 
 
     return (
-        <section className="relative h-full">
+        <section className="relative">
             <motion.div
                 style={{ y }}
                 className="fixed flex items-center w-full xl:h-screen overflow-hidden z-0"
             >
                 <Image
+                    src="/images/movie_night_teaser1.png"
+                    alt="content"
+                    className="object-cover object-center"
                     fill
+                    sizes="100vw"
                     priority
-                    src="/images/movie_night_teaser.png"
-                    alt="Movie Night Teaser 1"
-                    className="object-cover w-full h-full"
                 />
             </motion.div>
-                    {/*<div className="absolute top-0 -left-[20%] w-[120%] h-[120%] bg-black-gradient blur-[150px] -z-10"></div>
-					    <h1 className="h1 text-primary-900">
-						    Movie Night
-					    </h1>
-                        <p className="text-base xl:max-w-[600px] mb-4 text-primary-700">
-                            Web-Application | Stuttgart Media University | 2024
-					    </p>
-                        <p className="text-lg mb-7">
-                            Movie Night is a React-based Web Application that aims to simplify the decision process for movie nights with friends.
-                            The app allows you to create and manage polls where every participant has the opportunity to propose one movie for the voting.
-                            The movie that has the most votes at the set deadline is declared the winner.
-					    </p>*/}
 
             {/* Whitespace */}
             <div ref={containerRef} className="h-screen" />
 
-            <div className="relative mx-auto h-auto pb-12 pt-36 bg-primary-900 z-10">
+            <div className="relative pb-12 pt-36 bg-primary-900 z-10">
                 <div className="container-wide">
                     <h2 className="h2 text-left mb-8 text-primary-100">Movie Night<span className="text-purple-500">.</span></h2>
                     <motion.div
@@ -95,13 +84,37 @@ const MovieNight = () => {
                             </div>
                         </div>
                         <div className="relative aspect-video rounded-xl overflow-hidden">
-                            <Image fill alt="content" className="object-cover object-center h-full w-full hover:scale-105 transition-transform duration-300" src="/images/movie_night_teaser2.png" />
+                            <Image
+                                src="/images/movie_night_teaser2.png"
+                                alt="content"
+                                className="object-cover object-center"
+                                fill
+                                sizes="90vw,
+                                    (min-width: 768px) 80vw,
+                                    (min-width: 1280px) 90vw"
+                            />
                         </div>
                         <div className="relative aspect-video rounded-xl overflow-hidden">
-                            <Image fill alt="content" className="object-cover object-center h-full w-full hover:scale-105 transition-transform duration-300" src="/images/movie_night_teaser3.png" />
+                            <Image
+                                src="/images/movie_night_teaser3.png"
+                                alt="content"
+                                className="object-cover object-center"
+                                fill
+                                sizes="90vw,
+                                    (min-width: 768px) 80vw,
+                                    (min-width: 1280px) 90vw"
+                            />
                         </div>
                         <div className="relative aspect-video rounded-xl overflow-hidden">
-                            <Image fill alt="content" className="object-cover object-center h-full w-full hover:scale-105 transition-transform duration-300" src="/images/movie_night_teaser4.png" />
+                            <Image
+                                src="/images/movie_night_teaser4.png"
+                                alt="content"
+                                className="object-cover object-center"
+                                fill
+                                sizes="90vw,
+                                    (min-width: 768px) 80vw,
+                                    (min-width: 1280px) 90vw"
+                            />
                         </div>
 					</motion.div>
                 </div>

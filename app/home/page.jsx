@@ -1,13 +1,10 @@
 "use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import Typewriter from 'typewriter-effect';
-
 import CardGrid from "@/components/CardGrid";
-import Carousel from "@/components/Carousel";
 import HeadingFullPage from "@/components/HeadingFullPage";
-import Socials from "@/components/Socials";
 import TabGrid from "@/components/TabGrid";
 import TechStack from "@/components/TechStack";
 
@@ -21,43 +18,44 @@ const smoothScroll = (e) => {
 
 const Home = () => {
   return (
-	<section className="h-full">
-		<div className="mx-auto">
-			<div className="container-wide pt-20 xl:pt-4 xl:h-screen flex flex-col items-center justify-center gap-16">
-				<div className="flex flex-col justify-center items-center gap-7">
-					<span className="font-heading uppercase inline-block h6 text-primary-100">
-						Tim Breunig
+	<section>
+		<div className="container-wide pt-20 xl:pt-4 xl:h-screen flex flex-col items-center justify-center gap-16">
+			<div className="flex flex-col justify-center items-center gap-7">
+				<span className="font-heading uppercase inline-block h6 text-primary-100">
+					Tim Breunig
+				</span>
+				<h1 className="h1 inline-flex flex-col gap-2 text-primary-100">
+					<span className="text-center">
+						Building
 					</span>
-					<h1 className="inline-flex flex-col gap-2 text-primary-100 h1">
-						<span className="text-center">
-							Building
+					<span className="ml-[0.07em] text-left text-purple-500">
+						things
+					</span>
+					<span className="mr-[0.02em] text-right">
+						for
+					</span>
+					<span className="relative ml-[0.07em]">
+						the&nbsp;&nbsp;&nbsp;web
+						<span className="absolute -right-6 xl:-right-16 bottom-0 text-purple-500">
+							.
 						</span>
-						<span className="ml-[0.07em] text-left text-purple-500">
-							things
-						</span>
-						<span className="mr-[0.02em] text-right">
-							for
-						</span>
-						<span className="relative ml-[0.07em]">
-							the&nbsp;&nbsp;&nbsp;web
-							<span className="absolute -right-6 xl:-right-16 bottom-0 text-purple-500">
-								.
-							</span>
-						</span>
-					</h1>
-				</div>
+					</span>
+				</h1>
 			</div>
 		</div>
 		<div
 			id="about"
-			className="mx-auto pt-8 xl:pt-0 bg-primary-200 text-primary-800">
+			className="pt-8 xl:pt-0 bg-primary-200 text-primary-800">
             <div className="container xl:h-[85vh] flex flex-col-reverse xl:flex-row items-center justify-between gap-12">
 				<div className="relative xl:w-[40%] h-full text-center xl:text-left text-primary-800 z-20">
 					<Image
-						fill
-						className="xl:absolute bottom-0 object-cover"
 						src="/images/portrait.png"
 						alt="Portrait of Tim Breunig"
+						className="xl:absolute bottom-0 object-cover"
+						fill
+						sizes="90vw,
+							(min-width: 768px) 80vw,
+               				(min-width: 1280px) 90vw"
 					/>
                     <div className="absolute top-[28%] left-[33%] w-[27%] h-[36%] bg-blue-gradient blur-[150px] opacity-60 -z-10"></div>
                 </div>
@@ -89,29 +87,23 @@ const Home = () => {
         </div>
 		<div
 			id ="work"
-			className="mx-auto h-auto pb-12 pt-36">
-			<div className="container-wide z-10">
-				<h2 className="h2 text-left mb-8 text-primary-100">Featured Work<span className="text-purple-500">.</span></h2>
-    			<CardGrid />
-			</div>
+			className="container-wide pb-12 pt-36 z-10">
+			<h2 className="h2 text-left mb-8 text-primary-100">Featured Work<span className="text-purple-500">.</span></h2>
+    		<CardGrid />
 		</div>
-		<div className="h-screen mx-auto box-content pb-60">
+		<div className="h-screen box-content pb-60">
 			<HeadingFullPage />
 		</div>
 		<div
 			className="relative xl:h-screen mx-auto box-content py-24 xl:py-4 flex items-center bg-primary-100 z-10">
-			<div className="container-wide">
-				<TechStack />
-			</div>
+			<TechStack />
 		</div>
 		<div 
 			id ="services"
-			className="mx-auto xl:h-screen py-24 xl:py-36">
-			<div className="container-wide text-right">
-				<span className="mb-4 font-secondary font-medium inline-block text-2xl text-primary-600 uppercase">&#91;What I offer&#93;</span>
-				<h2 className="h2 mb-14 text-primary-200">Services<span className="text-purple-500">.</span></h2>
-    			<TabGrid />
-			</div>
+			className="container-wide xl:h-screen py-24 xl:py-36 text-right">
+			<span className="mb-4 font-secondary font-medium inline-block text-2xl text-primary-600 uppercase">&#91;What I offer&#93;</span>
+			<h2 className="h2 mb-14 text-primary-200">Services<span className="text-purple-500">.</span></h2>
+    		<TabGrid />
 		</div>
 	</section>
   );

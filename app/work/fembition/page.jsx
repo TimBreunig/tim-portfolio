@@ -31,24 +31,25 @@ const Fembition = () => {
 
 
     return (
-        <section className="relative h-full">
+        <section className="relative">
             <motion.div
                 style={{ y }}
                 className="fixed flex items-center w-full xl:h-screen overflow-hidden z-0"
             >
                 <Image
-                    fill
-                    priority
                     src="/images/fembition_teaser.png"
                     alt="Fembition Teaser 1"
-                    className="object-cover w-full h-full"
+                    className="object-cover"
+                    fill
+                    sizes="100vw"
+                    priority
                 />
             </motion.div>
 
             {/* Whitespace */}
             <div ref={containerRef} className="h-screen" />
 
-            <div className="relative mx-auto h-auto pb-12 pt-36 bg-primary-900 z-10">
+            <div className="relative pb-12 pt-36 bg-primary-900 z-10">
                 <div className="container-wide">
                     <h2 className="h2 text-left mb-8 text-primary-100">Fembition<span className="text-purple-500">.</span></h2>
                     <motion.div
@@ -80,13 +81,37 @@ const Fembition = () => {
                             </div>
                         </div>
                         <div className="relative aspect-video rounded-xl overflow-hidden">
-                            <Image fill alt="content" className="w-full h-full object-cover object-center" src="/images/fembition_teaser2.png" />
+                            <Image
+                                src="/images/fembition_teaser2.png"
+                                alt="content"
+                                className="object-cover object-center"
+                                fill
+                                sizes="90vw,
+                                    (min-width: 768px) 80vw,
+                                    (min-width: 1280px) 90vw"
+                            />
                         </div>
                         <div className="relative aspect-video rounded-xl overflow-hidden">
-                            <Image fill alt="content" className="w-full h-full object-cover object-center" src="/images/fembition_teaser3.png" />
+                            <Image
+                                src="/images/fembition_teaser3.png"
+                                alt="content"
+                                className="object-cover object-center"
+                                fill
+                                sizes="90vw,
+                                    (min-width: 768px) 80vw,
+                                    (min-width: 1280px) 90vw"
+                            />
                         </div>
                         <div className="relative aspect-video rounded-xl overflow-hidden">
-                            <Image fill alt="content" className="w-full h-full object-cover object-center" src="/images/movie_night_teaser4.png" />
+                            <Image
+                                src="/images/movie_night_teaser4.png"
+                                alt="content"
+                                className="object-cover object-center"
+                                fill
+                                sizes="90vw,
+                                    (min-width: 768px) 80vw,
+                                    (min-width: 1280px) 90vw"
+                            />
                         </div>
 					</motion.div>
                 </div>

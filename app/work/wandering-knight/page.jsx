@@ -25,10 +25,10 @@ const WanderingKnight = () => {
                     </div>
                     <div className="relative w-[59%] mt-6 text-center xl:text-left text-primary-800 z-10">
                         <Image
-                            fill
-                            alt="The Wandering Knight Teaser Image"
                             src="/images/IntroCutscene2_LowRes.gif"
+                            alt="The Wandering Knight Teaser Image"
                             className="aspect-[15.2/9] rounded-xl object-cover pointer-events-none"
+                            fill
                         />
                         <div className="absolute -top-[7%] right-[25%] w-[85%] h-[105%] bg-blue-gradient blur-[150px] opacity-60 -z-10"></div>
                     </div>
@@ -38,10 +38,10 @@ const WanderingKnight = () => {
                 <div className="container flex flex-col xl:flex-row items-top justify-between gap-12">
 				    <div className="relative w-[39%] mt-12 text-center xl:text-left text-primary-800 z-20">
                         <Image
-                            fill
-                            alt="Project Mothership Trailer"
                             src="/images/ProjectMothershipTrailer.png"
+                            alt="Project Mothership Trailer"
                             className="absolute top-12 left-0 rounded-lg aspect-video object-cover"
+                            fill
                         />
                         <div className="absolute top-[28%] left-[15%] w-[55%] h-[35%] bg-blue-gradient blur-[150px] opacity-60 -z-10"></div>
                     </div>
@@ -87,10 +87,10 @@ const WanderingKnight = () => {
                     </div>
                     <div className="relative w-[39%] mt-12 text-center xl:text-left text-primary-800 z-20">
                         <Image
-                            fill
-                            alt="Project Mothership Trailer"
                             src="/images/ProjectMothershipRaycasting2.png"
+                            alt="Project Mothership Trailer"
                             className="absolute top-12 left-0 rounded-lg aspect-video object-cover"
+                            fill
                         />
                         <div className="absolute top-[28%] right-[20%] w-[60%] h-[45%] bg-blue-gradient blur-[150px] opacity-60 -z-10"></div>
                     </div>
@@ -100,10 +100,10 @@ const WanderingKnight = () => {
                 <div className="container flex flex-col xl:flex-row items-top justify-between gap-12">
 				    <div className="relative w-[39%] mt-12 text-center xl:text-left text-primary-800 z-20">
                         <Image
-                            fill
-                            alt="Project Mothership VFX"
                             src="/images/ProjectMothershipVFX.png"
+                            alt="Project Mothership VFX"
                             className="absolute top-12 left-0 rounded-lg aspect-video object-cover"
+                            fill
                         />
                         <div className="absolute top-[28%] left-[15%] w-[55%] h-[35%] bg-blue-gradient blur-[150px] opacity-60 -z-10"></div>
                     </div>

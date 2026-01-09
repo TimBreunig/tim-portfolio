@@ -1,9 +1,25 @@
 import "./globals.css";
-
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Outfit, Inconsolata } from 'next/font/google';
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PageTransition from "@/components/PageTransition";
+
+
+const outfit = Outfit({
+    subsets: ["latin"],
+    display: 'swap',
+    weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+    variable: '--font-outfit'
+});
+
+
+const inconsolata = Inconsolata ({
+  subsets: ["latin"],
+  display: 'swap',
+  weight: ["200", "300", "400", "500", "600", "700", "800"],
+  variable: '--font-inconsolata'
+});
 
 
 export const metadata = {
@@ -15,7 +31,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={"relative"}>
+      <body className={`relative ${outfit.variable} ${inconsolata.variable}`}>
         <Header />
         <PageTransition>
             {children}

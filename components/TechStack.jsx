@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useAnimation, useInView, useScroll } from 'framer-motion'
+import { motion, useAnimation, useInView } from 'framer-motion'
 import { useEffect, useRef } from 'react'
 
 import NextjsLogo from "@/app/images/logos/logo-nextjs.svg";
@@ -78,7 +78,7 @@ const TechStack = () => {
 			}}
 			initial="hidden"
 			animate={mainControls}
-			className="space-y-6">
+			className="container-wide space-y-6">
 			<div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
 				{firstRow.map(({ Icon, name }) => (
 					<motion.div

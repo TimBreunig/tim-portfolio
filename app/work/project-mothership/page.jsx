@@ -41,10 +41,10 @@ const ProjectMothership = () => {
                 <div className="container flex flex-col xl:flex-row items-top justify-between gap-12">
 				    <div className="relative w-[39%] mt-12 text-center xl:text-left text-primary-800 z-20">
                         <Image
-                            fill
-                            alt="Project Mothership Trailer"
                             src="/images/ProjectMothershipTrailer.png"
+                            alt="Project Mothership Trailer"
                             className="absolute top-12 left-0 rounded-lg aspect-video object-cover"
+                            fill
                         />
                         <div className="absolute top-[28%] left-[15%] w-[55%] h-[35%] bg-blue-gradient blur-[150px] opacity-60 -z-10"></div>
                     </div>
@@ -111,10 +111,10 @@ const ProjectMothership = () => {
                         />
                         */}
                         <Image
-                            fill
-                            alt="Project Mothership Raycasting"
                             src="/images/ProjectMothershipRaycasting2.png"
+                            alt="Project Mothership Raycasting"
                             className="absolute top-12 left-0 rounded-lg aspect-video object-cover"
+                            fill
                         />
                         <div className="absolute top-[28%] right-[20%] w-[60%] h-[45%] bg-blue-gradient blur-[150px] opacity-60 -z-10"></div>
                     </div>
@@ -124,10 +124,10 @@ const ProjectMothership = () => {
                 <div className="container flex flex-col xl:flex-row items-top justify-between gap-12">
 				    <div className="relative w-[39%] mt-12 text-center xl:text-left text-primary-800 z-20">
                         <Image
-                            fill
-                            alt="Project Mothership VFX"
                             src="/images/ProjectMothershipVFX.png"
+                            alt="Project Mothership VFX"
                             className="absolute top-12 left-0 rounded-lg aspect-video object-cover"
+                            fill
                         />
                         <div className="absolute top-[28%] left-[15%] w-[55%] h-[35%] bg-blue-gradient blur-[150px] opacity-60 -z-10"></div>
                     </div>
