@@ -15,7 +15,7 @@ const MovieNight = () => {
 		if(isInView) {
 			mainControls.start("show")
 		}
-	}, [isInView])
+	}, [isInView, mainControls])
 
 
     const { scrollYProgress } = useScroll({

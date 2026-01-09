@@ -59,7 +59,7 @@ const TechStack = () => {
 		if(isInView) {
 			mainControls.start("show")
 		}
-	}, [isInView])
+	}, [isInView, mainControls])
 
 	const firstRow = icons.slice(0, 3);
 	const secondRow = icons.slice(3);

@@ -62,7 +62,7 @@ const CardGrid = () => {
 		if(isInView) {
 			mainControls.start("show")
 		}
-	}, [isInView])
+	}, [isInView, mainControls])
 
 	return (		
 		<motion.div
@@ -84,6 +84,7 @@ const CardGrid = () => {
 			{cards.map((card, index) => {
 					return (
 						<motion.div
+							key={index}
 							variants={{ hidden: { opacity: 0, y: 20 }, show: { opacity: 1, y: 0 } }}
 							className="group flex-2 w-full box-border mb-0 xl:mb-2 bg-primary-100 rounded-2xl shadow-md hover:cursor-pointer transition-colors duration-300"
 							>
