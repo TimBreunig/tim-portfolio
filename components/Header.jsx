@@ -2,7 +2,6 @@
 
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import { Button } from "./ui/button";
 
 import Socials from "@/components/Socials";
 import Typewriter from 'typewriter-effect';

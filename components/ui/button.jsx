@@ -5,12 +5,12 @@ import { cn } from "@/lib/utils"
 
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center whitespace-nowrap rounded-full text-lg font-semibold tracking-wider ring-offset-white transition-colors duration-300 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-slate-950 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 dark:ring-offset-slate-950 dark:focus-visible:ring-slate-300",
+  "inline-flex items-center justify-center whitespace-nowrap rounded-full text-lg font-semibold tracking-wider ring-offset-white hover:cursor-pointer transition-colors duration-300 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-slate-950 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 dark:ring-offset-slate-950 dark:focus-visible:ring-slate-300",
   {
     variants: {
       variant: {
-        default: "bg-primary-100 text-primary-900 hover:text-primary-200",
-        light: "text-primary-200 hover:text-primary-300",
+        default: "bg-primary-100 text-primary-900 hover:bg-purple-500 hover:text-primary-100",
+        light: "bg-purple-500 text-primary-100 hover:bg-purple-500 hover:text-primary-900",
         primary: "bg-linear-to-br from-accent-600 to-accent-400 text-primary-900 hover:text-primary-200",
         outline: "box-border border border-primary-700 text-primary-900 hover:bg-primary-900 hover:border-primary-900 hover:text-primary-300",
       },
