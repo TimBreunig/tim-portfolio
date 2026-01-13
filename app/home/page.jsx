@@ -38,7 +38,7 @@ const Home = () => {
 		<section
 			id ="work"
 			className="container-wide pb-12 pt-36 z-10">
-			<h2 className="h2 text-left mb-8 text-primary-100">Featured Work<span className="accent-dot">.</span></h2>
+			<h2 className="h2 text-left text-primary-100">Featured Work<span className="accent-dot">.</span></h2>
     		<CardGrid />
 		</section>
 		<section className="h-screen box-content pb-60">

@@ -137,6 +137,10 @@
 		}
 	}
 
+	a.hyperlink {
+		@apply text-purple-400 hover:text-purple-500 underline underline-offset-4 transition-colors duration-300;
+	}
+
 	nav a {
 		@apply relative;
 	}
@@ -165,6 +169,10 @@
 		@apply tracking-wide;
 	}
 
+	.p-xl {
+		@apply text-xl mb-4 tracking-wide;
+	}
+
 	.p-2xl {
 		@apply text-2xl mb-4 tracking-normal;
 	}
@@ -186,11 +194,11 @@
 	}
 
 	.h4 {
-		@apply text-[2.25rem] xl:text-[5.75rem] leading-[1.1] font-bold uppercase tracking-wide mb-3;
+		@apply text-[2.25rem] xl:text-[5.75rem] leading-[1.1] font-bold uppercase tracking-wide mb-4;
 	}
 
 	.h5 {
-		@apply text-[1.625rem] xl:text-[3.5rem] leading-[1.2] font-semibold uppercase tracking-wider mb-2;
+		@apply text-[1.625rem] xl:text-[3.5rem] leading-[1.2] font-semibold uppercase tracking-wider mb-3;
 	}
 
 	.h6 {
