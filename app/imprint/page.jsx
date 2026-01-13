@@ -1,3 +1,5 @@
+import PolicyText from "@/components/PolicyText"
+
 const Imprint = () => {
     return (
         <div>
@@ -13,33 +15,34 @@ const Imprint = () => {
                     >
                         <div className="flex flex-col gap-2 p-8 pb-12 bg-primary-200 rounded-xl">
                             <span className="block mb-2 font-semibold text-primary-600 uppercase tracking-wider">Information in accordance with Section 5 TMG (German Telemedia Act)</span>
-                            <p className="p-2xl">
-                                <h2 className="h5">
-                                    Provider<span className="accent-dot">.</span>
-                                </h2>
-                                Tim Breunig<br />
-                                Etivalstraße 52<br />
-                                75173 Pforzheim<br />
-                                Germany
-                            </p><br />
-                            <p className="p-2xl">
-                                <h2 className="h5">
-                                    Contact<span className="accent-dot">.</span>
-                                </h2>
-                                E-Mail: <a href="mailto:breunig.tim@web.de">breunig.tim@web.de</a>
-                                <br />
-                                <br />
-                                Responsible for content according to § 55 Abs. 2 RStV:<br />
-                                Tim Breunig, address same as above
-                            </p><br />
-                            <p className="p-2xl">
-                                <h2 className="h5">
-                                    Disclaimer<span className="accent-dot">.</span>
-                                </h2>
-                                Despite careful content control, I assume no liability for the content of external links. The operators of the linked pages are solely responsible for
-                                their content. This website is intended for showcasing design work in the context of job applications and is not operated for commercial purposes or
-                                revenue generation.
-                            </p><br />
+                            <div className="space-y-10">
+                                <PolicyText title="Provider">
+                                    Tim Breunig<br />
+                                    Etivalstraße 52<br />
+                                    75173 Pforzheim<br />
+                                    Germany
+                                </PolicyText>
+
+                                <PolicyText title="Contact">
+                                    E-Mail:&nbsp;
+                                    <a
+                                        href="mailto:breunig.tim@web.de"
+                                        className="hyperlink"
+                                    >
+                                        breunig.tim@web.de
+                                    </a>
+                                    <br />
+                                    <br />
+                                    Responsible for content according to § 55 Abs. 2 RStV:<br />
+                                    Tim Breunig, address same as above
+                                </PolicyText>
+
+                                <PolicyText title="Disclaimer">
+                                    Despite careful content control, I assume no liability for the content of external links. The operators of the linked pages are solely responsible for
+                                    their content. This website is solely intended for showcasing project work in the context of job applications and is not operated under commercial purposes or
+                                    for the sake of revenue generation.
+                                </PolicyText>
+                            </div>
                             <span className="block font-semibold text-primary-600 uppercase tracking-wider">Source: https://www.e-recht24.de</span>
                         </div>
                     </div>
