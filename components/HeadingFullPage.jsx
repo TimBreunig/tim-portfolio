@@ -13,20 +13,20 @@ const HeadingFullPage = () => {
 
   const scale = useTransform(
     scrollYProgress,
-    [0, 0.75, 1],
-    [1, 1.75, 1.5]
+    [0, 0.6, 1],
+    [1, 1.6, 1.6]
   )
 
   const strokeColor = useTransform(
     scrollYProgress,
     [0, 0.39, 0.4],
-    ['transparent', 'transparent', '#1c1c22']
+    ['transparent', 'transparent', '#141417']
   )
 
   const fillColor = useTransform(
     scrollYProgress,
     [0, 0.35, 0.36, 0.39, 0.4],
-    ['transparent', 'transparent', '#a855f7', '#a855f7', '#f5f5fc']
+    ['transparent', 'transparent', '#a855f7', '#a855f7', '#fdfeff']
   )
 
   return (
@@ -43,7 +43,7 @@ const HeadingFullPage = () => {
               WebkitTextStrokeWidth: '5px',
               WebkitTextStrokeColor: strokeColor,
             }}
-            className="h2 absolute m-0 inset-0 text-center text-primary-200"
+            className="h2 absolute m-0 inset-0 text-center text-primary-100"
           >
             Versatile<br />Tech Stack
           </motion.h2>

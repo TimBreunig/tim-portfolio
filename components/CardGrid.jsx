@@ -11,7 +11,7 @@ import { faCircle, faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
 const CardGrid = () => {
 	const cards = [
-		{
+		/*{
 			title: "The Wandering Knight",
 			description: "Game",
 			roles: ["Storytelling", "Engineering"],
@@ -26,7 +26,7 @@ const CardGrid = () => {
 			date: "2024",
 			path: "/images/ProjectMothershipTeaser.png",
 			link: "/work/project-mothership",
-		},
+		},*/
 		{
 			title: "Fembition",
 			description: "Website for an imaginary esports-organization empowering female players",
@@ -43,14 +43,14 @@ const CardGrid = () => {
 			path: "/images/movie_night_teaser.png",
 			link: "/work/movie-night",
 		},
-		{
+		/*{
 			title: "Chromania",
 			description: "A personal indie top-down adventure game about magic, color and mental health",
 			roles: ["Game Design", "Game Art", "Engineering"],
 			date: "2023",
 			path: "/images/ChromaniaTeaser.png",
 			link: "/work/chromania",
-		},
+		},*/
 	];
 
 	const containerRef = useRef(null)
