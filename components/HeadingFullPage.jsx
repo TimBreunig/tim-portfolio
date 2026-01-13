@@ -13,8 +13,8 @@ const HeadingFullPage = () => {
 
   const scale = useTransform(
     scrollYProgress,
-    [0, 0.75, 1],
-    [1, 1.75, 1.5]
+    [0, 0.6, 1],
+    [1, 1.6, 1.6]
   )
 
   const strokeColor = useTransform(

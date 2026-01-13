@@ -1,8 +1,8 @@
 "use client";
 
-import React from "react";
+import { motion, useAnimation, useInView } from 'framer-motion'
+import { useEffect, useRef } from 'react'
 
-import Link from "next/link";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGamepad, faCode, faGlobe, faPalette, faFilm } from '@fortawesome/free-solid-svg-icons'
 
@@ -12,7 +12,7 @@ const TabGrid = () => {
 		{
 			title: "Web Dev Frontend",
 			icon: faGlobe,
-			text: "I love designing and building websites with modern tools and state-of-the-art frameworks like React and Tailwind, combining smooth performance with responsiveness and an appealing design.",
+			text: "I design and build websites with modern tools and state-of-the-art frameworks like React and Tailwind, combining smooth performance with responsiveness and an appealing design.",
 		},
 		{
 			title: "User Interface Design",
@@ -26,8 +26,54 @@ const TabGrid = () => {
 		},
 	];
 
-	return (	
-		<div className="flex flex-col">
+	const containerRef = useRef(null)
+
+	const isInView = useInView(containerRef, { once: true })
+	const mainControls = useAnimation()
+
+	useEffect(() => {
+		if(isInView) {
+			mainControls.start("show")
+		}
+	}, [isInView, mainControls])
+
+	return (
+		<motion.div
+			ref={containerRef}
+			variants={{
+				hidden: { opacity: 0 },
+				show: {
+					opacity: 1,
+					transition: {
+						staggerChildren: 0.1,
+					},
+				},
+			}}
+			initial="hidden"
+			animate={mainControls}
+			className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+			{tabs.map((tab, index) => {
+					return (
+						<motion.div
+							variants={{ hidden: { opacity: 0, y: 20 }, show: { opacity: 1, y: 0 } }}
+							key={index}
+							className="w-full">
+							<div
+								className="hex-icon-wrapper mx-auto flex items-center justify-center w-24 h-24 bg-linear-to-br from-purple-400 to-purple-600 shadow-2xl/60">
+                                <FontAwesomeIcon icon={tab.icon} className="w-10 h-10 text-3xl text-primary-900" />
+                            </div>
+       						<div className="-mt-12 group flex items-center justify-center w-full aspect-video p-12 bg-primary-200 rounded-2xl shadow-md hover:cursor-pointer">
+								<div className="text-center px-16 pt-10">
+									<h3 className="h6 text-accent-900">{tab.title}</h3>
+       						    	<p className="mt-2 text-primary-800 leading-relaxed">
+							        	{tab.text}
+							    	</p>
+								</div>
+                            </div>
+						</motion.div>
+					);
+				})}
+		{/*<div className="flex flex-col">
 			{tabs.map((tab, index) => {
 					return (
 						<div key={index}
@@ -46,7 +92,8 @@ const TabGrid = () => {
 						</div>
 					);
 				})}
-    	</div>
+    	</div>*/}
+    	</motion.div>
 	);
 };
 

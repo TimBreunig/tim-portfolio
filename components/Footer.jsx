@@ -1,9 +1,5 @@
 import Link from "next/link";
-import { Button } from "./ui/button";
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLinkedinIn, faInstagram, faPinterestP, faGithub } from '@fortawesome/free-brands-svg-icons'
-import { faPaperPlane } from '@fortawesome/free-solid-svg-icons'
 
 const Footer = () => {
 	return (

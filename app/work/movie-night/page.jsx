@@ -56,7 +56,7 @@ const MovieNight = () => {
 						variants={{ hidden: { opacity: 0, y: 20 }, show: { opacity: 1, y: 0 } }}
 						className="w-full flex flex-col gap-6 box-border p-8 bg-primary-100 rounded-2xl shadow-md text-primary-900 hover:cursor-pointer transition-colors duration-300"
 					>
-                        <div className="grid grid-cols-7 gap-12 w-full p-8 pb-12 bg-primary-200 rounded-xl">
+                        <div className="grid grid-cols-7 gap-12 w-full p-8 bg-primary-200 rounded-xl">
                             <div>
                                 <span className="block mb-2 font-semibold text-primary-600 uppercase tracking-wider">Year</span>
                                 <span className="h5">2024</span>

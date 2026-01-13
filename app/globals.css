@@ -142,7 +142,7 @@
 	}
 
 	nav a.active::after {
-		@apply absolute content-[''] w-1/2 h-[2px] -bottom-3 left-1/2 transform -translate-x-1/2 bg-primary-300 transition-colors duration-300 rounded-sm;
+		@apply absolute content-[''] w-1/2 h-0.5 -bottom-3 left-1/2 transform -translate-x-1/2 bg-primary-300 transition-colors duration-300 rounded-sm;
 	}
 
 	nav a.active:hover::after {
@@ -166,15 +166,19 @@
 	}
 
 	.p-2xl {
-		@apply text-2xl tracking-normal;
+		@apply text-2xl mb-4 tracking-normal;
+	}
+
+	.p-7xl {
+		@apply text-7xl font-medium mb-7 tracking-tighter;
 	}
 
 	.h1 {
-		@apply text-[4.125rem] xl:text-[12rem] leading-[0.75] font-bold uppercase tracking-tighter mb-10;
+		@apply text-[4.125rem] xl:text-[11.25rem] leading-[0.8] font-bold uppercase tracking-tighter mb-10;
 	}
 
 	.h2 {
-		@apply text-[3.75rem] xl:text-[11.25rem] leading-[0.9] font-bold uppercase tracking-tight mb-7;
+		@apply text-[3.75rem] xl:text-[11.25rem] leading-[0.9] font-bold uppercase tracking-tight mb-8;
 	}
 
 	.h3 {

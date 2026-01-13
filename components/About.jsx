@@ -8,11 +8,11 @@ const About = () => {
   const textControls = useAnimation();
 
 	return (
-    	<motion.div
+    	<motion.section
 			id="about"
 			initial={{ backgroundColor: "#fdfeff" }}
 			whileInView={{ backgroundColor: "#141417" }}
-			transition={{ duration: 0.5, ease: "easeInOut" }}
+			transition={{ duration: 0.25, ease: "easeInOut" }}
 			viewport={{ once: true, amount: 0.9 }}
 			className="h-[110vh] flex flex-col justify-center text-primary-900"
 			onAnimationComplete={() => {
@@ -49,7 +49,7 @@ const About = () => {
 
 				<div className="container relative text-left">
 					<motion.p
-						className="w-5/6 text-7xl font-medium mb-7 tracking-tighter"
+						className="w-5/6 p-7xl"
 						variants={{
 							hidden: { opacity: 0, y: 10 },
 							visible: { opacity: 1, y: 0 },
@@ -68,9 +68,14 @@ const About = () => {
 							visible: { opacity: 1, y: 0 },
 						}}
 					>
-						<Button variant="light" asChild>
+						<Button
+							variant="light"
+							size="lg"
+							asChild
+						>
 							<a href="/files/resume_breunig.pdf"
-      							download
+      							target="_blank"
+								rel="noopener"
 							>
 								Download CV
 							</a>	
@@ -78,7 +83,7 @@ const About = () => {
 					</motion.div>
 				</div>
 			</motion.div>
-		</motion.div>
+		</motion.section>
 	);
 };
 
