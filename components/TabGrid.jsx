@@ -10,19 +10,19 @@ import { faGamepad, faCode, faGlobe, faPalette, faFilm } from '@fortawesome/free
 const TabGrid = () => {
 	let tabs = [
 		{
-			title: "Web Dev Frontend",
-			icon: faGlobe,
-			text: "I design and build websites with modern tools and state-of-the-art frameworks like React and Tailwind, combining smooth performance with responsiveness and an appealing design.",
+			title: "Digital Design",
+			roles: ["UX", "UI", "Webdesign", "Wireframing", "Prototyping", "Graphic Design"],
+			description: "Designing high-quality experiences from the first wireframes to a fully working prototype, balancing clear usability and aethetic visuals.",
 		},
 		{
-			title: "User Interface Design",
-			icon: faPalette,
-			text: "A unique and modern look is essential for building a successful application. With tools like Figma, I create and prototype clean, aesthetic and user-friendly designs for all kinds of software.",
+			title: "Development",
+			roles: ["Frontend Development", "SEO", "CMS", "Mobile Development", "Unit Testing"],
+			description: "Crafting engaging digital products that combine appealing design with intuitive usability and modern technology.",
 		},
 		{
-			title: "Game Development",
-			icon: faCode,
-			text: "Being proficient in working with multiple Game Engines like Unity, Unreal Engine and Godot, I realize existing game concepts with clean implementation and an eye for detail.",
+			title: "Communication",
+			roles: ["Storyboarding", "Video Production", "Social Media", "Community Management"],
+			description: "Managing communication and social media channels and producing content suitable for the respective target group.",
 		},
 	];
 
@@ -51,48 +51,55 @@ const TabGrid = () => {
 			}}
 			initial="hidden"
 			animate={mainControls}
-			className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-			{tabs.map((tab, index) => {
-					return (
-						<motion.div
-							variants={{ hidden: { opacity: 0, y: 20 }, show: { opacity: 1, y: 0 } }}
-							key={index}
-							className="w-full">
-							<div
-								className="hex-icon-wrapper mx-auto flex items-center justify-center w-24 h-24 bg-linear-to-br from-purple-400 to-purple-600 shadow-2xl/60">
-                                <FontAwesomeIcon icon={tab.icon} className="w-10 h-10 text-3xl text-primary-900" />
-                            </div>
-       						<div className="-mt-12 group flex items-center justify-center w-full aspect-video p-12 bg-primary-200 rounded-2xl shadow-md hover:cursor-pointer">
-								<div className="text-center px-16 pt-10">
-									<h3 className="h6 text-accent-900">{tab.title}</h3>
-       						    	<p className="mt-2 text-primary-800 leading-relaxed">
-							        	{tab.text}
-							    	</p>
+			className=""
+		>
+			<motion.div
+				variants={{ hidden: { opacity: 0, y: 20 }, show: { opacity: 1, y: 0 } }}
+				className="w-full box-border p-4 xl:p-8 bg-primary-100 rounded-xl xl:rounded-2xl shadow-md text-primary-900 transition-colors duration-300"
+			>
+				<div className="w-full bg-primary-200 rounded-lg xl:rounded-xl">
+					{tabs.map((tab, index) => {
+						return (
+							<>
+								<div className="p-8 grid grid-cols-1 xl:grid-cols-7 gap-4 xl:gap-12">
+									<div
+										key={index} 
+										className="xl:col-span-3"
+									>
+										<h3 className="h3">
+											{tab.title}<span className="accent-dot">.</span>
+										</h3>
+									</div>
+									
+									<div className="xl:col-span-2">
+										<div className="flex flex-wrap gap-2 xl:gap-3">
+											{tab.roles.map((role, index) => (
+												<div
+													key={index}
+													className="px-3 xl:px-4 py-0 xl:py-2 font-semibold text-[0.625rem] xl:text-sm uppercase tracking-wider bg-primary-300 text-primary-600 rounded-md"
+												>
+													{role}
+												</div>
+												)
+											)}
+										</div>
+									</div>
+
+									<div className="xl:col-span-2">
+										<p className="p-2xl">
+											{tab.description}
+										</p>
+									</div>
 								</div>
-                            </div>
-						</motion.div>
-					);
-				})}
-		{/*<div className="flex flex-col">
-			{tabs.map((tab, index) => {
-					return (
-						<div key={index}
-							className="w-full">
-							<div className="hex-icon-wrapper mx-auto flex items-center justify-center w-24 h-24 bg-linear-to-br from-purple-400 to-purple-600 shadow-2xl/60">
-                                <FontAwesomeIcon icon={tab.icon} className="w-10 h-10 text-4xl text-primary-900" />
-                            </div>
-       						<div className="-mt-12 group flex items-center justify-center w-full aspect-video p-12 bg-primary-200 rounded-2xl shadow-md hover:cursor-pointer">
-								<div className="px-16 pt-10 text-left">
-									<h3 className="h3 text-accent-900">{tab.title}</h3>
-       						    	<p className="p-2xl mt-2 text-primary-800 leading-relaxed">
-							        	{tab.text}
-							    	</p>
-								</div>
-                            </div>
-						</div>
-					);
-				})}
-    	</div>*/}
+
+								{index < tabs.length - 1 && (
+									<div className="h-0.5 mx-8 rounded bg-primary-300" />
+								)}
+							</>
+						)
+					})}
+				</div>
+			</motion.div>
     	</motion.div>
 	);
 };

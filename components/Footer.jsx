@@ -4,12 +4,12 @@ import Link from "next/link";
 const Footer = () => {
 	return (
 		<div className="relative w-full pt-8 xl:pt-12 pb-6 xl:pb-8 bg-primary-0 text-primary-700 z-50">
-			<div className="container-wide mx-auto">
-				<div className="flex flex-col xl:flex-row justify-between items-start gap-12 xl:gap-16 mt-12 mb-16">
+			<div className="container-wide">
+				<div className="flex flex-col xl:flex-row justify-between items-start xl:gap-16 my-8 xl:mt-12 xl:mb-16">
 					<div className="xl:w-[50%]">
-						<h2 className="h2 text-primary-900">Get in touch<span className="accent-dot">.</span></h2>
+						<h2 className="h2 text-primary-900 text-center xl:text-left">Get in touch<span className="accent-dot">.</span></h2>
 					</div>
-					<div className="w-full xl:w-[50%] text-right footer-links">
+					<div className="w-full xl:w-[50%] text-center xl:text-right footer-links">
 						<ul>
 							<li>
 								<a
@@ -19,14 +19,14 @@ const Footer = () => {
 							</li>
 							<li>
 								<a
-									href="https://de.linkedin.com/in/tim-breunig-a82250252" target="_blank">
-									Github
+									href="mailto:breunig.tim@web.de" target="_blank">
+									Email
 								</a>
 							</li>
 							<li>
 								<a
 									href="https://de.linkedin.com/in/tim-breunig-a82250252" target="_blank">
-									Instagram
+									Github
 								</a>
 							</li>
 							<li>

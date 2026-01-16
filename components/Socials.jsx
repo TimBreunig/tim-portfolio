@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLinkedinIn, faInstagram, faPinterestP, faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faLinkedinIn, faPinterestP, faGithub } from '@fortawesome/free-brands-svg-icons'
 
 
 const socialLinks = [
@@ -8,12 +9,12 @@ const socialLinks = [
 		Icon: faLinkedinIn,
 	},
 	{
-		path: "https://github.com/TimBreunig",
-		Icon: faGithub,
+		path: "mailto:breunig.tim@web.de",
+		Icon: faEnvelope,
 	},
 	{
-		path: "https://www.instagram.com/_timbrng_/",
-		Icon: faInstagram,
+		path: "https://github.com/TimBreunig",
+		Icon: faGithub,
 	},
 	{
 		path: "https://www.pinterest.de/tiracin16/",
@@ -34,7 +35,7 @@ const Socials = () => {
                     >
                         <span className="absolute inset-0 w-full h-full bg-primary-100 transform scale-x-0 origin-left rounded-tr-full rounded-br-full z-0 group-hover:scale-x-100 transition-transform duration-500 delay-75 ease-in-out"></span>
                         <span className="absolute inset-0 w-full h-full bg-primary-100 transform scale-x-0 origin-right rounded-tl-full rounded-bl-full z-0 group-hover:scale-x-100 transition-transform duration-500 ease-in-out"></span>
-                        <FontAwesomeIcon icon={Icon} className="relative w-full h-full text-2xl text-primary-300 z-10 group-hover:border-primary-100 group-hover:text-primary-900 transition-colors duration-500" />
+                        <FontAwesomeIcon icon={Icon} className="relative w-full h-full text-2xl text-primary-100 z-10 group-hover:border-primary-100 group-hover:text-primary-900 transition-colors duration-500" />
                     </a>
 				);
 			})}

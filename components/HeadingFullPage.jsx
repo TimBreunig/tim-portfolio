@@ -17,45 +17,41 @@ const HeadingFullPage = () => {
     [1, 1.6, 1.6]
   )
 
-  const strokeColor = useTransform(
+  const fillColor1 = useTransform(
     scrollYProgress,
-    [0, 0.39, 0.4],
-    ['transparent', 'transparent', '#141417']
+    [0, 0.35, 0.36, 0.39, 0.4, 0.43, 0.44],
+    ['#141417', '#141417', '#a855f7', '#a855f7', '#141417', '#141417', '#a855f7']
   )
 
-  const fillColor = useTransform(
+  const fillColor2 = useTransform(
     scrollYProgress,
-    [0, 0.35, 0.36, 0.39, 0.4],
-    ['transparent', 'transparent', '#a855f7', '#a855f7', '#fdfeff']
+    [0, 0.39, 0.4],
+    ['#141417', '#141417', '#a855f7']
   )
 
   return (
     <section
       ref={containerRef}
-      className="relative container-wide h-[200vh]"
+      className="relative h-[50vh] xl:h-[200vh]"
     >
-      <div className="sticky top-0 h-screen flex items-center justify-center">
+      <div className="container-wide sticky top-0 h-[50vh] xl:h-screen flex items-center justify-center">
         <div className="relative">
           <motion.h2
-            aria-hidden
             style={{
               scale,
-              WebkitTextStrokeWidth: '5px',
-              WebkitTextStrokeColor: strokeColor,
             }}
-            className="h2 absolute m-0 inset-0 text-center text-primary-100"
+            className="relative h1 text-[2.25rem] xl:text-[12rem] m-0 text-center"
           >
-            Versatile<br />Tech Stack
-          </motion.h2>
-
-          <motion.h2
-            style={{
-              scale,
-              color: fillColor,
-            }}
-            className="h2 m-0 text-center relative"
-          >
-            Versatile<br />Tech Stack
+            <motion.span
+              style={{
+                color: fillColor1,
+              }}
+              className="tracking-tight">Versatile</motion.span><br />
+            <motion.span
+              style={{
+                color: fillColor2,
+              }}
+              className="tracking-tight">Tech Stack</motion.span>
           </motion.h2>
         </div>
       </div>

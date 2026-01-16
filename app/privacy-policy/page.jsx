@@ -4,13 +4,13 @@ const PrivacyPolicy = () => {
     return (
         <div>
             <section>
-                <div className="container-wide pb-12 pt-36 z-10 bg-primary-900">
+                <div className="container-wide pb-12 pt-24 xl:pt-36 z-10 bg-primary-900">
                     <h1 className="h1">
                         Privacy Policy<span className="accent-dot">.</span>
                     </h1>
 
-                    <div className="w-full box-border p-8 bg-primary-100 rounded-2xl shadow-md text-primary-900 hover:cursor-pointer transition-colors duration-300">
-                        <div className="flex flex-col gap-2 p-8 pb-12 bg-primary-200 rounded-xl">
+                    <div className="w-full box-border p-4 xl:p-8 bg-primary-100 rounded-xl xl:rounded-2xl shadow-md text-primary-900 hover:cursor-pointer transition-colors duration-300">
+                        <div className="flex flex-col gap-2 p-4 xl:p-8 pb-8 xl:pb-12 bg-primary-200 rounded-lg xl:rounded-xl">
                             <span className="block mb-2 font-semibold text-primary-600 uppercase tracking-wider">Information in accordance with GDPR (General Data Protection Regulation)</span>
                             <div className="space-y-10">
                                 <PolicyText title="Provider">

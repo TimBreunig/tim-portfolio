@@ -1,15 +1,16 @@
 "use client";
 
-import { motion, useAnimation, useInView } from 'framer-motion'
-import { useEffect, useRef } from 'react'
+import { motion, useAnimation, useInView, useScroll, useTransform } from "framer-motion";
+import { useEffect, useRef } from "react";
 
-import Link from "next/link"
+import Link from "next/link";
 import Image from "next/image";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCircle, faArrowRight } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { Button } from "@/components/ui/button";
 
 
-const CardGrid = () => {
+const CardGrid = ({ showCompact }) => {
 	const cards = [
 		/*{
 			title: "The Wandering Knight",
@@ -53,81 +54,109 @@ const CardGrid = () => {
 		},*/
 	];
 
-	const containerRef = useRef(null)
-
-	const isInView = useInView(containerRef, { once: true })
-	const mainControls = useAnimation()
+	const containerRef = useRef(null);
+	const isInView = useInView(containerRef, { once: true });
+	const mainControls = useAnimation();
 
 	useEffect(() => {
-		if(isInView) {
-			mainControls.start("show")
+		if (isInView) {
+			mainControls.start("show");
 		}
-	}, [isInView, mainControls])
+	}, [isInView, mainControls]);
 
-	return (		
-		<motion.div
-			ref={containerRef}
-			variants={{
-				hidden: { opacity: 0 },
-				show: {
-					opacity: 1,
-					transition: {
-						ease: "easeOut",
-						duration: 0.5,
-						staggerChildren: 0.15,
+
+	const visibleCards = showCompact ? cards.slice(0, 2) : cards;
+	const showButton = showCompact;
+
+	return (
+		<>
+			<motion.div
+				ref={containerRef}
+				variants={{
+					hidden: { opacity: 0 },
+					show: {
+						opacity: 1,
+						transition: {
+							ease: "easeInOut",
+							duration: 0.6,
+							staggerChildren: 0.2,
+						},
 					},
-				},
-			}}
-			initial="hidden"
-			animate={mainControls}
-			className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-			{cards.map((card, index) => {
-					return (
-						<motion.div
-							key={index}
-							variants={{ hidden: { opacity: 0, y: 20 }, show: { opacity: 1, y: 0 } }}
-							className="group flex-2 w-full box-border mb-0 xl:mb-2 bg-primary-100 rounded-2xl shadow-md hover:cursor-pointer transition-colors duration-300"
-							>
-							<Link key={index}
-								href={card.link}
-								className="block p-5">
-								<div className="relative aspect-16/10 rounded-xl overflow-hidden">
-									<Image
-										src={card.path}
-										alt="content"
-										className="object-cover object-center group-hover:scale-105 transition-transform duration-300"
-										fill
-										sizes="90vw,
-											(min-width: 1024px) 50vw,"
+				}}
+				initial="hidden"
+				animate={mainControls}
+				className="grid grid-cols-1 lg:grid-cols-2 gap-6"
+			>
+				{visibleCards.map((card, index) => (
+					<motion.div
+						key={index}
+						variants={{
+							hidden: { opacity: 0, y: 20 },
+							show: { opacity: 1, y: 0 },
+						}}
+						className="group w-full bg-primary-100 rounded-xl xl:rounded-2xl shadow-md hover:cursor-pointer transition-colors duration-300"
+					>
+						<Link href={card.link} className="block p-2 xl:p-5">
+							<div className="relative aspect-16/10 rounded-lg xl:rounded-xl overflow-hidden">
+								<Image
+									src={card.path}
+									alt={card.title}
+									className="object-cover object-center group-hover:scale-105 transition-transform duration-300"
+									fill
+									sizes="90vw, (min-width: 1024px) 50vw"
+								/>
+							</div>
+
+							<div className="relative px-2 xl:px-4 pt-3 xl:pt-7 pb-2 text-left rounded-b-xl overflow-hidden">
+								<span className="block mb-1 xl:mb-3 text-xl xl:text-3xl font-semibold xl:font-bold text-primary-900 group-hover:text-purple-500 transition-colors">
+									{card.title}
+								</span>
+
+								<div className="absolute top-3 xl:top-7 right-1 xl:right-3 flex items-center gap-4">
+									<div className="flex gap-3 flex-wrap">
+										{card.roles.map((role, index) => (
+											<div
+												key={index}
+												className="px-3 xl:px-4 py-0 xl:py-2 font-semibold text-[0.625rem] xl:text-sm uppercase tracking-wider bg-primary-300 text-primary-600 rounded-md"
+											>
+												{role}
+											</div>
+										))}
+									</div>
+
+									<FontAwesomeIcon
+										icon={faArrowRight}
+										className="w-7 h-7 p-1 text-base xl:text-2xl text-primary-900 group-hover:text-purple-500 group-hover:-rotate-45 transition-all duration-300"
 									/>
 								</div>
-								<div className="relative px-4 pt-7 pb-2 rounded-b-xl overflow-hidden duration-300">
-									<span className="block mb-3 text-3xl font-bold text-primary-900 group-hover:text-purple-400 transition-colors">{card.title}</span>
-									<div className="absolute top-7 right-3 flex justify-end items-center gap-4">
-										<div className="flex gap-3 flex-wrap">
-											{card.roles.map((role, index) => (
-												<div
-													key={index}
-													className="px-4 py-2 font-semibold text-sm uppercase tracking-wider bg-primary-300 text-primary-600 rounded-md"
-												>
-													{role}
-												</div>
-											))}
-										</div>
-										<FontAwesomeIcon
-											icon={faArrowRight}
-											className="w-7 h-7 p-1 text-2xl text-primary-900 group-hover:text-purple-400 group-hover:-rotate-45 transition-all duration-300"
-										/>
-									</div>
-									<p className="-mt-1 font-secondary font-semibold text-xl uppercase text-primary-600 group-hover:text-primary-500 tracking-wider leading-relaxed transition-colors truncate">
-										{card.description}
-									</p>
-								</div>
-							</Link>
-						</motion.div>
-					);
-				})}
-    	</motion.div>
+
+								<p className="-mt-1 font-secondary font-semibold text-sm xl:text-xl uppercase text-primary-600 group-hover:text-primary-500 tracking-wider leading-relaxed truncate">
+									{card.description}
+								</p>
+							</div>
+						</Link>
+					</motion.div>
+				))}
+			</motion.div>
+
+			{showButton && (
+				<div className="flex justify-center">
+					<Link href="/work">
+						<Button
+							variant="light"
+							size="xl"
+							className="group mt-4 xl:mt-12"
+						>
+							See all
+							<FontAwesomeIcon
+								icon={faArrowRight}
+								className="w-6 h-6 p-2 text-base xl:text-2xl group-hover:-rotate-45 transition-all duration-300"
+							/>
+						</Button>
+					</Link>
+				</div>
+			)}
+		</>
 	);
 };
 
