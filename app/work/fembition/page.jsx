@@ -20,21 +20,21 @@ const Fembition = () => {
 
     const { scrollYProgress } = useScroll({
         target: containerRef,
-        offset: ['start end', 'end start'],
+        offset: ['start start', 'end start'],
     })
 
     const y = useTransform(
         scrollYProgress,
         [0, 1],
-        ["25vh", "-25vh"]
+        ["0", "-100vh"]
     )
 
 
     return (
-        <section className="relative">
+        <section ref={containerRef} className="relative">
             <motion.div
                 style={{ y }}
-                className="fixed flex items-center w-full xl:h-screen overflow-hidden z-0"
+                className="sticky top-0 h-[40vh] xl:h-screen w-full z-0 overflow-hidden"
             >
                 <Image
                     src="/images/fembition_teaser.png"
@@ -46,32 +46,29 @@ const Fembition = () => {
                 />
             </motion.div>
 
-            {/* Whitespace */}
-            <div ref={containerRef} className="h-screen" />
-
-            <div className="relative pb-12 pt-36 bg-primary-900 z-10">
+            <div className="relative pb-12 pt-12 xl:pt-36 bg-primary-900 z-10">
                 <div className="container-wide">
                     <h2 className="h2 text-left mb-8 text-primary-100">Fembition<span className="text-purple-500">.</span></h2>
                     <motion.div
 						variants={{ hidden: { opacity: 0, y: 20 }, show: { opacity: 1, y: 0 } }}
-						className="w-full flex flex-col gap-6 box-border p-8 bg-primary-100 rounded-2xl shadow-md text-primary-900 hover:cursor-pointer transition-colors duration-300"
+						className="w-full flex flex-col gap-4 xl:gap-6 box-border p-4 xl:p-8 bg-primary-100 rounded-xl xl:rounded-2xl shadow-md text-primary-900 transition-colors duration-300"
 					>
-                        <div className="grid grid-cols-7 gap-12 w-full p-8 bg-primary-200 rounded-xl">
+                        <div className="grid grid-cols-3 xl:grid-cols-7 gap-4 xl:gap-12 w-full p-8 bg-primary-200 rounded-lg xl:rounded-xl">
                             <div>
                                 <span className="block mb-2 font-semibold text-primary-600 uppercase tracking-wider">Year</span>
-                                <span className="h5">2025</span>
+                                <span className="text-[1.75rem] xl:text-[3.5rem] leading-[1.2] font-semibold tracking-wider mb-3">2025</span>
                             </div>
                             <div className="col-span-2">
                                 <span className="block mb-2 font-semibold text-primary-600 uppercase tracking-wider">Roles</span>
                                 <div className="flex flex-wrap gap-3">
 									{/*{card.roles.map((role, index) => (*/}
-										<div className="px-4 py-2 font-semibold text-sm uppercase tracking-wider bg-primary-300 text-primary-600 rounded-md">
+										<div className="px-3 xl:px-4 py-0 xl:py-2 font-semibold text-[0.625rem] xl:text-sm uppercase tracking-wider bg-primary-300 text-primary-600 rounded-md">
                                             Webdesign
 										</div>
 									{/*))*/}
 								</div>
                             </div>
-                            <div className="col-span-4">
+                            <div className="col-span-3 xl:col-span-4">
                                 <span className="block mb-2 font-semibold text-primary-600 uppercase tracking-wider">Description</span>
                                 <p className="p-2xl">
                                     Fembition resulted from a challenge to design a landing page for a fictional organization within one business day &ndash; completely from scratch.
@@ -80,7 +77,7 @@ const Fembition = () => {
                                 </p>
                             </div>
                         </div>
-                        <div className="relative aspect-video rounded-xl overflow-hidden">
+                        <div className="relative aspect-video rounded-lg xl:rounded-xl overflow-hidden">
                             <Image
                                 src="/images/fembition_teaser2.png"
                                 alt="content"
@@ -91,7 +88,7 @@ const Fembition = () => {
                                     (min-width: 1280px) 90vw"
                             />
                         </div>
-                        <div className="relative aspect-video rounded-xl overflow-hidden">
+                        <div className="relative aspect-video rounded-lg xl:rounded-xl overflow-hidden">
                             <Image
                                 src="/images/fembition_teaser3.png"
                                 alt="content"
@@ -102,7 +99,7 @@ const Fembition = () => {
                                     (min-width: 1280px) 90vw"
                             />
                         </div>
-                        <div className="relative aspect-video rounded-xl overflow-hidden">
+                        <div className="relative aspect-video rounded-lg xl:rounded-xl overflow-hidden">
                             <Image
                                 src="/images/movie_night_teaser4.png"
                                 alt="content"
