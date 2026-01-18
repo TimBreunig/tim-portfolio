@@ -53,7 +53,7 @@ const TabGrid = () => {
 				<div className="w-full bg-primary-200 rounded-lg xl:rounded-xl">
 					{tabs.map((tab, index) => {
 						return (
-							<>
+							<div key={index}>
 								<div className="p-4 xl:p-8 grid grid-cols-1 xl:grid-cols-7 gap-4 xl:gap-12">
 									<div
 										key={index} 
@@ -86,7 +86,7 @@ const TabGrid = () => {
 								{index < tabs.length - 1 && (
 									<div className="h-0.5 mx-8 rounded bg-primary-300" />
 								)}
-							</>
+							</div>
 						)
 					})}
 				</div>
