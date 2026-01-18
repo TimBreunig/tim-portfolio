@@ -2,27 +2,20 @@
 
 import { motion, useAnimation, useInView } from 'framer-motion'
 import { useEffect, useRef } from 'react'
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGamepad, faCode, faGlobe, faPalette, faFilm } from '@fortawesome/free-solid-svg-icons'
+import Tile from "@/components/ui/tile";
 
 
 const TabGrid = () => {
 	let tabs = [
 		{
 			title: "Digital Design",
-			roles: ["UX", "UI", "Webdesign", "Wireframing", "Prototyping", "Graphic Design"],
+			roles: ["UX", "UI", "Webdesign", "Wireframing", "Prototyping"],
 			description: "Designing high-quality experiences from the first wireframes to a fully working prototype, balancing clear usability and aethetic visuals.",
 		},
 		{
 			title: "Development",
 			roles: ["Frontend Development", "SEO", "CMS", "Mobile Development", "Unit Testing"],
 			description: "Crafting engaging digital products that combine appealing design with intuitive usability and modern technology.",
-		},
-		{
-			title: "Communication",
-			roles: ["Storyboarding", "Video Production", "Social Media", "Community Management"],
-			description: "Managing communication and social media channels and producing content suitable for the respective target group.",
 		},
 	];
 
@@ -61,7 +54,7 @@ const TabGrid = () => {
 					{tabs.map((tab, index) => {
 						return (
 							<>
-								<div className="p-8 grid grid-cols-1 xl:grid-cols-7 gap-4 xl:gap-12">
+								<div className="p-4 xl:p-8 grid grid-cols-1 xl:grid-cols-7 gap-4 xl:gap-12">
 									<div
 										key={index} 
 										className="xl:col-span-3"
@@ -74,12 +67,10 @@ const TabGrid = () => {
 									<div className="xl:col-span-2">
 										<div className="flex flex-wrap gap-2 xl:gap-3">
 											{tab.roles.map((role, index) => (
-												<div
+												<Tile
 													key={index}
-													className="px-3 xl:px-4 py-0 xl:py-2 font-semibold text-[0.625rem] xl:text-sm uppercase tracking-wider bg-primary-300 text-primary-600 rounded-md"
-												>
-													{role}
-												</div>
+													text={role}
+												/>
 												)
 											)}
 										</div>

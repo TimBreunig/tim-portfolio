@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useAnimation, useInView, useScroll, useTransform } from "framer-motion";
+import { motion, useAnimation, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
 
 import Link from "next/link";
@@ -8,6 +8,7 @@ import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { Button } from "@/components/ui/button";
+import Tile from "@/components/ui/tile";
 
 
 const CardGrid = ({ showCompact }) => {
@@ -85,7 +86,7 @@ const CardGrid = ({ showCompact }) => {
 				}}
 				initial="hidden"
 				animate={mainControls}
-				className="grid grid-cols-1 lg:grid-cols-2 gap-6"
+				className="grid grid-cols-1 lg:grid-cols-2 gap-4 xl:gap-6"
 			>
 				{visibleCards.map((card, index) => (
 					<motion.div
@@ -101,34 +102,36 @@ const CardGrid = ({ showCompact }) => {
 								<Image
 									src={card.path}
 									alt={card.title}
-									className="object-cover object-center group-hover:scale-105 transition-transform duration-300"
+									className="object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-in-out"
 									fill
 									sizes="90vw, (min-width: 1024px) 50vw"
 								/>
 							</div>
 
 							<div className="relative px-2 xl:px-4 pt-3 xl:pt-7 pb-2 text-left rounded-b-xl overflow-hidden">
-								<span className="block mb-1 xl:mb-3 text-xl xl:text-3xl font-semibold xl:font-bold text-primary-900 group-hover:text-purple-500 transition-colors">
-									{card.title}
-								</span>
+								<div className="w-full mb-2 xl:mb-3 flex flex-row gap-5 items-start xl:items-center">
+									<div className="w-full flex flex-col xl:flex-row gap-1 xl:justify-between xl:gap-auto">
+										<span className="block text-xl xl:text-3xl font-semibold xl:font-bold text-primary-900 group-hover:text-purple-500 transition-colors">
+											{card.title}
+										</span>
 
-								<div className="absolute top-3 xl:top-7 right-1 xl:right-3 flex items-center gap-4">
-									<div className="flex gap-3 flex-wrap">
-										{card.roles.map((role, index) => (
-											<div
-												key={index}
-												className="px-3 xl:px-4 py-0 xl:py-2 font-semibold text-[0.625rem] xl:text-sm uppercase tracking-wider bg-primary-300 text-primary-600 rounded-md"
-											>
-												{role}
-											</div>
-										))}
+										<div className="flex gap-2 xl:gap-3 flex-wrap">
+											{card.roles.map((role, index) => (
+												<Tile 
+													key={index}
+													text={role}
+												/>
+											))}
+										</div>
 									</div>
-
 									<FontAwesomeIcon
 										icon={faArrowRight}
-										className="w-7 h-7 p-1 text-base xl:text-2xl text-primary-900 group-hover:text-purple-500 group-hover:-rotate-45 transition-all duration-300"
+										className="w-7 h-7 -mr-1 p-1 text-base xl:text-2xl text-primary-900 group-hover:text-purple-500 group-hover:-rotate-45 transition-all duration-300"
 									/>
 								</div>
+								
+
+								
 
 								<p className="-mt-1 font-secondary font-semibold text-sm xl:text-xl uppercase text-primary-600 group-hover:text-primary-500 tracking-wider leading-relaxed truncate">
 									{card.description}

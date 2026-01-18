@@ -11,9 +11,9 @@ const Imprint = () => {
 
                     <div
                         variants={{ hidden: { opacity: 0, y: 20 }, show: { opacity: 1, y: 0 } }}
-                        className="w-full box-border p-4 xl:p-8 bg-primary-100 rounded-xl xl:rounded-2xl shadow-md text-primary-900 transition-colors duration-300"
+                        className="w-full box-border p-4 xl:p-8 bg-primary-100 rounded-2xl shadow-md text-primary-900 transition-colors duration-300"
                     >
-                        <div className="flex flex-col gap-2 p-4 xl:p-8 pb-8 xl:pb-12 bg-primary-200 rounded-lg xl:rounded-xl">
+                        <div className="flex flex-col gap-2 p-4 xl:p-8 pb-8 xl:pb-12 bg-primary-200 rounded-xl">
                             <span className="block mb-2 font-semibold text-primary-600 uppercase tracking-wider">Information in accordance with Section 5 TMG (German Telemedia Act)</span>
                             <div className="space-y-10">
                                 <PolicyText title="Provider">

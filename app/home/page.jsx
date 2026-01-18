@@ -1,5 +1,3 @@
-"use client";
-
 import About from "@/components/About";
 import CardGrid from "@/components/CardGrid";
 import HeadingFullPage from "@/components/HeadingFullPage";
@@ -11,8 +9,8 @@ import TechStack from "@/components/TechStack";
 const Home = () => {
   return (
 	<div>
-		<section className="container-wide h-screen xl:pt-4 flex flex-col items-center justify-center gap-16">
-			<div className="flex flex-col justify-center items-center gap-4 xl:gap-6">
+		<section className="container-wide h-screen -pt-4 xl:pt-4 flex flex-col items-center justify-center">
+			<div className="flex flex-col justify-center items-center gap-2 xl:gap-6">
 				<span className="h6 inline-block text-primary-100">
 					Tim Breunig
 				</span>
@@ -38,7 +36,7 @@ const Home = () => {
         <About />
 		<section
 			id ="work"
-			className="container-wide pb-12 pt-18 xl:pt-36 text-center z-10">
+			className="container-wide pb-12 pt-16 xl:pt-36 text-center z-10">
 			<MotionHeading as="h2" className="text-primary-100 text-left">Featured Work<span className="accent-dot">.</span></MotionHeading>
     		<CardGrid showCompact={true} />
 		</section>
@@ -51,10 +49,10 @@ const Home = () => {
 		</section>
 		<section 
 			id ="services"
-			className="relative box-content py-16 xl:py-24 flex flex-col justify-center"
+			className="relative box-content py-16 xl:py-24 flex flex-col justify-center bg-primary-900"
 		>
 			<div className="container-wide">
-				<MotionHeading as="h2" className="mb-14 text-primary-100 text-left xl:text-right">Services<span className="accent-dot">.</span></MotionHeading>
+				<MotionHeading as="h2" className="text-primary-100 text-left xl:text-right">Services<span className="accent-dot">.</span></MotionHeading>
 				<TabGrid />
 			</div>
 		</section>

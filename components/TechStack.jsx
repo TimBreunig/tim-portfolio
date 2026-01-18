@@ -3,14 +3,16 @@
 import { motion, useAnimation, useInView } from 'framer-motion'
 import { useEffect, useRef } from 'react'
 
-import NextjsLogo from "@/app/images/logos/logo-nextjs.svg";
-import ReactLogo from "@/app/images/logos/logo-react.svg";
-import HtmlLogo from "@/app/images/logos/logo-html5.svg";
-import TailwindLogo from "@/app/images/logos/logo-tailwind-css.svg";
-import JsLogo from "@/app/images/logos/logo-js.svg";
-import CssLogo from "@/app/images/logos/logo-css3.svg";
-import JavaLogo from "@/app/images/logos/logo-java.svg";
 import CsharpLogo from "@/app/images/logos/logo-csharp.svg";
+import CssLogo from "@/app/images/logos/logo-css3.svg";
+import HtmlLogo from "@/app/images/logos/logo-html5.svg";
+import JavaLogo from "@/app/images/logos/logo-java.svg";
+import JsLogo from "@/app/images/logos/logo-js.svg";
+import NextjsLogo from "@/app/images/logos/logo-nextjs.svg";
+import PhpLogo from "@/app/images/logos/logo-php.svg";
+import ReactLogo from "@/app/images/logos/logo-react.svg";
+import TailwindLogo from "@/app/images/logos/logo-tailwind-css.svg";
+import TsLogo from "@/app/images/logos/logo-typescript.svg";
 
 
 const TechStack = () => {
@@ -23,6 +25,10 @@ const TechStack = () => {
 		{
 			name: "Next.js",
 			Icon: NextjsLogo
+		},
+		{
+			name: "TypeScript",
+			Icon: TsLogo
 		},
 		{
 			name: "Tailwind",
@@ -47,6 +53,10 @@ const TechStack = () => {
 		{
 			name: "Csharp",
 			Icon: CsharpLogo
+		},
+		{
+			name: "PHP",
+			Icon: PhpLogo
 		},
 	];
 
