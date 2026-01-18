@@ -52,7 +52,7 @@ const Home = () => {
 			className="relative box-content py-16 xl:py-24 flex flex-col justify-center bg-primary-900"
 		>
 			<div className="container-wide">
-				<MotionHeading as="h2" className="text-primary-100 text-left xl:text-right">Services<span className="accent-dot">.</span></MotionHeading>
+				<MotionHeading as="h2" className="text-primary-100 text-left xl:text-right">Skills<span className="accent-dot">.</span></MotionHeading>
 				<TabGrid />
 			</div>
 		</section>
