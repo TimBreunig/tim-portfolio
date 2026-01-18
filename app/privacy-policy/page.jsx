@@ -26,7 +26,7 @@ const PrivacyPolicy = () => {
                                     <br />
                                     <br />
                                     My hosting provider Vercel automatically collects anonymous, aggregated data  (e.g. IP address, location information derived from your IP address, date/time, system configuration).
-                                    This is necessary for security, maintenance and optimization. For more information, you can read up about Vercel's Privacy and Compliance&nbsp;
+                                    This is necessary for security, maintenance and optimization. For more information, you can read up about Vercel&apos;s Privacy and Compliance&nbsp;
                                     <a
                                         href="https://vercel.com/docs/analytics/privacy-policy"
                                         className="hyperlink">
