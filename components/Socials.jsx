@@ -31,11 +31,11 @@ const Socials = () => {
 					<a href={path}
                         key={index}
                         target="_blank"
-                        className="block group relative w-10 h-10 xl:w-12 xl:h-12 p-2 xl:p-3 bg-primary-900/75 rounded-full overflow-hidden hover:scale-110 transition-all duration-500"
+                        className="block group relative w-10 h-10 xl:w-12 xl:h-12 py-2 xl:py-3 bg-primary-900/75 text-center rounded-full overflow-hidden hover:scale-110 transition-all duration-500"
                     >
                         <span className="absolute inset-0 w-full h-full bg-primary-100 transform scale-x-0 origin-left rounded-tr-full rounded-br-full z-0 group-hover:scale-x-100 transition-transform duration-500 delay-75 ease-in-out"></span>
                         <span className="absolute inset-0 w-full h-full bg-primary-100 transform scale-x-0 origin-right rounded-tl-full rounded-bl-full z-0 group-hover:scale-x-100 transition-transform duration-500 ease-in-out"></span>
-                        <FontAwesomeIcon icon={Icon} className="relative w-full h-full text-2xl text-primary-100 z-10 group-hover:border-primary-100 group-hover:text-primary-900 transition-colors duration-500" />
+                        <FontAwesomeIcon icon={Icon} className="relative text-2xl text-primary-100 z-10 group-hover:border-primary-100 group-hover:text-primary-900 transition-colors duration-500" />
                     </a>
 				);
 			})}
