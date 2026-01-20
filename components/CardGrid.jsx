@@ -30,6 +30,14 @@ const CardGrid = ({ showCompact }) => {
 			link: "/work/movie-night",
 		},
 		{
+			title: "Coming Soon - Expiravoid",
+			description: "Web Application that lets you handle your inventory and shopping lists with ease.",
+			roles: ["UI Design", "Fullstack Development"],
+			date: "2026",
+			path: "/images/expiravoid_teaser.png",
+			link: "/work/expiravoid",
+		},
+		{
 			title: "Project Mothership",
 			description: "Coop rogue-like videogame that sends players on an intergalactic journey",
 			roles: ["Game Development"],
