@@ -13,22 +13,6 @@ import Tile from "@/components/ui/tile";
 
 const CardGrid = ({ showCompact }) => {
 	const cards = [
-		/*{
-			title: "The Wandering Knight",
-			description: "Game",
-			roles: ["Storytelling", "Engineering"],
-			date: "2024",
-			path: "/images/IntroCutscene2_LowRes.gif",
-			link: "/work/wandering-knight",
-		},
-		{
-			title: "Project Mothership",
-			description: "Local-coop rogue-like videogame",
-			roles: ["Engineering"],
-			date: "2024",
-			path: "/images/ProjectMothershipTeaser.png",
-			link: "/work/project-mothership",
-		},*/
 		{
 			title: "Fembition",
 			description: "Website for an imaginary esports-organization empowering female players",
@@ -44,6 +28,14 @@ const CardGrid = ({ showCompact }) => {
 			date: "2024",
 			path: "/images/movie_night_teaser.png",
 			link: "/work/movie-night",
+		},
+		{
+			title: "Project Mothership",
+			description: "Coop rogue-like videogame that sends players on an intergalactic journey",
+			roles: ["Game Development"],
+			date: "2024",
+			path: "/images/project_mothership_teaser.png",
+			link: "/work/project-mothership",
 		},
 		/*{
 			title: "Chromania",

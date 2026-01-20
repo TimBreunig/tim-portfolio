@@ -4,15 +4,15 @@ import ProjectPage from "@/components/ProjectPage";
 const ProjectMothership = () => {
     return (
         <ProjectPage
-            title="MovieNight"
+            title="Project Mothership"
             year="2024"
-            roles={["Web Design", "Frontend Development"]}
-            description="Planning movie nights with friends can be quite... chaotic. As part of the study course Mobile Web Applications, I was member of a small team designing and developing a mobile-first web app that lets you manage the planning process digitally. You can create groups, propose movies from a huge database and vote for your favourite."
+            roles={["Game Development"]}
+            description="In this cooperative action-adventure game, players embark on an intergalactic journey where teamwork, exploration, and puzzle-solving are key to success. The game revolves around your mothership. Work together to navigate mysterious planets and solve intricate puzzles, all while enhancing the mothership to tackle increasingly challenging missions. The thrill of discovery and the wonder of the unknown await you!"
             images={[
-                "/images/movie_night_teaser.png",
-                "/images/movie_night_teaser2.png",
-                "/images/movie_night_teaser3.png",
-                "/images/movie_night_teaser4.png",
+                "/images/project_mothership_teaser.png",
+                "/images/project_mothership_teaser.png",
+                "/images/project_mothership_teaser3.png",
+                "/images/project_mothership_teaser.png",
             ]}
         />
     )
