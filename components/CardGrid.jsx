@@ -1,7 +1,6 @@
 "use client";
 
-import { motion, useAnimation, useInView } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { motion, useAnimation } from "framer-motion";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -9,6 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { Button } from "@/components/ui/button";
 import Tile from "@/components/ui/tile";
+import MotionHeading from "@/components/MotionHeading";
 
 
 const CardGrid = ({ showCompact }) => {
@@ -55,24 +55,23 @@ const CardGrid = ({ showCompact }) => {
 		},*/
 	];
 
-	const containerRef = useRef(null);
-	const isInView = useInView(containerRef, { once: true });
+
 	const mainControls = useAnimation();
-
-	useEffect(() => {
-		if (isInView) {
-			mainControls.start("show");
-		}
-	}, [isInView, mainControls]);
-
 
 	const visibleCards = showCompact ? cards.slice(0, 2) : cards;
 	const showButton = showCompact;
 
 	return (
 		<>
+			<MotionHeading
+				as="h2"
+				onComplete={() => mainControls.start("show")}
+				className="text-primary-100 text-left"
+			>
+				Featured Work<span className="accent-dot">.</span>
+			</MotionHeading>
+
 			<motion.div
-				ref={containerRef}
 				variants={{
 					hidden: { opacity: 0 },
 					show: {

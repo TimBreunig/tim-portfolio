@@ -24,7 +24,7 @@ const Nav = ({ onNavigate }) => {
 	const pathname = usePathname();
 
 	return (
-		<nav className="flex flex-col gap-4 xl:gap-1 text-center xl:text-right">
+		<nav className="flex flex-col gap-4 lg:gap-1 text-center lg:text-right">
 			{links.map((link, index) => (
 				<Link
 					key={index}

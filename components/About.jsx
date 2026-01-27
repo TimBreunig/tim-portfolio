@@ -2,57 +2,50 @@
 
 import { Button } from "@/components/ui/button";
 import { motion, useAnimation } from "framer-motion";
+import MotionHeading from "@/components/MotionHeading";
 
 
 const About = () => {
-  const textControls = useAnimation();
+	const mainControls = useAnimation();
 
 	return (
-    	<motion.section
+		<section
 			id="about"
-			initial={{ backgroundColor: "#fdfeff" }}
-			whileInView={{ backgroundColor: "#141417" }}
-			transition={{ duration: 0.3, ease: "easeInOut" }}
-			viewport={{ once: true, amount: 0.9 }}
-			className="xl:h-screen box-content py-24 xl:py-10 flex flex-col justify-center text-primary-900"
-			onAnimationComplete={() => {
-				textControls.start("visible");
-			}}
+			className="lg:h-screen box-content py-24 lg:py-10 flex flex-col justify-center bg-primary-100 text-primary-900"
 		>
-			<motion.div
-				initial="hidden"
-				animate={textControls}
-				variants={{
-					hidden: { opacity: 0, y: 20 },
-					visible: {
-						opacity: 1,
-						y: 0,
-						transition: {
-						duration: 0.6,
-						ease: "easeInOut",
-						staggerChildren: 0.15,
-						},
-					},
-				}}
-			>
+			<div>
 				<div className="container-wide relative">
-					<motion.h2
-						className="h2 text-center xl:text-right"
-						variants={{
-							hidden: { opacity: 0 },
-							visible: { opacity: 1 },
-						}}
+					<MotionHeading
+						as="h2"
+						onComplete={() => mainControls.start("show")}
+						className="text-primary-900 text-center lg:text-right"
 					>
 						About Me<span className="accent-dot">.</span>
-					</motion.h2>
+					</MotionHeading>
 				</div>
 
-				<div className="container relative text-center xl:text-left">
+				<motion.div
+					variants={{
+						hidden: { opacity: 0, y: 20 },
+						show: {
+							opacity: 1,
+							y: 0,
+							transition: {
+								duration: 0.6,
+								ease: "easeInOut",
+								staggerChildren: 0.25,
+							},
+						},
+					}}
+					initial="hidden"
+					animate={mainControls}
+					className="container relative text-center lg:text-left"
+				>
 					<motion.p
-						className="xl:w-5/6 p-7xl"
+						className="lg:w-5/6 p-7xl"
 						variants={{
 							hidden: { opacity: 0, y: 10 },
-							visible: { opacity: 1, y: 0 },
+							show: { opacity: 1, y: 0 },
 						}}
 					>
 						Being passionate about both web design and development, I{" "}
@@ -65,7 +58,7 @@ const About = () => {
 					<motion.div
 						variants={{
 							hidden: { opacity: 0, y: 10 },
-							visible: { opacity: 1, y: 0 },
+							show: { opacity: 1, y: 0 },
 						}}
 					>
 						<Button
@@ -81,9 +74,9 @@ const About = () => {
 							</a>	
 						</Button>
 					</motion.div>
-				</div>
-			</motion.div>
-		</motion.section>
+				</motion.div>
+			</div>
+		</section>
 	);
 };
 
