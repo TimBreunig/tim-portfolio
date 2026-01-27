@@ -25,13 +25,13 @@ const socialLinks = [
 
 const Socials = () => {
 	return (
-        <div className="flex flex-row xl:flex-col gap-2 pointer-events-auto">
+        <div className="flex flex-row lg:flex-col gap-2 pointer-events-auto">
             {socialLinks.map(({ Icon, path }, index) => {
 				return (
 					<a href={path}
                         key={index}
                         target="_blank"
-                        className="block group relative w-10 h-10 xl:w-12 xl:h-12 py-2 xl:py-3 bg-primary-900/75 text-center rounded-full overflow-hidden hover:scale-110 transition-all duration-500"
+                        className="block group relative w-10 h-10 lg:w-12 lg:h-12 py-2 lg:py-3 bg-primary-900/75 text-center rounded-full overflow-hidden hover:scale-110 transition-all duration-500"
                     >
                         <span className="absolute inset-0 w-full h-full bg-primary-100 transform scale-x-0 origin-left rounded-tr-full rounded-br-full z-0 group-hover:scale-x-100 transition-transform duration-500 delay-75 ease-in-out"></span>
                         <span className="absolute inset-0 w-full h-full bg-primary-100 transform scale-x-0 origin-right rounded-tl-full rounded-bl-full z-0 group-hover:scale-x-100 transition-transform duration-500 ease-in-out"></span>

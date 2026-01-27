@@ -42,7 +42,7 @@ const Header = () => {
 	})
 
 	return (
-		<header className={"fixed w-full h-full py-6 lg:py-10 z-50 pointer-events-none transition-all duration-500"}>
+		<header className={"fixed w-full h-full py-6 lg:py-8 xl:py-10 z-50 pointer-events-none transition-all duration-500"}>
 			<div className={"container-wide flex justify-between items-center lg:items-start pointer-events-auto"}>
 				<Link href="/">
 					<div className="font-bold text-3xl lg:text-4xl text-primary-100 -tracking-widest">
@@ -105,7 +105,7 @@ const Header = () => {
 			</div>
 
 			{/* social links and typewriter */}
-			<div className="hidden lg:block absolute inset-x-0 bottom-6 lg:bottom-10">
+			<div className="hidden lg:block absolute inset-x-0 bottom-6 lg:bottom-8 xl:bottom-10">
 				<div className="container-wide flex justify-between items-end">
 					<Socials />
 					<div className="font-secondary font-medium text-lg lg:text-2xl tracking-tight uppercase text-primary-600">

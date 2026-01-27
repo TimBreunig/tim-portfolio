@@ -53,15 +53,15 @@ const HeadingFullPage = () => {
   return (
     <section
       ref={containerRef}
-      className="relative h-screen xl:h-[250vh]"
+      className="relative h-screen lg:h-[250vh]"
     >
-      <div className="container-wide sticky top-0 h-[50vh] xl:h-screen flex items-center justify-center">
+      <div className="container-wide sticky top-0 h-[50vh] lg:h-screen flex items-center justify-center">
         <div className="relative">
           <motion.h2
             style={{
               scale,
             }}
-            className="absolute h1 m-0 text-[2.25rem] xl:text-[12rem] text-purple-200 text-center"
+            className="absolute h1 m-0 text-[2.25rem] lg:text-[8rem] xl:text-[12rem] text-purple-200 text-center"
           >
             {/* Back Layer */}
             <motion.span
@@ -81,7 +81,7 @@ const HeadingFullPage = () => {
             style={{
               scale,
             }}
-            className="absolute h1 m-0 text-[2.25rem] xl:text-[12rem] text-purple-300 text-center"
+            className="absolute h1 m-0 text-[2.25rem] lg:text-[8rem] xl:text-[12rem] text-purple-300 text-center"
           >
             <motion.span
               style={{
@@ -101,7 +101,7 @@ const HeadingFullPage = () => {
               scale,
               color
             }}
-            className="relative h1 m-0 text-[2.25rem] xl:text-[12rem] text-center"
+            className="relative h1 m-0 text-[2.25rem] lg:text-[8rem] xl:text-[12rem] text-center"
           >
             <span className="inline-block tracking-tight">
               Versatile

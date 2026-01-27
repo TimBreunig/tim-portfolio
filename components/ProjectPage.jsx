@@ -36,7 +36,7 @@ const ProjectPage = ({
             {images[0] && (
                 <motion.div
                     style={{ y }}
-                    className="sticky top-0 h-[40vh] xl:h-screen w-full z-0 overflow-hidden"
+                    className="sticky top-0 h-[40vh] lg:h-screen w-full z-0 overflow-hidden"
                 >
                     <Image
                         src={images[0]}
@@ -50,7 +50,7 @@ const ProjectPage = ({
             )}
 
             {/* Content */}
-            <div className="relative pb-12 pt-12 xl:pt-36 bg-primary-900 z-10">
+            <div className="relative pb-12 pt-12 lg:pt-36 bg-primary-900 z-10">
                 <div className="container-wide">
                     <h2 className="h2 text-left mb-8 text-primary-100">
                         {title}
@@ -61,16 +61,16 @@ const ProjectPage = ({
                         variants={fadeUp}
                         initial="hidden"
                         animate={isInView ? "show" : "hidden"}
-                        className="w-full flex flex-col gap-4 xl:gap-6 p-4 xl:p-8 bg-primary-100 rounded-2xl shadow-md text-primary-900"
+                        className="w-full flex flex-col gap-4 lg:gap-6 p-4 lg:p-8 bg-primary-100 rounded-2xl shadow-md text-primary-900"
                     >
                         {/* Meta Grid */}
-                        <div className="grid grid-cols-3 xl:grid-cols-7 gap-6 xl:gap-12 w-full p-4 xl:p-8 bg-primary-200 rounded-xl">
+                        <div className="grid grid-cols-3 lg:grid-cols-7 gap-6 lg:gap-12 w-full p-4 lg:p-8 bg-primary-200 rounded-xl">
                             {/* Year */}
                             <div>
                                 <span className="block mb-2 font-semibold text-primary-600 uppercase tracking-wider">
                                     Year
                                 </span>
-                                <span className="text-[1.75rem] xl:text-[3.5rem] leading-[1.1] xl:leading-[1.2] font-semibold tracking-wider">
+                                <span className="text-[1.75rem] lg:text-[3.5rem] leading-[1.1] lg:leading-[1.2] font-semibold tracking-wider">
                                     {year}
                                 </span>
                             </div>
@@ -91,7 +91,7 @@ const ProjectPage = ({
                             </div>
 
                             {/* Description */}
-                            <div className="col-span-3 xl:col-span-4">
+                            <div className="col-span-3 lg:col-span-4">
                                 <span className="block mb-2 font-semibold text-primary-600 uppercase tracking-wider">
                                     Description
                                 </span>

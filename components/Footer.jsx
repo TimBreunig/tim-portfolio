@@ -3,13 +3,13 @@ import Link from "next/link";
 
 const Footer = () => {
 	return (
-		<div className="relative w-full pt-8 xl:pt-12 pb-6 xl:pb-8 bg-primary-0 text-primary-700 z-50">
+		<div className="relative w-full pt-8 lg:pt-12 pb-6 lg:pb-8 bg-primary-0 text-primary-700 z-50">
 			<div className="container-wide">
-				<div className="flex flex-col xl:flex-row justify-between items-start xl:gap-16 my-8 xl:mt-12 xl:mb-16">
-					<div className="xl:w-[50%]">
-						<h2 className="h2 text-primary-900 text-center xl:text-left">Get in touch<span className="accent-dot">.</span></h2>
+				<div className="flex flex-col lg:flex-row justify-between items-start lg:gap-16 my-8 lg:mt-12 lg:mb-16">
+					<div className="lg:w-[50%]">
+						<h2 className="h2 text-primary-900 text-center lg:text-left">Get in touch<span className="accent-dot">.</span></h2>
 					</div>
-					<div className="w-full xl:w-[50%] text-center xl:text-right footer-links">
+					<div className="w-full lg:w-[50%] text-center lg:text-right footer-links">
 						<ul>
 							<li>
 								<a
@@ -38,13 +38,13 @@ const Footer = () => {
 						</ul>
 					</div>
 				</div>
-				<div className="flex flex-col xl:flex-row text-center justify-between text-base gap-1 md:gap-0">
+				<div className="flex flex-col lg:flex-row text-center justify-between text-base gap-1 md:gap-0">
 					<span className="text-primary-600">
 						© 2025 Tim Breunig. All rights reserved.
 					</span>
 					<span>
 						<Link
-							className="mr-3 xl:mr-5 font-secondary uppercase text-primary-800 hover:text-primary-700 transition-colors duration-300"
+							className="mr-3 lg:mr-5 font-secondary uppercase text-primary-800 hover:text-primary-700 transition-colors duration-300"
 							href="/imprint"
 						>
 							&#91;Imprint&#93;
