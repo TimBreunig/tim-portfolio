@@ -94,10 +94,10 @@ const CardGrid = ({ showCompact }) => {
 							hidden: { opacity: 0, y: 20 },
 							show: { opacity: 1, y: 0 },
 						}}
-						className="group w-full bg-primary-100 rounded-xl xl:rounded-2xl shadow-md hover:cursor-pointer transition-colors duration-300"
+						className="group w-full bg-primary-100 rounded-xl lg:rounded-2xl shadow-md hover:cursor-pointer transition-colors duration-300"
 					>
 						<Link href={card.link} className="block p-2 xl:p-5">
-							<div className="relative aspect-16/10 rounded-lg xl:rounded-xl overflow-hidden">
+							<div className="relative aspect-16/10 rounded-lg lg:rounded-xl overflow-hidden">
 								<Image
 									src={card.path}
 									alt={card.title}
@@ -107,10 +107,10 @@ const CardGrid = ({ showCompact }) => {
 								/>
 							</div>
 
-							<div className="relative px-2 xl:px-4 pt-3 xl:pt-7 pb-2 text-left rounded-b-xl overflow-hidden">
-								<div className="w-full mb-2 xl:mb-3 flex flex-row gap-5 items-start xl:items-center">
-									<div className="w-full flex flex-col xl:flex-row gap-1 xl:justify-between xl:gap-auto">
-										<span className="block text-xl xl:text-3xl font-semibold xl:font-bold text-primary-900 group-hover:text-purple-500 transition-colors">
+							<div className="relative px-2 lg:px-3 xl:px-4 pt-3 lg:pt-5 xl:pt-7 pb-2 text-left rounded-b-xl overflow-hidden">
+								<div className="w-full mb-2 lg:mb-3 flex flex-row gap-5 items-start lg:items-center">
+									<div className="w-full flex flex-col lg:flex-row gap-1 lg:justify-between lg:gap-auto">
+										<span className="block text-xl lg:text-2xl xl:text-3xl font-semibold xl:font-bold text-primary-900 group-hover:text-purple-500 transition-colors">
 											{card.title}
 										</span>
 
@@ -125,14 +125,14 @@ const CardGrid = ({ showCompact }) => {
 									</div>
 									<FontAwesomeIcon
 										icon={faArrowRight}
-										className="w-7 h-7 -mr-1 p-1 text-base xl:text-2xl text-primary-900 group-hover:text-purple-500 group-hover:-rotate-45 transition-all duration-300"
+										className="w-7 h-7 -mr-1 p-1 text-base lg:text-lg xl:text-2xl text-primary-900 group-hover:text-purple-500 group-hover:-rotate-45 transition-all duration-300"
 									/>
 								</div>
 								
 
 								
 
-								<p className="-mt-1 font-secondary font-semibold text-sm xl:text-xl uppercase text-primary-600 group-hover:text-primary-500 tracking-wider leading-relaxed truncate">
+								<p className="-mt-1 font-secondary font-semibold text-sm lg:text-base xl:text-xl uppercase text-primary-600 group-hover:text-primary-500 tracking-wider leading-relaxed truncate">
 									{card.description}
 								</p>
 							</div>
@@ -147,12 +147,12 @@ const CardGrid = ({ showCompact }) => {
 						<Button
 							variant="light"
 							size="xl"
-							className="group mt-4 xl:mt-12"
+							className="group mt-4 lg:mt-8 xl:mt-12"
 						>
 							See all
 							<FontAwesomeIcon
 								icon={faArrowRight}
-								className="w-6 h-6 p-2 text-base xl:text-2xl group-hover:-rotate-45 transition-all duration-300"
+								className="w-6 h-6 p-2 text-base lg:text-lg xl:text-2xl group-hover:-rotate-45 transition-all duration-300"
 							/>
 						</Button>
 					</Link>

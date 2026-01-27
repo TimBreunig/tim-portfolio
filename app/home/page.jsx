@@ -35,7 +35,7 @@ const Home = () => {
         <About />
 		<section
 			id ="work"
-			className="container-wide pb-12 pt-16 lg:pt-36 text-center z-10">
+			className="container-wide pb-12 pt-16 lg:pt-24 xl:pt-36 text-center z-10">
     		<CardGrid showCompact={true} />
 		</section>
 		<section className="h-[50vh] lg:h-screen box-content lg:pb-60">

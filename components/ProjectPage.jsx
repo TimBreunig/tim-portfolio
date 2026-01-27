@@ -50,7 +50,7 @@ const ProjectPage = ({
             )}
 
             {/* Content */}
-            <div className="relative pb-12 pt-12 lg:pt-36 bg-primary-900 z-10">
+            <div className="relative pb-12 pt-12 lg:pt-24 xl:pt-36 bg-primary-900 z-10">
                 <div className="container-wide">
                     <h2 className="h2 text-left mb-8 text-primary-100">
                         {title}

@@ -95,7 +95,7 @@ const TechStack = () => {
 						variants={{ hidden: { opacity: 0, y: 20 }, show: { opacity: 1, y: 0 } }}
 						key={name}
 						className="group flex items-center justify-center w-full aspect-video p-12 bg-primary-200 hover:bg-primary-900 rounded-2xl shadow-md hover:cursor-pointer transition-colors duration-300">
-						<Icon className="w-24 h-24 lg:w-32 xl:h-32 fill-primary-900 group-hover:fill-primary-200 transition-colors duration-300" />
+						<Icon className="w-24 h-24 lg:w-28 lg:h-28 xl:w-32 xl:h-32 fill-primary-900 group-hover:fill-primary-200 transition-colors duration-300" />
 					</motion.div>
 					))
 				}
@@ -107,7 +107,7 @@ const TechStack = () => {
 						variants={{ hidden: { opacity: 0, y: 20 }, show: { opacity: 1, y: 0 } }}
 						key={name}
 						className="group flex items-center justify-center w-full aspect-video p-12 bg-primary-200 hover:bg-primary-900 rounded-2xl shadow-md hover:cursor-pointer transition-colors duration-300">
-						<Icon className="w-16 h-16 lg:w-24 xl:h-24 fill-primary-900 group-hover:fill-primary-200 transition-colors duration-300" />
+						<Icon className="w-16 h-16 lg:w-20 lg:h-20 xl:w-24 xl:h-24 fill-primary-900 group-hover:fill-primary-200 transition-colors duration-300" />
 					</motion.div>
 					))
 				}
