@@ -14,12 +14,12 @@ import MotionHeading from "@/components/MotionHeading";
 const CardGrid = ({ showCompact }) => {
 	const cards = [
 		{
-			title: "Fembition",
-			description: "Website for an imaginary esports-organization empowering female players",
-			roles: ["Web Design"],
-			date: "2025",
-			path: "/images/fembition_teaser.png",
-			link: "/work/fembition",
+			title: "In Progress - Expiravoid",
+			description: "Web Application that lets you handle your inventory and shopping lists with ease.",
+			roles: ["UI Design", "Fullstack Development"],
+			date: "2026",
+			path: "/images/expiravoid_teaser.png",
+			link: "/work/expiravoid",
 		},
 		{
 			title: "Movie Night",
@@ -30,12 +30,12 @@ const CardGrid = ({ showCompact }) => {
 			link: "/work/movie-night",
 		},
 		{
-			title: "Coming Soon - Expiravoid",
-			description: "Web Application that lets you handle your inventory and shopping lists with ease.",
-			roles: ["UI Design", "Fullstack Development"],
-			date: "2026",
-			path: "/images/expiravoid_teaser.png",
-			link: "/work/expiravoid",
+			title: "Fembition",
+			description: "Website for an imaginary esports-organization empowering female players",
+			roles: ["Web Design"],
+			date: "2025",
+			path: "/images/fembition_teaser.png",
+			link: "/work/fembition",
 		},
 		{
 			title: "Project Mothership",
