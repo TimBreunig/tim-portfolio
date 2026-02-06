@@ -14,6 +14,7 @@ const Fembition = () => {
                 "/images/fembition_teaser.png",
                 "/images/fembition_teaser2.png",
                 "/images/fembition_teaser3.png",
+                "/images/fembition_teaser4.png",
             ]}
         />
     )
