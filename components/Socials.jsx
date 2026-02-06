@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
-import { faLinkedinIn, faPinterestP, faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faLinkedinIn, faArtstation, faGithub } from '@fortawesome/free-brands-svg-icons'
 
 
 const socialLinks = [
@@ -17,8 +17,8 @@ const socialLinks = [
 		Icon: faGithub,
 	},
 	{
-		path: "https://www.pinterest.de/tiracin16/",
-		Icon: faPinterestP,
+		path: "https://www.artstation.com/timbreunig",
+		Icon: faArtstation,
 	},
 ];
 

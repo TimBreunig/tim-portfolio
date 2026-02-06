@@ -31,8 +31,8 @@ const Footer = () => {
 							</li>
 							<li>
 								<a
-									href="https://de.linkedin.com/in/tim-breunig-a82250252" target="_blank">
-									Pinterest
+									href="https://www.artstation.com/timbreunig" target="_blank">
+									Artstation
 								</a>
 							</li>
 						</ul>
