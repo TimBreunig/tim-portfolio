@@ -1,8 +1,9 @@
 import "./globals.css";
 import { Outfit, Inconsolata } from 'next/font/google';
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Header from "@/components/Header";
+import LenisProvider from "@/components/LenisProvider";
 import PageTransition from "@/components/PageTransition";
 
 
@@ -32,11 +33,14 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`relative ${outfit.variable} ${inconsolata.variable}`}>
-        <Header />
-        <PageTransition>
-            {children}
-        </PageTransition>
-        <Footer />
+        <LenisProvider>
+          <Header />
+          <PageTransition>
+              {children}
+          </PageTransition>
+          <Footer />
+        </LenisProvider>
+        
         <SpeedInsights />
       </body>
     </html>

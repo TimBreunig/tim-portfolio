@@ -7,8 +7,8 @@ import TechStack from "@/components/TechStack";
 
 const Home = () => {
   return (
-	<div>
-		<section className="container-wide h-screen -pt-4 lg:pt-4 flex flex-col items-center justify-center">
+	<div className="w-screen">
+		<section className="container-wide h-screen -pt-4 lg:pt-5 flex flex-col items-center justify-center">
 			<div className="flex flex-col justify-center items-center gap-2 lg:gap-6">
 				<span className="h6 inline-block text-primary-100">
 					Tim Breunig
@@ -35,7 +35,7 @@ const Home = () => {
         <About />
 		<section
 			id ="work"
-			className="container-wide pb-12 pt-16 lg:pt-24 xl:pt-36 text-center z-10">
+			className="container-wide pb-12 pt-16 lg:pt-24 xl:pt-32 text-center z-10">
     		<CardGrid showCompact={true} />
 		</section>
 		<section className="h-[50vh] lg:h-screen box-content lg:pb-60">

@@ -42,21 +42,24 @@ const Header = () => {
 	})
 
 	return (
-		<header className={"fixed w-full h-full py-6 lg:py-8 xl:py-10 z-50 pointer-events-none transition-all duration-500"}>
-			<div className={"container-wide flex justify-between items-center lg:items-start pointer-events-auto"}>
-				<Link href="/">
-					<div className="font-bold text-3xl lg:text-4xl text-primary-100 -tracking-widest">
+		<header className={"fixed w-full h-full py-6 lg:py-7 xl:py-8 z-50 pointer-events-none transition-all duration-500"}>
+			<div className={"container-wide flex justify-between items-center"}>
+				<Link
+					href="/"
+					className="pointer-events-auto"
+				>
+					<div className="relative font-bold text-3xl lg:text-4xl text-primary-100 -tracking-widest z-50">
 						TB <span className="text-purple-500">.</span>
 					</div>
 				</Link>
 
 				{/* desktop nav & contact button */}
-				<div className="hidden lg:flex items-center gap-10">
+				<div className="hidden lg:flex items-center gap-10 pointer-events-auto">
 					<Nav />
 				</div>
 
 				{/* mobile nav */}
-				<div className="lg:hidden">
+				<div className="lg:hidden pointer-events-auto">
 					<Button
 						variant="icon"
 						size="icon"
@@ -79,10 +82,10 @@ const Header = () => {
 						<div className="container-wide h-full flex flex-col justify-center items-center gap-12">
 							<Nav onNavigate={() => setMenuOpen(false)} />
 
-							<div className="flex flex-col gap-2">
+							<div className="flex flex-col gap-4">
 								<Socials />
 
-								<div className="font-secondary font-medium text-lg lg:text-2xl text-center tracking-tight uppercase text-primary-600">
+								<div className="font-secondary font-medium text-xl lg:text-2xl text-center tracking-tight uppercase text-primary-600">
 								&#91;
 								<span className="inline-block">
 									<Typewriter

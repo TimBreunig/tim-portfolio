@@ -1,5 +1,6 @@
 "use client";
 
+import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { usePathname } from 'next/navigation';
 
@@ -24,19 +25,31 @@ const Nav = ({ onNavigate }) => {
 	const pathname = usePathname();
 
 	return (
-		<nav className="flex flex-col gap-4 lg:gap-1 text-center lg:text-right">
-			{links.map((link, index) => (
-				<Link
-					key={index}
-					href={link.path}
-					onClick={onNavigate}
-					className={`text-xl hover:text-purple-500 uppercase tracking-wide transition-all duration-300 ${
-							pathname.includes(link.path) ? "font-semibold text-primary-400" : "font-medium text-primary-700"
-						}`}
-					>
-					{link.name}
-				</Link>
-			))}
+		<nav className="flex flex-col lg:flex-row items-center gap-6 lg:gap-9 text-center lg:text-right">
+			<div className="flex flex-col lg:flex-row gap-4 lg:gap-12">
+				{links.map((link, index) => (
+					<Link
+						key={index}
+						href={link.path}
+						onClick={onNavigate}
+						className={`text-2xl lg:text-xl hover:text-purple-500 capitalize transition-all duration-300 ${
+								pathname.includes(link.path) ? "font-semibold text-primary-400" : "font-medium text-primary-700"
+							}`}
+						>
+						{link.name}
+					</Link>
+				))}
+			</div>
+			<Button
+				variant="default"
+				size="lg"
+				className="lg:px-7 lg:py-4 lg:text-xl"
+				asChild
+			>
+				<a href="mailto:breunig.tim@web.de">
+					Get in touch
+				</a>	
+			</Button>
 		</nav>
 	);
 };

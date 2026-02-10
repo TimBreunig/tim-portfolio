@@ -1,14 +1,13 @@
 "use client";
 
-import { useEffect } from 'react';
-import { useRouter } from 'next/navigation';
-
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
 
 const IndexPage = () => {
   const router = useRouter();
 
   useEffect(() => {
-    router.push('/home');
+    router.replace("/home");
   }, [router]);
 
   return null;
