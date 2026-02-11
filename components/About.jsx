@@ -66,11 +66,16 @@ const About = () => {
 							size="lg"
 							asChild
 						>
-							<a href="/files/resume_breunig.pdf"
+							<a
+								href="/files/resume_breunig.pdf"
       							target="_blank"
 								rel="noopener"
+								className="group flex flex-col overflow-hidden justify-start gap-4"
 							>
-								Download CV
+								<div className="h-8 overflow-hidden">
+									<span className="block tracking-normal group-hover:-translate-y-8 transition-all duration-300 ease-out">Download CV</span>
+									<span className="block tracking-normal group-hover:-translate-y-8 transition-all duration-300 ease-out">Download CV</span>
+								</div>
 							</a>	
 						</Button>
 					</motion.div>

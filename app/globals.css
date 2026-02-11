@@ -156,7 +156,7 @@
 	}
 
 	.footer-links a {
-		@apply relative inline-block lg:pl-4 font-bold text-4xl lg:text-7xl uppercase text-primary-900 tracking-wide transition-all duration-300 z-10 overflow-hidden;
+		@apply relative inline-block lg:pl-4 font-bold text-4xl lg:text-7xl uppercase text-primary-900 tracking-wide transition-all duration-300 ease-out z-10 overflow-hidden;
 	}
 
 	.footer-links a:hover {

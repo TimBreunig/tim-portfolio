@@ -28,7 +28,7 @@ const Nav = ({ onNavigate }) => {
 						key={index}
 						href={link.path}
 						onClick={onNavigate}
-						className={`text-2xl lg:text-xl hover:text-purple-500 capitalize transition-all duration-300 ${
+						className={`text-2xl lg:text-xl hover:text-purple-500 tracking-wide capitalize transition-all duration-300 ${
 								pathname.includes(link.path) ? "font-semibold text-primary-400" : "font-medium text-primary-700"
 							}`}
 						>
@@ -42,8 +42,14 @@ const Nav = ({ onNavigate }) => {
 				className="lg:px-7 lg:py-4 lg:text-xl"
 				asChild
 			>
-				<a href="mailto:breunig.tim@web.de">
-					Get in touch
+				<a
+					href="mailto:breunig.tim@web.de"
+					className="group flex flex-col overflow-hidden justify-start gap-4"
+				>
+					<div className="h-8 lg:h-7 overflow-hidden">
+						<span className="block tracking-normal group-hover:-translate-y-8 lg:group-hover:-translate-y-7 transition-all duration-300 ease-out">Get in touch</span>
+						<span className="block tracking-normal group-hover:-translate-y-8 lg:group-hover:-translate-y-7 transition-all duration-300 ease-out">Get in touch</span>
+					</div>
 				</a>	
 			</Button>
 		</nav>
