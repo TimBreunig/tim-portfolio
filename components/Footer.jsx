@@ -1,6 +1,8 @@
 import Link from "next/link";
 
 
+const currentYear = () => new Date().getFullYear();
+
 const Footer = () => {
 	return (
 		<div className="relative w-full pt-8 xl:pt-12 pb-6 xl:pb-8 bg-primary-0 text-primary-700 z-50">
@@ -40,7 +42,7 @@ const Footer = () => {
 				</div>
 				<div className="flex flex-col lg:flex-row text-center justify-between text-base gap-1 md:gap-0">
 					<span className="text-primary-600">
-						© 2025 Tim Breunig. All rights reserved.
+						© {currentYear()} Tim Breunig. All rights reserved.
 					</span>
 					<span>
 						<Link

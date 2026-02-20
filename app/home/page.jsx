@@ -35,23 +35,21 @@ const Home = () => {
         <About />
 		<section
 			id ="work"
-			className="container-wide pb-12 pt-16 lg:pt-24 xl:pt-32 text-center z-10">
+			className="container-wide pb-12 pt-16 lg:pt-24 xl:pt-36 text-center z-10">
     		<CardGrid showCompact={true} />
 		</section>
 		<section className="h-[50vh] lg:h-screen box-content lg:pb-60">
 			<HeadingFullPage />
 		</section>
 		<section
-			className="relative lg:h-screen box-content py-24 lg:py-10 flex items-center bg-primary-100 z-10">
+			className="relative lg:h-screen box-content py-24 lg:py-20 flex items-center bg-primary-100 z-10">
 			<TechStack />
 		</section>
 		<section 
 			id ="services"
-			className="relative box-content py-16 lg:py-24 flex flex-col justify-center bg-primary-900"
+			className="relative container-wide py-16 lg:py-24 xl:py-36 flex flex-col justify-center bg-primary-900"
 		>
-			<div className="container-wide">
-				<TabGrid />
-			</div>
+			<TabGrid />
 		</section>
 	</div>
   );

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
@@ -48,8 +49,16 @@ const Header = () => {
 					href="/"
 					className="pointer-events-auto"
 				>
-					<div className="relative font-bold text-3xl lg:text-4xl text-primary-100 -tracking-widest z-50">
-						TB <span className="text-purple-500">.</span>
+					<div className="relative w-12 h-12 lg:w-16 lg:h-16 z-50">
+						<Image src="/images/logo.svg"
+							alt="Tim Breunig Logo"
+							className="object-contain"
+							fill
+							sizes="
+								48px,
+								(min-width: 1280px) 64px
+							"
+                    	/>
 					</div>
 				</Link>
 
