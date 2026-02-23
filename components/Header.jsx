@@ -78,9 +78,7 @@ const Header = () => {
 					>
 						<FontAwesomeIcon
 						icon={menuOpen ? faXmark : faBars}
-						className="relative w-full h-full text-2xl text-primary-100 z-10
-									group-hover:text-purple-500"
-						/>
+						className="relative w-full h-full text-2xl text-primary-100 z-10"/>
 					</Button>
 
 					<div
