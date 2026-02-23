@@ -36,7 +36,7 @@ const ProjectPage = ({
             {images[0] && (
                 <motion.div
                     style={{ y }}
-                    className="sticky top-0 h-[40vh] lg:h-screen w-full z-0 overflow-hidden"
+                    className="sticky top-0 h-[67vh] lg:h-screen w-full z-0 overflow-hidden"
                 >
                     <Image
                         src={images[0]}
@@ -59,8 +59,9 @@ const ProjectPage = ({
 
                     <motion.div
                         variants={fadeUp}
-                        initial="hidden"
-                        animate={isInView ? "show" : "hidden"}
+                        style={{ willChange: "transform" }}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
                         className="w-full flex flex-col gap-4 lg:gap-6 p-4 lg:p-8 bg-primary-100 rounded-2xl shadow-md text-primary-900"
                     >
                         {/* Meta Grid */}

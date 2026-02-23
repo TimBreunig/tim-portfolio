@@ -88,26 +88,40 @@ const TechStack = () => {
 			}}
 			initial="hidden"
 			animate={mainControls}
-			className="container-wide space-y-6">
-			<div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+			className="container-wide space-y-6"
+		>
+			{/* Mobile grid -> 1 grid with 2 columns */}
+			<div className="grid grid-cols-2 gap-6 lg:hidden">
+				{icons.map(({ Icon, name }) => (
+					<motion.div
+						key={name}
+						variants={{ hidden: { opacity: 0, y: 20 }, show: { opacity: 1, y: 0 } }}
+						className="group flex items-center justify-center w-full aspect-video p-8 bg-primary-200 hover:bg-primary-900 rounded-2xl shadow-md hover:cursor-pointer transition-colors duration-300"
+					>
+						<Icon className="w-20 h-20 fill-primary-900 group-hover:fill-primary-200 transition-colors duration-300" />
+					</motion.div>
+				))}
+			</div>
+
+			{/* Desktop grid -> 2 grids with 3 featured tiles on top */}
+			<div className="hidden lg:grid grid-cols-1 lg:grid-cols-3 gap-6">
 				{firstRow.map(({ Icon, name }) => (
 					<motion.div
 						variants={{ hidden: { opacity: 0, y: 20 }, show: { opacity: 1, y: 0 } }}
 						key={name}
 						className="group flex items-center justify-center w-full aspect-video p-12 bg-primary-200 hover:bg-primary-900 rounded-2xl shadow-md hover:cursor-pointer transition-colors duration-300">
-						<Icon className="w-24 h-24 lg:w-28 lg:h-28 xl:w-32 xl:h-32 fill-primary-900 group-hover:fill-primary-200 transition-colors duration-300" />
+						<Icon className="w-28 h-28 xl:w-32 xl:h-32 fill-primary-900 group-hover:fill-primary-200 transition-colors duration-300" />
 					</motion.div>
 					))
 				}
 			</div>
-
-			<div className="grid grid-cols-[repeat(auto-fit,minmax(160px,1fr))] gap-6">
+			<div className="hidden lg:grid grid-cols-[repeat(auto-fit,minmax(160px,1fr))] gap-6">
 				{secondRow.map(({ Icon, name }) => (
 					<motion.div
 						variants={{ hidden: { opacity: 0, y: 20 }, show: { opacity: 1, y: 0 } }}
 						key={name}
 						className="group flex items-center justify-center w-full aspect-video p-12 bg-primary-200 hover:bg-primary-900 rounded-2xl shadow-md hover:cursor-pointer transition-colors duration-300">
-						<Icon className="w-16 h-16 lg:w-20 lg:h-20 xl:w-24 xl:h-24 fill-primary-900 group-hover:fill-primary-200 transition-colors duration-300" />
+						<Icon className="w-20 h-20 xl:w-24 xl:h-24 fill-primary-900 group-hover:fill-primary-200 transition-colors duration-300" />
 					</motion.div>
 					))
 				}

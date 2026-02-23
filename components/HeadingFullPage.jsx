@@ -53,9 +53,9 @@ const HeadingFullPage = () => {
   return (
     <section
       ref={containerRef}
-      className="relative h-screen lg:h-[250vh]"
+      className="relative min-h-svh lg:h-[250vh]"
     >
-      <div className="container-wide sticky top-0 h-[50vh] lg:h-screen flex items-center justify-center">
+      <div className="container-wide sticky top-0 h-[50vh] lg:min-h-svh flex items-center justify-center">
         <div className="relative">
           <motion.h2
             style={{

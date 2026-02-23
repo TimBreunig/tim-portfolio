@@ -11,7 +11,7 @@ const About = () => {
 	return (
 		<section
 			id="about"
-			className="lg:h-screen box-content py-24 lg:py-20 flex flex-col justify-center bg-primary-100 text-primary-900"
+			className="min-h-svh box-content py-24 lg:py-20 flex flex-col justify-center bg-primary-100 text-primary-900"
 		>
 			<div>
 				<div className="container-wide relative">

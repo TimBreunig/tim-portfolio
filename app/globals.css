@@ -1,7 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
 @import 'tailwindcss';
-
 @plugin 'tailwindcss-animate';
 
 @custom-variant dark (&:is(.dark *));
@@ -184,7 +181,7 @@
 	}
 
 	.p-7xl {
-		@apply text-4xl lg:text-6xl xl:text-7xl font-medium mb-4 lg:mb-6 xl:mb-7 tracking-tighter;
+		@apply text-4xl lg:text-6xl xl:text-7xl font-medium mb-6 xl:mb-7 tracking-tighter;
 	}
 
 	.h1 {
