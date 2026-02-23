@@ -79,13 +79,13 @@ const Header = () => {
 						<FontAwesomeIcon
 						icon={menuOpen ? faXmark : faBars}
 						className="relative w-full h-full text-2xl text-primary-100 z-10
-									group-hover:text-primary-900"
+									group-hover:text-purple-500"
 						/>
 					</Button>
 
 					<div
 						className={`fixed inset-0 z-40 bg-primary-900 transform transition-transform duration-300 ease-in-out
-						${menuOpen ? "translate-x-0" : "translate-x-full"}
+							${menuOpen ? "translate-x-0" : "translate-x-full"}
 						`}
 					>
 						<div className="container-wide h-full flex flex-col justify-center items-center gap-12">
@@ -95,20 +95,20 @@ const Header = () => {
 								<Socials />
 
 								<div className="font-secondary font-medium text-xl lg:text-2xl text-center tracking-tight uppercase text-primary-600">
-								&#91;
-								<span className="inline-block">
-									<Typewriter
-									options={{
-										strings: ["Design", "Build", "Create"],
-										autoStart: true,
-										loop: true,
-										delay: 75,
-										deleteSpeed: 60,
-										pauseFor: 2400,
-									}}
-									/>
-								</span>
-								with passion&#93;
+									&#91;
+									<span className="inline-block">
+										<Typewriter
+											options={{
+												strings: ["Design", "Build", "Create"],
+												autoStart: true,
+												loop: true,
+												delay: 75,
+												deleteSpeed: 60,
+												pauseFor: 2400,
+											}}
+										/>
+									</span>
+									with passion&#93;
 								</div>
 							</div>
 						</div>
