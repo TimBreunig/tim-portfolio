@@ -72,9 +72,9 @@ const About = () => {
 								rel="noopener"
 								className="group flex flex-col overflow-hidden justify-start gap-4"
 							>
-								<div className="h-8 overflow-hidden">
-									<span className="block tracking-normal group-hover:-translate-y-8 transition-all duration-300 ease-out">Download CV</span>
-									<span className="block tracking-normal group-hover:-translate-y-8 transition-all duration-300 ease-out">Download CV</span>
+								<div className="h7 lg:h-8 overflow-hidden">
+									<span className="block tracking-normal group-hover:-translate-y-7 lg:group-hover:-translate-y-8 transition-all duration-300 ease-out">Download CV</span>
+									<span className="block tracking-normal group-hover:-translate-y-7 lg:group-hover:-translate-y-8 transition-all duration-300 ease-out">Download CV</span>
 								</div>
 							</a>	
 						</Button>

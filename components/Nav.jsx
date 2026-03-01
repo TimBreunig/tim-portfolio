@@ -46,9 +46,9 @@ const Nav = ({ onNavigate }) => {
 					href="mailto:breunig.tim@web.de"
 					className="group flex flex-col overflow-hidden justify-start gap-4"
 				>
-					<div className="h-8 lg:h-7 overflow-hidden">
-						<span className="block tracking-normal group-hover:-translate-y-8 lg:group-hover:-translate-y-7 transition-all duration-300 ease-out">Get in touch</span>
-						<span className="block tracking-normal group-hover:-translate-y-8 lg:group-hover:-translate-y-7 transition-all duration-300 ease-out">Get in touch</span>
+					<div className="h-7 overflow-hidden">
+						<span className="block tracking-normal group-hover:-translate-y-7 transition-all duration-300 ease-out">Get in touch</span>
+						<span className="block tracking-normal group-hover:-translate-y-7 transition-all duration-300 ease-out">Get in touch</span>
 					</div>
 				</a>	
 			</Button>

@@ -67,7 +67,7 @@ const TabGrid = () => {
 						}}
 						className="lg:col-span-10"
 					>
-						Being passionate about both web design and development, I create experiences that blend strong visual appeal with clean, thoughtful implementation.
+						With a focus on quality and consistency, I bring a constantly evolving skillset that connects brand identity, design, and development from start to finish.
 					</motion.div>
 				</div>
 
