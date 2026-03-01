@@ -6,7 +6,7 @@ import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
+import { faBarsStaggered, faXmark } from "@fortawesome/free-solid-svg-icons";
 import Socials from "@/components/Socials";
 import Typewriter from 'typewriter-effect';
 import Nav from "@/components/Nav";
@@ -53,6 +53,7 @@ const Header = () => {
 						<Image src="/images/logo.svg"
 							alt="Tim Breunig Logo"
 							className="object-contain"
+							loading="eager"
 							fill
 							sizes="
 								48px,
@@ -77,8 +78,9 @@ const Header = () => {
 						aria-label="Toggle menu"
 					>
 						<FontAwesomeIcon
-						icon={menuOpen ? faXmark : faBars}
-						className="relative w-full h-full text-2xl text-primary-100 z-10"/>
+							icon={menuOpen ? faXmark : faBarsStaggered}
+							className="relative w-full h-full text-2xl text-primary-300 z-10"
+						/>
 					</Button>
 
 					<div

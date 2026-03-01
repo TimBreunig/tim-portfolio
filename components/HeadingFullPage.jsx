@@ -32,70 +32,34 @@ const HeadingFullPage = () => {
 
   const color = useTransform(
     scrollYProgress,
-    [0, 0.34, 0.35],
-    ['#141417', '#141417', '#a855f7']
+    [0, 0.41, 0.44],
+    ['#141417', '#141417', '#fdfeff']
+  )
+
+  const backgroundColor = useTransform(
+    scrollYProgress,
+    [0, 0.41, 0.44],
+    ['#fdfeff', '#fdfeff', '#141417']
   )
 
   const offset = useTransform(
     scrollYProgress,
-    [0.36, 1],
-    [0, 250]
+    [0.42, 1],
+    [0, 2000]
   )
 
-  const responsiveOffset = useTransform(offset, v => v * motionStrength)
-
-  const backUp = useTransform(responsiveOffset, v => -2 * v)
-  const backDown = useTransform(responsiveOffset, v => 2 * v)
-
-  const midUp = useTransform(responsiveOffset, v => -v)
-  const midDown = useTransform(responsiveOffset, v => v)
+  const offsetReverse = useTransform(offset, (v) => -v);
 
   return (
-    <section
+    <motion.section
       ref={containerRef}
-      className="relative min-h-svh lg:h-[250vh]"
+      style={{
+        backgroundColor
+      }}
+      className="relative min-h-svh lg:h-[150vh] overflow-clip"
     >
       <div className="container-wide sticky top-0 h-[50vh] lg:min-h-svh flex items-center justify-center">
         <div className="relative">
-          <motion.h2
-            style={{
-              scale,
-            }}
-            className="absolute h1 m-0 text-[2.25rem] lg:text-[8rem] xl:text-[12rem] text-purple-200 text-center"
-          >
-            {/* Back Layer */}
-            <motion.span
-              style={{
-                y: backUp
-              }}
-              className="inline-block tracking-tight">Versatile</motion.span><br />
-            <motion.span
-              style={{
-                y: backDown
-              }}
-              className="inline-block tracking-tight">Tech Stack</motion.span>
-          </motion.h2>
-
-          {/* Center Layer */}
-          <motion.h2
-            style={{
-              scale,
-            }}
-            className="absolute h1 m-0 text-[2.25rem] lg:text-[8rem] xl:text-[12rem] text-purple-300 text-center"
-          >
-            <motion.span
-              style={{
-                y: midUp
-              }}
-              className="inline-block tracking-tight">Versatile</motion.span><br />
-            <motion.span
-              style={{
-                y: midDown
-              }}
-              className="inline-block tracking-tight">Tech Stack</motion.span>
-          </motion.h2>
-          
-          {/* Front Layer */}
           <motion.h2
             style={{
               scale,
@@ -103,17 +67,27 @@ const HeadingFullPage = () => {
             }}
             className="relative h1 m-0 text-[2.25rem] lg:text-[8rem] xl:text-[12rem] text-center"
           >
-            <span className="inline-block tracking-tight">
+            <motion.span
+              className="inline-block tracking-tight"
+              style={{
+                x: offsetReverse
+              }}
+            >
               Versatile
-            </span>
+            </motion.span>
             <br />
-            <span className="inline-block tracking-tight">
+            <motion.span
+              className="inline-block tracking-tight"
+              style={{
+                x: offset
+              }}
+            >
               Tech Stack
-            </span>
+            </motion.span>
           </motion.h2>
         </div>
       </div>
-    </section>
+    </motion.section>
   )
 }
 

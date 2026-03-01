@@ -114,7 +114,7 @@ const CardGrid = ({ showCompact }) => {
 											{card.title}
 										</span>
 
-										<div className="flex gap-2 xl:gap-3 flex-wrap">
+										<div className="-ml-1 lg:ml-0 flex gap-2 xl:gap-3 flex-wrap">
 											{card.roles.map((role, index) => (
 												<Tile 
 													key={index}
@@ -129,10 +129,7 @@ const CardGrid = ({ showCompact }) => {
 									/>
 								</div>
 								
-
-								
-
-								<p className="-mt-1 font-secondary font-semibold text-sm lg:text-base xl:text-xl uppercase text-primary-600 group-hover:text-primary-500 tracking-wider leading-relaxed truncate">
+								<p className="font-secondary font-semibold text-sm lg:text-base xl:text-xl uppercase text-primary-600 group-hover:text-primary-500 tracking-wider leading-relaxed truncate">
 									{card.description}
 								</p>
 							</div>

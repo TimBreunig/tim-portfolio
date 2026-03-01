@@ -28,7 +28,7 @@ const Nav = ({ onNavigate }) => {
 						key={index}
 						href={link.path}
 						onClick={onNavigate}
-						className={`text-2xl lg:text-xl hover:text-purple-500 tracking-wide capitalize transition-all duration-300 ${
+						className={`text-xl hover:text-purple-500 tracking-wide capitalize transition-all duration-300 ${
 								pathname.includes(link.path) ? "font-semibold text-primary-400" : "font-medium text-primary-700"
 							}`}
 						>

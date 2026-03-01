@@ -8,7 +8,7 @@ import TechStack from "@/components/TechStack";
 const Home = () => {
   return (
 	<div>
-		<section className="container-wide min-h-svh pt-5 flex flex-col items-center justify-center">
+		<section className="container-wide min-h-svh pt-8 lg:pt-5 flex flex-col items-center justify-center">
 			<div className="flex flex-col justify-center items-center gap-2 lg:gap-6">
 				<span className="h6 inline-block text-primary-100">
 					Tim Breunig
@@ -42,7 +42,7 @@ const Home = () => {
 			<HeadingFullPage />
 		</section>
 		<section
-			className="relative lg:min-h-svh box-content py-24 lg:py-20 flex items-center bg-primary-100 z-10">
+			className="relative lg:min-h-svh box-content py-24 lg:py-18 flex items-center bg-primary-100 z-10">
 			<TechStack />
 		</section>
 		<section 

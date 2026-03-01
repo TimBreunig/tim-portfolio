@@ -9,14 +9,14 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary-100 text-primary-900 hover:bg-purple-500 border border-primary-400",
+        default: "bg-primary-100 text-primary-900 hover:bg-purple-500 border border-primary-400 hover:border-purple-500",
         primary: "bg-purple-500 text-primary-100 hover:bg-purple-500 hover:text-primary-900",
         light: "text-primary-100 hover:text-purple-500",
         icon: "",
       },
       size: {
-        default: "px-7 py-4 font-semibold text-xl",
-        lg: "px-7 lg:px-8 py-4 lg:py-5 font-semibold text-2xl",
+        default: "px-6 lg:px-7 py-3 lg:py-4 font-semibold text-lg",
+        lg: "px-6 lg:px-8 py-3 lg:py-5 font-semibold text-xl lg:text-2xl",
         xl: "px-8 py-5 font-medium text-2xl lg:text-3xl",
         icon: "p-2",
       },

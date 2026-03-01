@@ -62,23 +62,23 @@ const ProjectPage = ({
                         style={{ willChange: "transform" }}
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        className="w-full flex flex-col gap-4 lg:gap-6 p-4 lg:p-8 bg-primary-100 rounded-2xl shadow-md text-primary-900"
+                        className="w-full flex flex-col gap-4 lg:gap-6 p-4 lg:p-6 bg-primary-100 rounded-2xl shadow-md text-primary-900"
                     >
                         {/* Meta Grid */}
-                        <div className="grid grid-cols-3 lg:grid-cols-7 gap-6 lg:gap-12 w-full p-4 lg:p-8 bg-primary-200 rounded-xl">
+                        <div className="grid grid-cols-3 lg:grid-cols-7 gap-6 lg:gap-12 w-full p-3 lg:p-8 bg-primary-200 rounded-xl">
                             {/* Year */}
                             <div>
-                                <span className="block mb-2 font-semibold text-primary-600 uppercase tracking-wider">
+                                <span className="block mb-2 text-[0.875rem] lg:text-[1rem] font-semibold text-primary-600 uppercase tracking-wider">
                                     Year
                                 </span>
-                                <span className="text-[1.75rem] lg:text-[3.5rem] leading-[1.1] lg:leading-[1.2] font-semibold tracking-wider">
+                                <span className="text-[2rem] lg:text-[3.5rem] leading-[1.1] lg:leading-[1.2] font-semibold tracking-wide lg:tracking-wider">
                                     {year}
                                 </span>
                             </div>
 
                             {/* Roles */}
                             <div className="col-span-2">
-                                <span className="block mb-2 font-semibold text-primary-600 uppercase tracking-wider">
+                                <span className="block mb-2 text-[0.875rem] lg:text-[1rem] font-semibold text-primary-600 uppercase tracking-wider">
                                     Roles
                                 </span>
                                 <div className="flex flex-wrap gap-3">
@@ -92,8 +92,8 @@ const ProjectPage = ({
                             </div>
 
                             {/* Description */}
-                            <div className="col-span-3 lg:col-span-4">
-                                <span className="block mb-2 font-semibold text-primary-600 uppercase tracking-wider">
+                            <div className="mt-2 lg:mt-0 col-span-3 lg:col-span-4">
+                                <span className="block mb-2 text-[0.875rem] lg:text-[1rem] font-semibold text-primary-600 uppercase tracking-wider">
                                     Description
                                 </span>
                                 <p className="p-2xl">{description}</p>

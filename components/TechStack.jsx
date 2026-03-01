@@ -60,6 +60,7 @@ const TechStack = () => {
 		},
 	];
 
+
 	const containerRef = useRef(null)
 
 	const isInView = useInView(containerRef, { once: true })
@@ -73,6 +74,7 @@ const TechStack = () => {
 
 	const firstRow = icons.slice(0, 3);
 	const secondRow = icons.slice(3);
+
 
 	return (		
 		<motion.div
@@ -88,17 +90,17 @@ const TechStack = () => {
 			}}
 			initial="hidden"
 			animate={mainControls}
-			className="container-wide space-y-6"
+			className="container-wide space-y-0 lg:space-y-6"
 		>
 			{/* Mobile grid -> 1 grid with 2 columns */}
-			<div className="grid grid-cols-2 gap-6 lg:hidden">
+			<div className="grid grid-cols-2 gap-4 lg:hidden">
 				{icons.map(({ Icon, name }) => (
 					<motion.div
 						key={name}
 						variants={{ hidden: { opacity: 0, y: 20 }, show: { opacity: 1, y: 0 } }}
 						className="group flex items-center justify-center w-full aspect-video p-8 bg-primary-200 hover:bg-primary-900 rounded-2xl shadow-md hover:cursor-pointer transition-colors duration-300"
 					>
-						<Icon className="w-20 h-20 fill-primary-900 group-hover:fill-primary-200 transition-colors duration-300" />
+						<Icon className="w-16 h-16 fill-primary-900 group-hover:fill-primary-200 transition-colors duration-300" />
 					</motion.div>
 				))}
 			</div>

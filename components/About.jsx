@@ -18,7 +18,7 @@ const About = () => {
 					<MotionHeading
 						as="h2"
 						onComplete={() => mainControls.start("show")}
-						className="text-primary-900 text-center lg:text-right"
+						className="text-primary-900 text-left lg:text-right"
 					>
 						About Me<span className="accent-dot">.</span>
 					</MotionHeading>
@@ -39,7 +39,7 @@ const About = () => {
 					}}
 					initial="hidden"
 					animate={mainControls}
-					className="container relative text-center lg:text-left"
+					className="container-wide lg:container relative text-left"
 				>
 					<motion.p
 						className="lg:w-5/6 p-7xl"
