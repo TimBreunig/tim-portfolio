@@ -21,13 +21,13 @@ const Footer = () => {
 							</li>
 							<li>
 								<a
-									href="mailto:breunig.tim@web.de" target="_blank">
+									href="mailto:&#x62;&#x72;&#x65;&#x75;&#x6e;&#x69;&#x67;&#x2e;&#x74;&#x69;&#x6d;&#x40;&#x77;&#x65;&#x62;&#x2e;&#x64;&#x65;" target="_blank">
 									Email
 								</a>
 							</li>
 							<li>
 								<a
-									href="https://de.linkedin.com/in/tim-breunig-a82250252" target="_blank">
+									href="https://github.com/TimBreunig" target="_blank">
 									Github
 								</a>
 							</li>
