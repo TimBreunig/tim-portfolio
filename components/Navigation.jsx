@@ -11,7 +11,7 @@ import getEmail from "@/utils/getEmail";
 const links = [
 	{
 		name: "About",
-		path: "/home",
+		path: "/",
 	},
 	{
 		name: "work",
