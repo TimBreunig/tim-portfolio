@@ -33,11 +33,22 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`relative ${outfit.variable} ${inconsolata.variable}`}>
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only"
+        >
+          Skip to main content
+        </a>
+
         <LenisProvider>
           <Header />
-          <PageTransition>
-              {children}
-          </PageTransition>
+
+          <main id="main-content">
+            <PageTransition>
+                {children}
+            </PageTransition>
+          </main>
+
           <Footer />
         </LenisProvider>
         
