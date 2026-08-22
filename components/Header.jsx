@@ -87,7 +87,7 @@ const Header = () => {
 
 					<div
 						id="mobile-navigation"
-						inert={menuOpen ? undefined : true}
+						inert={!menuOpen}
 						className={`fixed inset-0 z-40 bg-primary-900 transform transition-transform duration-300 ease-in-out
 							${menuOpen ? "translate-x-0" : "translate-x-full"}
 						`}
@@ -101,11 +101,13 @@ const Header = () => {
 							<div className="flex flex-col gap-4">
 								<Socials />
 
-								<div className="font-secondary font-medium text-xl lg:text-2xl text-center tracking-tight uppercase text-primary-600">
+								<div
+									aria-hidden="true"
+									className="font-secondary font-medium text-xl lg:text-2xl text-center tracking-tight uppercase text-primary-600"
+								>
 									&#91;
 									<span className="inline-block">
 										<Typewriter
-											aria-hidden="true"
 											options={{
 												strings: ["Design", "Build", "Create"],
 												autoStart: true,
@@ -128,18 +130,21 @@ const Header = () => {
 			<div className="hidden lg:block absolute inset-x-0 bottom-6 lg:bottom-8 xl:bottom-10">
 				<div className="container-wide flex justify-between items-end">
 					<Socials />
-					<div className="font-secondary font-medium text-lg lg:text-2xl tracking-tight uppercase text-primary-600">
+					<div
+						aria-hidden="true"
+						className="font-secondary font-medium text-lg lg:text-2xl tracking-tight uppercase text-primary-600"
+					>
 						&#91;
 						<span className="inline-block">
 							<Typewriter
-							options={{
-								strings: ["Design", "Build", "Create"],
-								autoStart: true,
-								loop: true,
-								delay: 75,
-								deleteSpeed: 60,
-								pauseFor: 2400,
-							}}
+								options={{
+									strings: ["Design", "Build", "Create"],
+									autoStart: true,
+									loop: true,
+									delay: 75,
+									deleteSpeed: 60,
+									pauseFor: 2400,
+								}}
 							/>
 						</span>
 						with passion&#93;
