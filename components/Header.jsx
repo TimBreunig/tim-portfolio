@@ -9,44 +9,43 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBarsStaggered, faXmark } from "@fortawesome/free-solid-svg-icons";
 import Socials from "@/components/Socials";
 import Typewriter from 'typewriter-effect';
-import Nav from "@/components/Nav";
+import Navigation from "@/components/Navigation";
 
 const Header = () => {
-	const [transparent, setTransparent] = useState(true);
 	const [menuOpen, setMenuOpen] = useState(false);
 	
 	useEffect(() => {
-		if (menuOpen) {
-			document.body.style.overflow = "hidden";
-		} else {
-			document.body.style.overflow = "";
-		}
+		document.body.classList.toggle("overflow-hidden", menuOpen);
 
 		return () => {
-			document.body.style.overflow = "";
+			document.body.classList.remove("overflow-hidden");
 		};
 	}, [menuOpen]);
 
-  	const handleScroll = () => {
-    	const currentScrollPos = window.scrollY
+	useEffect(() => {
+		if (!menuOpen) return;
 
-		if(currentScrollPos > 0) {
-			setTransparent(false)
-		} else {
-			setTransparent(true)
-		}
-	};
+		// Close the menu when the Escape key is pressed
+		// for tsx rework: "event: KeyboardEvent"
+		const handleKeyDown = (event) => {
+			if (event.key === "Escape") {
+			setMenuOpen(false);
+			}
+		};
 
-	useEffect( () => {
-		window.addEventListener('scroll', handleScroll);
-		return () => window.removeEventListener('scroll', handleScroll)
-	})
+		document.addEventListener("keydown", handleKeyDown);
+
+		return () => {
+			document.removeEventListener("keydown", handleKeyDown);
+		};
+	}, [menuOpen]);
 
 	return (
-		<header className={"fixed w-full h-full py-6 lg:py-7 xl:py-8 z-50 pointer-events-none transition-all duration-500"}>
+		<header className={"fixed inset-0 py-6 lg:py-7 xl:py-8 z-50 pointer-events-none transition-all duration-500"}>
 			<div className={"container-wide flex justify-between items-center"}>
 				<Link
 					href="/"
+					aria-label="Link to homepage"
 					className="pointer-events-auto"
 				>
 					<div className="relative w-12 h-12 lg:w-16 lg:h-16 z-50">
@@ -65,7 +64,7 @@ const Header = () => {
 
 				{/* desktop nav & contact button */}
 				<div className="hidden lg:flex items-center gap-10 pointer-events-auto">
-					<Nav />
+					<Navigation aria-label="Desktop navigation" />
 				</div>
 
 				{/* mobile nav */}
@@ -75,21 +74,29 @@ const Header = () => {
 						size="icon"
 						className="group relative z-50"
 						onClick={() => setMenuOpen((prev) => !prev)}
-						aria-label="Toggle menu"
+						aria-label={menuOpen ? "Close navigation" : "Open navigation"}
+						aria-expanded={menuOpen}
+						aria-controls="mobile-navigation"
 					>
 						<FontAwesomeIcon
 							icon={menuOpen ? faXmark : faBarsStaggered}
+							aria-hidden="true"
 							className="relative w-full h-full text-2xl text-primary-300 z-10"
 						/>
 					</Button>
 
 					<div
+						id="mobile-navigation"
+						inert={menuOpen ? undefined : true}
 						className={`fixed inset-0 z-40 bg-primary-900 transform transition-transform duration-300 ease-in-out
 							${menuOpen ? "translate-x-0" : "translate-x-full"}
 						`}
 					>
 						<div className="container-wide h-full flex flex-col justify-center items-center gap-12">
-							<Nav onNavigate={() => setMenuOpen(false)} />
+							<Navigation
+								aria-label="Mobile navigation"
+								onNavigate={() => setMenuOpen(false)}
+							/>
 
 							<div className="flex flex-col gap-4">
 								<Socials />
@@ -98,6 +105,7 @@ const Header = () => {
 									&#91;
 									<span className="inline-block">
 										<Typewriter
+											aria-hidden="true"
 											options={{
 												strings: ["Design", "Build", "Create"],
 												autoStart: true,
