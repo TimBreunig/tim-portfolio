@@ -6,18 +6,22 @@ import { faLinkedinIn, faArtstation, faGithub } from '@fortawesome/free-brands-s
 const socialLinks = [
 	{
 		path: "https://de.linkedin.com/in/tim-breunig-a82250252",
+		label: "Follow me on LinkedIn",
 		Icon: faLinkedinIn,
 	},
 	{
 		path: "mailto:&#x62;&#x72;&#x65;&#x75;&#x6e;&#x69;&#x67;&#x2e;&#x74;&#x69;&#x6d;&#x40;&#x77;&#x65;&#x62;&#x2e;&#x64;&#x65;",
+		label: "Send me an email",
 		Icon: faEnvelope,
 	},
 	{
 		path: "https://github.com/TimBreunig",
+		label: "Visit my GitHub profile",
 		Icon: faGithub,
 	},
 	{
 		path: "https://www.artstation.com/timbreunig",
+		label: "Visit my ArtStation profile",
 		Icon: faArtstation,
 	},
 ];
@@ -26,10 +30,11 @@ const socialLinks = [
 const Socials = () => {
 	return (
         <div className="flex flex-row lg:flex-col gap-2 pointer-events-auto">
-            {socialLinks.map(({ Icon, path }, index) => {
+            {socialLinks.map(({ Icon, path, label }, index) => {
 				return (
 					<a href={path}
                         key={index}
+						aria-label={label}
                         target="_blank"
                         className="block group relative box-content w-12 h-12 bg-primary-900/75 border border-primary-800 text-center rounded-full overflow-hidden hover:scale-110 transition-all duration-500"
                     >
