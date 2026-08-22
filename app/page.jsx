@@ -3,14 +3,15 @@
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 
+
 const IndexPage = () => {
-  const router = useRouter();
+    const router = useRouter();
 
-  useEffect(() => {
-    router.replace("/home");
-  }, [router]);
+    useEffect(() => {
+        router.replace("/home");
+    }, [router]);
 
-  return null;
+    return null;
 };
 
 export default IndexPage;
