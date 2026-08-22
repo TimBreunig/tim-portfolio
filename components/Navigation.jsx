@@ -1,8 +1,9 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { usePathname } from 'next/navigation';
+import { Button } from "@/components/ui/button";
+import { usePageTransition } from "@/components/context/PageTransitionContext";
 
 
 const links = [
@@ -17,8 +18,14 @@ const links = [
 ];
 
 
-const Navigation = ({ onNavigate, ariaLabel }) => {
+const Navigation = ({ onNavigate, "aria-label": ariaLabel }) => {
 	const pathname = usePathname();
+	const { navigate } = usePageTransition();
+
+	const handleNavigate = (href) => {
+		onNavigate?.();
+		navigate(href);
+	};
 
 	return (
 		<nav className="flex flex-col lg:flex-row items-center gap-6 lg:gap-10 text-center lg:text-right" aria-label={ariaLabel}>
@@ -27,7 +34,11 @@ const Navigation = ({ onNavigate, ariaLabel }) => {
 					<Link
 						key={index}
 						href={link.path}
-						onClick={onNavigate}
+						
+						onClick={(event) => {
+							event.preventDefault();
+							handleNavigate(link.path);
+						}}
 						className={`text-xl hover:text-purple-500 tracking-wide capitalize transition-all duration-300 ${
 								pathname.includes(link.path) ? "font-semibold text-primary-400" : "font-medium text-primary-700"
 							}`}
