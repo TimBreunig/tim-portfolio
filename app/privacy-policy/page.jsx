@@ -1,4 +1,7 @@
+import React from "react"
 import PolicyText from "@/components/PolicyText"
+import getEmail from "@/utils/getEmail"
+
 
 const PrivacyPolicy = () => {
     return (
@@ -45,10 +48,10 @@ const PrivacyPolicy = () => {
                                 <PolicyText title="Contact">
                                     If you have any questions regarding data privacy, feel free to contact me under&nbsp;
                                     <a
-                                        href="mailto:breunig.tim@web.de"
+                                        href={`mailto:${getEmail()}`}
                                         className="hyperlink"
                                     >
-                                        breunig.tim@web.de
+                                        {getEmail()}
                                     </a>
                                 </PolicyText>
                             </div>

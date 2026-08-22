@@ -1,4 +1,6 @@
+import React from "react";
 import Link from "next/link";
+import getEmail from "@/utils/getEmail";
 
 
 const currentYear = () => new Date().getFullYear();
@@ -15,25 +17,37 @@ const Footer = () => {
 						<ul>
 							<li>
 								<a
-									href="https://de.linkedin.com/in/tim-breunig-a82250252" target="_blank">
+									href="https://de.linkedin.com/in/tim-breunig-a82250252"
+									target="_blank"
+									rel="noreferrer"
+								>
 									Linkedin
 								</a>
 							</li>
 							<li>
 								<a
-									href="mailto:&#x62;&#x72;&#x65;&#x75;&#x6e;&#x69;&#x67;&#x2e;&#x74;&#x69;&#x6d;&#x40;&#x77;&#x65;&#x62;&#x2e;&#x64;&#x65;" target="_blank">
+									href={`mailto:${getEmail()}`}
+									target="_blank"
+									rel="noreferrer"
+								>
 									Email
 								</a>
 							</li>
 							<li>
 								<a
-									href="https://github.com/TimBreunig" target="_blank">
+									href="https://github.com/TimBreunig"
+									target="_blank"
+									rel="noreferrer"
+								>
 									Github
 								</a>
 							</li>
 							<li>
 								<a
-									href="https://www.artstation.com/timbreunig" target="_blank">
+									href="https://www.artstation.com/timbreunig"
+									target="_blank"
+									rel="noreferrer"
+								>
 									Artstation
 								</a>
 							</li>

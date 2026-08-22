@@ -1,9 +1,11 @@
 "use client";
 
+import React from "react";
 import Link from "next/link";
 import { usePathname } from 'next/navigation';
 import { Button } from "@/components/ui/button";
 import { usePageTransition } from "@/components/context/PageTransitionContext";
+import getEmail from "@/utils/getEmail";
 
 
 const links = [
@@ -54,7 +56,7 @@ const Navigation = ({ onNavigate, "aria-label": ariaLabel }) => {
 				asChild
 			>
 				<a
-					href="mailto:breunig.tim@web.de"
+					href={`mailto:${getEmail()}`}
 					className="group flex flex-col overflow-hidden justify-start gap-4"
 				>
 					<div className="h-7 overflow-hidden">

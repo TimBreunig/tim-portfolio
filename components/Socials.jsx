@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { faLinkedinIn, faArtstation, faGithub } from '@fortawesome/free-brands-svg-icons'
+import getEmail from "@/utils/getEmail";
 
 
 const socialLinks = [
@@ -10,7 +11,7 @@ const socialLinks = [
 		Icon: faLinkedinIn,
 	},
 	{
-		path: "mailto:&#x62;&#x72;&#x65;&#x75;&#x6e;&#x69;&#x67;&#x2e;&#x74;&#x69;&#x6d;&#x40;&#x77;&#x65;&#x62;&#x2e;&#x64;&#x65;",
+		path: `mailto:${getEmail()}`,
 		label: "Send me an email",
 		Icon: faEnvelope,
 	},
@@ -36,11 +37,12 @@ const Socials = () => {
                         key={index}
 						aria-label={label}
                         target="_blank"
+						rel="noreferrer"
                         className="block group relative box-content w-12 h-12 bg-primary-900/75 border border-primary-800 text-center rounded-full overflow-hidden hover:scale-110 transition-all duration-500"
                     >
                         <span className="absolute inset-0 w-full h-full bg-primary-100 transform scale-x-0 origin-left rounded-tr-full rounded-br-full z-0 group-hover:scale-x-100 transition-transform duration-500 delay-75 ease-in-out"></span>
                         <span className="absolute inset-0 w-full h-full bg-primary-100 transform scale-x-0 origin-right rounded-tl-full rounded-bl-full z-0 group-hover:scale-x-100 transition-transform duration-500 ease-in-out"></span>
-                        <FontAwesomeIcon icon={Icon} className="relative py-3 text-2xl text-primary-100 z-10 group-hover:border-primary-100 group-hover:text-primary-900 transition-colors duration-500" />
+                        <FontAwesomeIcon icon={Icon} className="relative py-3 size-6 text-2xl text-primary-100 z-10 group-hover:border-primary-100 group-hover:text-primary-900 transition-colors duration-500" />
                     </a>
 				);
 			})}
